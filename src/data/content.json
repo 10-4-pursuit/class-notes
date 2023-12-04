@@ -1,0 +1,1184 @@
+{
+  "1": {
+    "1": {
+      "codeDescriptionPairs": [
+        {
+          "code": "const greeting = 'Hello, world!';\nconsole.log(greeting);",
+          "description": "This is how you write a simple message in JavaScript. 'const' is used to create a constant named 'greeting' that holds the text 'Hello, world!'. Then 'console.log(greeting);' displays this message."
+        },
+        {
+          "code": "const number = 5;\nconst anotherNumber = 3;\nconst sum = number + anotherNumber;\nconsole.log(sum);",
+          "description": "Here, we're adding numbers. First, we make two constants, 'number' and 'anotherNumber', and give them values. Then, we add them using 'number + anotherNumber' and store this in 'sum'. Finally, we show the sum."
+        },
+        {
+          "code": "const name = 'Alice';\nif (name === 'Alice') {\n  console.log('Hello Alice!');\n} else {\n  console.log('You are not Alice');\n}",
+          "description": "This code checks a name. If 'name' is 'Alice', it says 'Hello Alice!'. If not, it says 'You are not Alice'. We use 'if' and 'else' to do something different based on the name."
+        },
+        {
+          "code": "for (let i = 0; i < 5; i++) {\n  console.log('Number ' + i);\n}",
+          "description": "A 'for' loop repeats actions. It starts with 'i = 0' and increases 'i' by 1 each round, until 'i' is less than 5. Each time, it shows 'Number ' followed by the current value of 'i'."
+        },
+        {
+          "code": "function sayHello(name) {\n  return 'Hello ' + name;\n}\nconst message = sayHello('Alice');\nconsole.log(message);",
+          "description": "This shows how to use a function. 'sayHello' takes a name and returns a greeting. We use 'sayHello('Alice')' to get 'Hello Alice' and store this in 'message'. Then, we display 'message'."
+        }
+      ]
+    },
+    "2": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let age = 30;",
+          "description": "We use 'let' to create a variable named 'age' and store the number 30 in it. Think of a variable like a box where you can keep things, and 'age' is the label on this box."
+        },
+        {
+          "code": "const name = 'Alice';",
+          "description": "Here, 'const' makes a constant called 'name'. We can't change 'name' later. It's like a permanent label. 'Alice' is stored as text, also known as a string, in the 'name' constant."
+        },
+        {
+          "code": "let isRaining = true;",
+          "description": "We use 'let' to create a variable 'isRaining' and set it to 'true'. This kind of variable, which can be true or false, is called a boolean. It's like saying yes (true) or no (false) to a question."
+        },
+        {
+          "code": "const numbers = [1, 2, 3, 4, 5];",
+          "description": "Here we have an array called 'numbers'. Arrays are like lists. This array stores a list of numbers: 1, 2, 3, 4, and 5. We use square brackets [] to create an array."
+        },
+        {
+          "code": "const person = { firstName: 'Alice', lastName: 'Smith' };",
+          "description": "This is an object called 'person'. Objects store information in a format like 'key: value'. Here, 'firstName' and 'lastName' are keys, and 'Alice' and 'Smith' are their values."
+        }
+      ]
+    },
+    "3": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let sum = 5 + 3;",
+          "description": "We use '+' to add numbers. Here, 5 and 3 are added together, and the total, 8, is stored in a variable called 'sum'."
+        },
+        {
+          "code": "let stringSum = '5' + 3;",
+          "description": "Adding a number and a string with '+' turns the number into a string and combines them. So '5' (a string) and 3 (a number) become '53' (a string)."
+        },
+        {
+          "code": "let isFiveGreater = 5 > 3;",
+          "description": "The '>' operator compares two numbers. Here, it checks if 5 is greater than 3. The result, 'true', is stored in 'isFiveGreater'."
+        },
+        {
+          "code": "let isTen = '10' == 10;",
+          "description": "JavaScript lets you compare strings and numbers. '==' compares the value regardless of type. So '10' (a string) and 10 (a number) are considered equal, making 'isTen' true."
+        },
+        {
+          "code": "let notEqual = '7' !== 7;",
+          "description": "The '!==' operator checks if values are not the same, including their type. Since '7' (a string) and 7 (a number) are different types, 'notEqual' becomes true."
+        },
+        {
+          "code": "let truthy = 'hello' && 5;",
+          "description": "Using '&&' with non-boolean values checks if they are 'truthy'. Both 'hello' (a string) and 5 (a number) are 'truthy', so it returns the last value, which is 5."
+        },
+        {
+          "code": "let falsy = '' || false;",
+          "description": "With '||', if the first value is 'falsy' (like an empty string ''), it returns the second value. Here, both '' and false are 'falsy', so 'falsy' becomes false."
+        }
+      ]
+    },
+    "4": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let age = 18;\nif (age >= 18) {\n  console.log('You are an adult.');\n} else {\n  console.log('You are a child.');\n}",
+          "description": "This code uses an 'if-else' statement to check age. If 'age' is 18 or more, it shows 'You are an adult.' If not, it shows 'You are a child.' It's like making a choice based on the age."
+        },
+        {
+          "code": "let grade = 90;\nif (grade >= 90) {\n  console.log('Excellent!');\n} else if (grade >= 75) {\n  console.log('Good job!');\n} else {\n  console.log('Keep trying!');\n}",
+          "description": "Here, we use 'if-else' with multiple conditions to check a grade. Depending on the score, it can say 'Excellent!', 'Good job!', or 'Keep trying!'. It's like giving different responses based on the score."
+        },
+        {
+          "code": "let weather = 'rainy';\nif (weather === 'rainy') {\n  console.log('Take an umbrella.');\n} else {\n  console.log('Enjoy your day.');\n}",
+          "description": "This code checks the weather. If it's 'rainy', it tells you to 'Take an umbrella.' If not, it says 'Enjoy your day.' It's like deciding what to do based on the weather."
+        },
+        {
+          "code": "let number = 15;\nif (number % 2 === 0) {\n  console.log('Even number');\n} else {\n  console.log('Odd number');\n}",
+          "description": "Here, we're checking if a number is even or odd. 'number % 2' gives the remainder when divided by 2. If it's 0 (even), it shows 'Even number'. If not, it shows 'Odd number'."
+        },
+        {
+          "code": "let fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('Apples are green or red.');\n    break;\n  case 'banana':\n    console.log('Bananas are yellow.');\n    break;\n  default:\n    console.log('Unknown fruit.');\n}",
+          "description": "A 'switch' statement is like a big switchboard. It picks a response based on the value of 'fruit'. For 'apple', it shows 'Apples are green or red.' For 'banana', 'Bananas are yellow.' Otherwise, it says 'Unknown fruit.'"
+        }
+      ]
+    },
+    "5": {
+      "codeDescriptionPairs": [
+        {
+          "code": "for (let i = 0; i < 5; i++) {\n  console.log('Number ' + i);\n}",
+          "description": "A 'for' loop repeats actions. It starts with 'i = 0' and adds 1 to 'i' each time, going until 'i' is less than 5. Each round, it shows 'Number ' with the current value of 'i', like counting up."
+        },
+        {
+          "code": "let i = 0;\nwhile (i < 5) {\n  console.log('Counting: ' + i);\n  i++;\n}",
+          "description": "A 'while' loop keeps going as long as a condition is true. Here, it keeps counting and showing 'Counting: ' with the number until 'i' is 5, like a chant that goes on until a count is reached."
+        },
+        {
+          "code": "let i = 0;\ndo {\n  console.log('Current number: ' + i);\n  i++;\n} while (i < 5);",
+          "description": "A 'do-while' loop is similar to 'while', but it runs at least once. It shows 'Current number: ' with 'i', then checks if 'i' is less than 5. It's like saying, 'I'll do this once, then see if I should continue.'"
+        },
+        {
+          "code": "for (let num = 0; num <= 10; num += 2) {\n  console.log('Even number: ' + num);\n}",
+          "description": "This 'for' loop counts up by 2s. Starting at 0, it adds 2 each time and shows each even number. It's like hopping on every other number up to 10."
+        },
+        {
+          "code": "let num = 10;\nwhile (num > 0) {\n  console.log('Countdown: ' + num);\n  num--;\n}",
+          "description": "Here, a 'while' loop counts backward. Starting from 10, it takes away 1 each time and shows the number, like a countdown before a rocket launch."
+        }
+      ]
+    },
+    "6": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function greet() {\n  console.log('Hello there!');\n}\ngreet();",
+          "description": "This function, named 'greet', simply says 'Hello there!' when called. Calling 'greet()' activates the function, like pressing a button to hear a greeting."
+        },
+        {
+          "code": "function saySomething() {\n  console.log('Something');\n}\nsaySomething();",
+          "description": "Here, 'saySomething' is a function that shows the word 'Something'. When we call 'saySomething()', it does its job by displaying that word."
+        },
+        {
+          "code": "function showNumber() {\n  console.log(10);\n}\nshowNumber();",
+          "description": "In the 'showNumber' function, we're making it display the number 10. Each time we call 'showNumber()', it shows 10, like a sign that always shows the same number."
+        }
+      ]
+    },
+    "7": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function add(a, b) {\n  return a + b;\n}\nlet total = add(5, 7);",
+          "description": "'add' is a function that takes two numbers (a and b) and returns their sum. When we call 'add(5, 7)', it adds these numbers and gives back 12, stored in 'total'."
+        },
+        {
+          "code": "function greet(name) {\n  return 'Hello, ' + name + '!';\n}\nlet message = greet('Alice');",
+          "description": "'greet' takes a name and creates a greeting. 'greet('Alice')' makes the message 'Hello, Alice!', which we then store in the variable 'message'."
+        },
+        {
+          "code": "function calculateArea(length, width) {\n  return length * width;\n}\nlet area = calculateArea(5, 4);",
+          "description": "'calculateArea' multiplies length and width to find an area. With 'calculateArea(5, 4)', it multiplies 5 and 4 to get the area, 20, which we save in 'area'."
+        },
+        {
+          "code": "function isEven(number) {\n  return number % 2 === 0;\n}\nlet evenCheck = isEven(8);",
+          "description": "'isEven' checks if a number is even. If 'number' divided by 2 has no remainder, it returns true. So, 'isEven(8)' checks if 8 is even, and since it is, 'evenCheck' becomes true."
+        }
+      ]
+    },
+    "8": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let outer = 'I am outside!';\nfunction showText() {\n  let inner = 'I am inside!';\n  console.log(outer);\n  console.log(inner);\n}\nshowText();\nconsole.log(outer);\n// console.log(inner); // This line would cause an error",
+          "description": "The variable 'outer' is outside the function, so it can be used anywhere. But 'inner' is inside the function, so it only works there. Trying to use 'inner' outside the function won't work, like a secret kept inside a room."
+        },
+        {
+          "code": "function createCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    console.log(count);\n  };\n}\nlet counter = createCounter();\ncounter();\ncounter();",
+          "description": "Here we have a function 'createCounter' that makes another function. The inner function changes 'count' each time we call it. Even after 'createCounter' is done, 'count' remembers its value, like keeping track of a score."
+        },
+        {
+          "code": "function outerFunction() {\n  let secret = 'I know a secret!';\n  function innerFunction() {\n    console.log(secret);\n  }\n  return innerFunction;\n}\nlet getSecret = outerFunction();\ngetSecret();",
+          "description": "The 'outerFunction' has a secret inside. It makes 'innerFunction', which knows the secret. When we call 'getSecret()', it still remembers the secret, even though 'outerFunction' is finished. It's like passing a whispered message."
+        },
+        {
+          "code": "let color = 'blue';\nfunction showColor() {\n  console.log(color);\n}\ncolor = 'green';\nshowColor();",
+          "description": "Here, 'color' is changed to 'green' before calling 'showColor'. The function shows the latest color, 'green'. It's like updating a sign outside a room and then reading it inside the room."
+        },
+        {
+          "code": "function startCounting() {\n  let number = 1;\n  function count() {\n    console.log(number);\n    number++;\n  }\n  return count;\n}\nlet countUp = startCounting();\ncountUp();\ncountUp();",
+          "description": "In 'startCounting', we set 'number' to 1. It makes 'count', which shows and increases 'number'. When we use 'countUp', it remembers where it left off with 'number', like a bookmark in a book that saves your place."
+        }
+      ]
+    },
+    "9": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let colors = ['red', 'green', 'blue'];",
+          "description": "An array, like 'colors', is a list of items. Here, we have an array with three colors: 'red', 'green', and 'blue'. It's like putting different colored marbles in a row."
+        },
+        {
+          "code": "let firstColor = colors[0];",
+          "description": "To get an item from an array, we use its number, starting from 0. 'colors[0]' gets the first color, which is 'red'. It's like picking the first marble from our row."
+        },
+        {
+          "code": "colors.push('yellow');",
+          "description": "The 'push' method adds a new item to the end of an array. Here, we add 'yellow' to our 'colors' array, making it longer, like adding another marble to the end of our row."
+        },
+        {
+          "code": "let numberOfColors = colors.length;",
+          "description": "'length' tells us how many items are in the array. For 'colors', it now says 4, because we have four colors. It's counting how many marbles are in our row."
+        },
+        {
+          "code": "let lastColor = colors.pop();",
+          "description": "The 'pop' method takes away the last item from the array and gives it to us. After using 'pop', 'lastColor' becomes 'yellow', and we have 3 colors left in the array, like taking the last marble off the row."
+        }
+      ]
+    },
+    "10": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let numbers = [1, 2, 3, 4, 5];\nlet doubled = numbers.map(number => number * 2);",
+          "description": "The 'map' method changes each item in an array. Here, we double every number in 'numbers', creating a new array 'doubled' with 2, 4, 6, 8, 10. It's like doubling the value of each marble."
+        },
+        {
+          "code": "let evenNumbers = numbers.filter(number => number % 2 === 0);",
+          "description": "'filter' picks certain items from an array. Here, it gets even numbers from 'numbers'. 'evenNumbers' becomes [2, 4], like selecting only marbles that are evenly shaped."
+        },
+        {
+          "code": "let sum = numbers.reduce((total, number) => total + number, 0);",
+          "description": "The 'reduce' method combines all items in an array into one value. Here, it adds all numbers together, giving us 'sum' as 15, like putting all marbles into one big marble."
+        },
+        {
+          "code": "let firstGreaterThanThree = numbers.find(number => number > 3);",
+          "description": "'find' gets the first item in an array that meets a condition. Here, it finds the first number greater than 3, which is 4, like finding the first unusually large marble."
+        },
+        {
+          "code": "let hasLargeNumber = numbers.some(number => number > 4);",
+          "description": "'some' checks if any items in an array meet a condition. Here, it sees if there's a number larger than 4. 'hasLargeNumber' is true because 5 is in the array, like checking if there's a really big marble among them."
+        }
+      ]
+    },
+    "11": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let car = { color: 'red', brand: 'Toyota', year: 2021 };",
+          "description": "A JavaScript object, like 'car', is like a box with compartments labeled with information. Here, 'car' has information about its 'color', 'brand', and 'year'."
+        },
+        {
+          "code": "let carColorDot = car.color;\nlet carColorBracket = car['color'];",
+          "description": "We can use both dot notation ('car.color') and bracket notation ('car['color']') to read the 'color' property of the car. Both ways tell us the car's color is 'red'. It's like having two keys to the same compartment."
+        },
+        {
+          "code": "car.year = 2022;\ncar['mileage'] = 5000;",
+          "description": "Dot notation ('car.year = 2022') updates the year, while bracket notation ('car['mileage'] = 5000') adds a new property for mileage. It's like changing the 'year' label and adding a new 'mileage' label to our car box."
+        },
+        {
+          "code": "let property = 'brand';\nconsole.log(car[property]);",
+          "description": "Using a variable in bracket notation ('car[property]') to access properties is like having a flexible key. Here, it checks the 'brand' and tells us the car is a 'Toyota'."
+        },
+        {
+          "code": "delete car.brand;\ndelete car['color'];",
+          "description": "We can remove properties with 'delete'. Using both 'delete car.brand' and 'delete car['color']' removes the brand and color from the car, like taking off these labels from our car box."
+        }
+      ]
+    },
+
+    "12": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let person = {\n  name: 'Alice',\n  greet: function() {\n    console.log('Hello, ' + this.name);\n  }\n};\nperson.greet();",
+          "description": "In this object 'person', 'greet' is a method, like a function inside the object. 'this.name' refers to the 'name' property in the same object. When we call 'person.greet()', it says 'Hello, Alice'."
+        },
+        {
+          "code": "let dog = {\n  name: 'Rex',\n  speak: function() {\n    console.log(this.name + ' says woof!');\n  }\n};\ndog.speak();",
+          "description": "'dog' has a 'speak' method. Using 'this.name' inside 'speak' gets the dog's name. So 'dog.speak()' makes it say 'Rex says woof!', like the dog talking."
+        },
+        {
+          "code": "let counter = {\n  count: 0,\n  increment: function() {\n    this.count++;\n    console.log('Count is now ' + this.count);\n  }\n};\ncounter.increment();\ncounter.increment();",
+          "description": "The 'counter' object has a 'count' property and an 'increment' method. Each time 'increment' is called, it adds 1 to 'count' and shows it, like counting up each time we press a button."
+        },
+        {
+          "code": "let calculator = {\n  number: 10,\n  double: function() {\n    this.number = this.number * 2;\n  }\n};\ncalculator.double();\nconsole.log(calculator.number);",
+          "description": "'calculator' has a method 'double' that multiplies its 'number' by 2. Calling 'calculator.double()' changes the number to 20. It's like the calculator doubling its number."
+        },
+        {
+          "code": "let book = {\n  title: 'JavaScript Basics',\n  showTitle: function() {\n    console.log('The book is called ' + this.title);\n  }\n};\nbook.showTitle();",
+          "description": "In the 'book' object, 'showTitle' is a method that uses 'this.title' to get the book's name. When 'book.showTitle()' is called, it says 'The book is called JavaScript Basics'."
+        }
+      ]
+    },
+    "13": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function fetchData(callback) {\n  setTimeout(() => {\n    let data = 'Sample data';\n    callback(data);\n  }, 2000);\n}\n\nfetchData((receivedData) => {\n  console.log(receivedData);\n});",
+          "description": "In this example, 'fetchData' simulates data fetching with 'setTimeout'. After 2 seconds, it calls the 'callback' function with the data. When we use 'fetchData', we provide a function that will run after 'fetchData' gets the data."
+        },
+        {
+          "code": "function processUserInput(callback) {\n  let name = prompt('Please enter your name.');\n  callback(name);\n}\n\nprocessUserInput((userName) => {\n  console.log('Hello ' + userName);\n});",
+          "description": "'processUserInput' asks for a name, then uses the 'callback' with the name. The function we pass in is called with the user's name, greeting them. It's like asking a friend (the callback) to say hello once you get a name."
+        }
+      ]
+    },
+    "14": {
+      "codeDescriptionPairs": [
+        {
+          "code": "let promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('Data received');\n  }, 3000);\n});\n\npromise.then(data => {\n  console.log(data);\n}).catch(error => {\n  console.log(error);\n});",
+          "description": "A 'Promise' is like a voucher for something in the future. Here, it waits 3 seconds, then 'resolves' with data. We use 'then' to handle the data and 'catch' for errors, like plans for both good and bad news."
+        },
+        {
+          "code": "function getJSON(url) {\n  return new Promise((resolve, reject) => {\n    // Imagine fetching data from the URL\n    if (url) {\n      resolve('{ \"message\": \"Success\" }');\n    } else {\n      reject('No URL');\n    }\n  });\n}\n\ngetJSON('https://example.com').then(data => {\n  console.log(data);\n}).catch(error => {\n  console.log(error);\n});",
+          "description": "'getJSON' is a function returning a Promise. If a URL is provided, it resolves with data. Otherwise, it rejects with an error. We handle these cases with 'then' and 'catch', like different paths based on what happens."
+        }
+      ]
+    },
+    "15": {
+      "codeDescriptionPairs": [
+        {
+          "code": "async function fetchData() {\n  let promise = new Promise((resolve, reject) => {\n    setTimeout(() => resolve('Data Loaded'), 2000);\n  });\n  let result = await promise;\n  console.log(result);\n}\n\nfetchData();",
+          "description": "'fetchData' is an 'async' function that waits for a Promise. 'await' pauses until the Promise is resolved. It's like saying, 'Wait here until the bus arrives, then continue the journey with the result.'"
+        },
+        {
+          "code": "async function getUser() {\n  let response = await fetch('https://api.example.com/user');\n  let data = await response.json();\n  console.log(data);\n}\n\ngetUser();",
+          "description": "In 'getUser', 'await' is used to wait for data from a URL. First, it waits for the response, then for the response to turn into JSON. It's like ordering a meal and waiting first for it to arrive, then to be ready to eat."
+        }
+      ]
+    },
+    "16": {
+      "codeDescriptionPairs": [
+        {
+          "code": "try {\n  console.log('Start of try runs');\n  notARealFunction();\n  console.log('End of try (never reached)');\n} catch (err) {\n  console.log('Error has occurred: ' + err.message);\n}",
+          "description": "Using 'try' and 'catch' is like having a safety net. If something goes wrong in 'try' (like calling a function that doesn't exist), 'catch' steps in. It's like having someone catch you if you trip."
+        },
+        {
+          "code": "function checkNumber(num) {\n  if (isNaN(num)) {\n    throw new Error('Not a number');\n  }\n  console.log('It is a number.');\n}\n\ntry {\n  checkNumber('hello');\n} catch (e) {\n  console.log('Caught: ' + e.message);\n}",
+          "description": "'throw' is used to create your own error. Here, if 'num' isn't a number, we throw an error. The 'catch' then tells us what went wrong. It's like saying 'Stop! There's a problem here!'"
+        },
+        {
+          "code": "console.log('Before error');\nconsole.error('This is an error message');\nconsole.log('After error');",
+          "description": "Using 'console.error' shows error messages. It still lets the program run, just like 'console.log', but it's like using a loud, red siren to show where problems are."
+        },
+        {
+          "code": "function add(a, b) {\n  if (typeof a !== 'number' || typeof b !== 'number') {\n    console.warn('Warning: Both arguments should be numbers.');\n    return;\n  }\n  return a + b;\n}",
+          "description": "Using 'console.warn' is for warnings. In 'add', if 'a' or 'b' aren't numbers, it warns but doesn't stop the program. It's like a yellow light saying 'Be careful, something might be wrong here.'"
+        },
+        {
+          "code": "function divide(a, b) {\n  if (b === 0) {\n    console.error('Error: Cannot divide by zero.');\n    return;\n  }\n  return a / b;\n}",
+          "description": "Here, 'divide' checks if 'b' is zero, because dividing by zero doesn't work. If it's zero, we show an error message. It's like telling someone they can't do something because it's impossible or wrong."
+        }
+      ]
+    },
+    "17": {
+      "codeDescriptionPairs": [
+        {
+          "code": "const MAX_COUNT = 100;\nfunction countToMax() {\n  for (let i = 0; i < MAX_COUNT; i++) {\n    console.log(i);\n  }\n}",
+          "description": "Using constants for values that don't change, like 'MAX_COUNT', is a good practice. It's like having a fixed rule or a signpost that guides how your code works."
+        },
+        {
+          "code": "let name = 'Alice';\n// Bad Practice: Reassigning a new value to 'name'\nname = 'Bob';\n\n// Good Practice: Using a new variable for a different value\nlet anotherName = 'Bob';",
+          "description": "Avoid changing the value of a variable to something totally different. It's better to create a new variable. This keeps your code clear, like using separate boxes for different things."
+        },
+        {
+          "code": "function addNumbers(a, b) {\n  if (typeof a !== 'number' || typeof b !== 'number') {\n    return;\n  }\n  return a + b;\n}",
+          "description": "Checking types of variables before using them helps prevent errors. In 'addNumbers', we make sure both 'a' and 'b' are numbers. It's like making sure you have the right ingredients before cooking."
+        },
+        {
+          "code": "// Bad Practice\nfunction doManyThings() {\n  // ...lots of different tasks...\n}\n\n// Good Practice\nfunction doOneThing() {\n  // ...one specific task...\n}",
+          "description": "Having a function do just one thing is a good practice. It's like having a tool for each specific job, which makes it easier to understand and use."
+        },
+        {
+          "code": "// Using descriptive variable and function names\nlet elapsedTimeInMinutes = 5;\nfunction calculateDistance(travelTime, speed) {\n  return travelTime * speed;\n}",
+          "description": "Using clear, descriptive names for variables and functions makes your code easier to understand. It's like labeling boxes in a storage room so you know exactly what's inside each one."
+        }
+      ]
+    },
+    "18": {
+      "codeDescriptionPairs": [
+        {
+          "code": "const name = 'Alice';\nconst greeting = `Hello, ${name}!`;",
+          "description": "Template literals make combining words easy. Here, backticks (` `) and ${} let us mix 'Hello,' with 'Alice'. It's like making a sentence by filling in a blank with the right word."
+        },
+        {
+          "code": "const fruits = ['apple', 'banana'];\nconst moreFruits = [...fruits, 'orange', 'grape'];",
+          "description": "The spread operator (...) lets us expand an array. We add 'orange' and 'grape' to the 'fruits' array. It's like unboxing fruits and then putting them into a bigger box with more fruits."
+        },
+        {
+          "code": "const book = { title: 'JavaScript', author: 'Alice' };\nconst { title, author } = book;",
+          "description": "Destructuring lets us get properties from an object easily. We take 'title' and 'author' out of 'book'. It's like taking toys out of a box and knowing each toy's name."
+        },
+        {
+          "code": "const sum = (a, b) => a + b;\nconsole.log(sum(5, 3));",
+          "description": "Arrow functions make writing functions shorter. Here, 'sum' adds two numbers. It's like a quicker way to do a task, using a shortcut."
+        },
+        {
+          "code": "let numbers = [1, 2, 3];\nlet doubledNumbers = numbers.map(n => n * 2);",
+          "description": "Using 'map' with arrow functions changes each item in an array. Here, every number in 'numbers' is doubled. It's like having a machine that automatically makes every number twice as big."
+        }
+      ]
+    }
+  },
+  "2": {
+    "1": {
+      "codeDescriptionPairs": [
+        {
+          "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My First Webpage</title>\n</head>\n<body>\n  <h1>Hello World!</h1>\n</body>\n</html>",
+          "description": "This is the basic structure of a webpage. '<!DOCTYPE html>' tells the browser it's an HTML5 document. The '<html>' tag wraps the entire content, with '<head>' for things like the title, and '<body>' for the visible part, like a greeting."
+        },
+        {
+          "code": "<p>This is a paragraph.</p>",
+          "description": "The '<p>' tag creates a paragraph. It's like a block of text in a book. Here, it wraps around 'This is a paragraph.' making it stand on its own on the webpage."
+        },
+        {
+          "code": "<img src='image.jpg' alt='A description'>",
+          "description": "The '<img>' tag adds an image. 'src' tells where the image is, like 'image.jpg', and 'alt' describes it, useful if the image can't be seen. It's like putting a picture in a photo album with a caption."
+        },
+        {
+          "code": "<a href='https://example.com'>Visit Example</a>",
+          "description": "An '<a>' tag makes a link. 'href' is the web address it goes to, like 'https://example.com'. The text 'Visit Example' is what you click on. It's like a signpost on the internet."
+        },
+        {
+          "code": "<ul>\n  <li>First item</li>\n  <li>Second item</li>\n</ul>",
+          "description": "The '<ul>' tag starts an unordered list, with '<li>' for each item. This list has 'First item' and 'Second item'. It's like making a bullet list on a piece of paper."
+        }
+      ]
+    },
+    "2": {
+      "codeDescriptionPairs": [
+        {
+          "code": "<header>\n  <h1>My Website</h1>\n</header>",
+          "description": "The '<header>' tag is like the top part of a website, usually with a title or logo. Here, it contains an '<h1>' heading for the site's main title, 'My Website'. It's like the sign on a store's front."
+        },
+        {
+          "code": "<nav>\n  <ul>\n    <li><a href='#home'>Home</a></li>\n    <li><a href='#about'>About</a></li>\n  </ul>\n</nav>",
+          "description": "'<nav>' is used for navigation links. It's like a map or menu on a website that helps you go to different sections, such as 'Home' and 'About'."
+        },
+        {
+          "code": "<article>\n  <h2>Article Title</h2>\n  <p>Article content...</p>\n</article>",
+          "description": "An '<article>' tag wraps around a complete piece of content, like a news article or blog post. It usually has a title ('<h2>') and some paragraphs ('<p>'). It's like a story in a newspaper."
+        },
+        {
+          "code": "<section>\n  <h2>Section Title</h2>\n  <p>Some content...</p>\n</section>",
+          "description": "'<section>' is for a themed part of a page, like a chapter in a book. This example has a title ('Section Title') and some content, grouping related information together."
+        },
+        {
+          "code": "<footer>\n  <p>Contact information</p>\n</footer>",
+          "description": "The '<footer>' tag is for the bottom part of a webpage. It often has contact info, copyright notices, or links. It's like the bottom part of a flyer, where you find extra details or small print."
+        }
+      ]
+    },
+    "3": {
+      "codeDescriptionPairs": [
+        {
+          "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My Web Page</title>\n  <link rel='stylesheet' href='styles.css'>\n</head>\n<body>\n  <h1>Welcome to My Web Page</h1>\n  <p>This is a paragraph on my web page.</p>\n</body>\n</html>",
+          "description": "This HTML document is linked to a separate CSS file named 'styles.css'. The '<link>' tag in the '<head>' section tells the browser to use the styles from that file. It's like giving directions to find clothes in another room."
+        },
+        {
+          "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My Web Page</title>\n  <style>\n    h1 { color: blue; }\n    p { color: green; }\n  </style>\n</head>\n<body>\n  <h1>Welcome to My Web Page</h1>\n  <p>This is a paragraph on my web page.</p>\n</body>\n</html>",
+          "description": "Here, CSS is written inside the HTML using the '<style>' tag. The styles inside '<style>' apply directly to elements in this document. It's like sewing clothes directly onto a doll."
+        },
+        {
+          "code": "h1 { color: blue; font-size: 20px; }",
+          "description": "This CSS code styles all '<h1>' headings. It sets their color to blue and font size to 20 pixels. It's like painting all the big titles blue and making sure they're a certain size."
+        },
+        {
+          "code": "p { margin: 10px; line-height: 1.5; }",
+          "description": "Here, all paragraphs ('<p>') get a space ('margin') of 10 pixels around them and a line height of 1.5 times the normal size. It's like giving each paragraph its own little box with extra room to breathe."
+        },
+        {
+          "code": ".button { background-color: green; padding: 10px 20px; }",
+          "description": "This CSS styles elements with the class 'button'. It gives them a green background and padding (space inside the button) of 10 pixels top and bottom, 20 pixels left and right. It's like making green cushions of specific thickness for buttons."
+        },
+        {
+          "code": "#header { width: 100%; border-bottom: 2px solid black; }",
+          "description": "CSS for the element with id 'header' sets its width to 100% of the container and adds a solid black line at the bottom. It's like stretching a banner across the top of a page and drawing a line under it."
+        },
+        {
+          "code": "a:hover { color: red; }",
+          "description": "This changes the color of links ('<a>') to red when hovered over with a mouse. It's like the link lighting up or changing color when you point at it, showing it's clickable."
+        }
+      ]
+    },
+    "4": {
+      "codeDescriptionPairs": [
+        {
+          "code": "div {\n  width: 300px;\n  padding: 20px;\n  border: 5px solid black;\n  margin: 15px;\n}",
+          "description": "In the CSS box model, each element is like a box. This 'div' has a width (300px), padding (20px inside), a border (5px thick), and space outside it (margin of 15px). It's like packing a gift with padding, wrapping, and then leaving space on a shelf."
+        },
+        {
+          "code": "p {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}",
+          "description": "The 'margin' creates space around elements. Here, paragraphs ('<p>') have space added above and below each (10px), so they don't touch other elements. It's like putting a cushion above and below a picture in a frame."
+        },
+        {
+          "code": "button {\n  padding: 5px 10px;\n}",
+          "description": "'Padding' is the space inside an element, around the content. For this 'button', padding makes the area inside it larger before the text starts (5px top and bottom, 10px left and right). It's like making a seat cushion bigger for more comfort."
+        },
+        {
+          "code": "h1 {\n  border-bottom: 2px solid red;\n}",
+          "description": "A 'border' is a line around an element. This '<h1>' heading gets a solid red line (2px thick) at its bottom. It's like drawing a line under a title for emphasis."
+        },
+        {
+          "code": ".container {\n  width: 50%;\n  margin: auto;\n}",
+          "description": "Setting 'margin: auto' on an element centers it inside its parent. Here, '.container' takes up half the width of its parent and is centered. It's like placing a painting in the middle of a wall."
+        }
+      ]
+    },
+    "5": {
+      "codeDescriptionPairs": [
+        {
+          "code": "div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}",
+          "description": "Flexbox is like a magic mat that can align items in one direction. In this 'div', 'display: flex' makes it a flex container. 'justify-content: center' and 'align-items: center' line up items perfectly in the middle, both horizontally and vertically."
+        },
+        {
+          "code": ".flex-item {\n  flex: 1;\n}",
+          "description": "Inside a flex container, 'flex: 1' on an item makes it flexible, allowing it to grow to fill the space. It's like giving each child an equal piece of a candy bar, so everyone gets the same amount."
+        },
+        {
+          "code": "div {\n  display: grid;\n  grid-template-columns: auto auto;\n}",
+          "description": "CSS Grid turns an element into a grid layout, like a checkerboard. Here, 'grid-template-columns: auto auto' makes two columns. It's like dividing a shelf into two equal sections for books."
+        },
+        {
+          "code": ".grid-item {\n  grid-column: span 2;\n}",
+          "description": "In a grid, 'grid-column: span 2' makes an item stretch across two columns. It's like a longer shelf in a bookcase that covers two normal shelf spaces."
+        },
+        {
+          "code": "div {\n  display: grid;\n  grid-template-rows: 50px 100px;\n  grid-template-columns: 50% 50%;\n}",
+          "description": "This grid has two rows and two columns. 'grid-template-rows' sets row heights, and 'grid-template-columns' sets column widths. It's like making a table with each cell sized differently for specific items."
+        }
+      ]
+    },
+    "6": {
+      "codeDescriptionPairs": [
+        {
+          "code": "@media screen and (max-width: 600px) {\n  body {\n    background-color: lightblue;\n  }\n}",
+          "description": "Media queries in CSS are like instructions for different screen sizes. This code says, 'If the screen is smaller than 600 pixels wide, make the background light blue.' It's like changing the wallpaper when moving from a big room to a smaller one."
+        },
+        {
+          "code": "div {\n  display: flex;\n}\n@media screen and (max-width: 400px) {\n  div {\n    display: block;\n  }\n}",
+          "description": "Here, 'div' elements use flexbox, but on small screens (less than 400px wide), they switch to block layout. It's like rearranging furniture for a party when you have less space."
+        },
+        {
+          "code": "@media screen and (min-width: 800px) {\n  .container {\n    width: 80%;\n    margin: auto;\n  }\n}",
+          "description": "This media query says, 'On screens at least 800px wide, make '.container' take up 80% of the screen width and center it.' It's like using a larger tablecloth for a big dining table."
+        },
+        {
+          "code": "p {\n  font-size: 16px;\n}\n@media screen and (min-width: 600px) {\n  p {\n    font-size: 18px;\n  }\n}",
+          "description": "In this example, paragraphs have a default font size, but on screens wider than 600px, the font size increases. It's like making the text bigger in a book for easier reading at a distance."
+        },
+        {
+          "code": "@media screen and (orientation: landscape) {\n  body {\n    background-color: coral;\n  }\n}",
+          "description": "This media query changes the background color when the screen's orientation is landscape (wider than tall). It's like painting the room a different color when you turn the lights from vertical to horizontal."
+        }
+      ]
+    },
+    "7": {
+      "codeDescriptionPairs": [
+        {
+          "code": "document.getElementById('header').innerText = 'Welcome!';",
+          "description": "This JavaScript code finds an HTML element by its ID 'header' and changes its text to 'Welcome!'. It's like finding a specific box by its label and putting a new label on it."
+        },
+        {
+          "code": "let paragraphs = document.getElementsByTagName('p');\nfor (let p of paragraphs) {\n  p.style.color = 'blue';\n}",
+          "description": "Here, JavaScript gets all '<p>' (paragraph) elements and changes their text color to blue. It's like going through a stack of notes and coloring all of them blue."
+        },
+        {
+          "code": "let button = document.createElement('button');\nbutton.innerHTML = 'Click me';\ndocument.body.appendChild(button);",
+          "description": "This code creates a new button and adds it to the webpage. 'createElement' makes a button, 'innerHTML' sets its text, and 'appendChild' puts it on the page. It's like making a new toy and then putting it in the playroom."
+        },
+        {
+          "code": "document.querySelector('.my-class').style.fontSize = '18px';",
+          "description": "'querySelector' finds the first element with the class 'my-class' and changes its font size to 18px. It's like finding the first book in a series on a shelf and making the title bigger."
+        },
+        {
+          "code": "document.querySelectorAll('li').forEach(item => {\n  item.style.backgroundColor = 'yellow';\n});",
+          "description": "This code finds all '<li>' (list item) elements and changes their background to yellow. It's like painting all items on a list with a yellow highlighter."
+        }
+      ]
+    },
+    "8": {
+      "codeDescriptionPairs": [
+        {
+          "code": "document.getElementById('myButton').addEventListener('click', function() {\n  alert('Button clicked!');\n});",
+          "description": "This code adds an event listener to a button. When the button with ID 'myButton' is clicked, it shows an alert saying 'Button clicked!'. It's like setting up a doorbell that makes a sound when someone presses it."
+        },
+        {
+          "code": "let inputField = document.getElementById('nameInput');\ninputField.addEventListener('change', function() {\n  console.log('Name changed to: ' + inputField.value);\n});",
+          "description": "Here, an event listener on an input field ('nameInput') reacts to changes. When you change the text, it prints the new name. It's like having a note that updates itself whenever you write a new name on it."
+        },
+        {
+          "code": "window.addEventListener('resize', function() {\n  console.log('Window size changed!');\n});",
+          "description": "This JavaScript listens for when the browser window size changes. When it does, it says 'Window size changed!'. It's like having an alarm that sounds whenever someone changes the size of a room."
+        },
+        {
+          "code": "document.body.addEventListener('mousemove', function(event) {\n  console.log('Mouse is at: ' + event.clientX + ', ' + event.clientY);\n});",
+          "description": "This event listener tracks the mouse's movement. Whenever you move the mouse, it shows its position. It's like having a tracker that tells you the exact location of something moving around a map."
+        },
+        {
+          "code": "document.getElementById('submitButton').addEventListener('click', function() {\n  console.log('Form submitted!');\n});",
+          "description": "When you click the 'submitButton', this code makes a message saying 'Form submitted!'. It's like putting a bell on a submit button that rings when you press it, signaling something was sent."
+        }
+      ]
+    },
+    "9": {
+      "codeDescriptionPairs": [
+        {
+          "code": "<form>\n  <input type='text' id='username' required>\n  <input type='submit' value='Submit'>\n</form>",
+          "description": "This HTML form has a text input for a username. The 'required' attribute means you can't submit the form without filling it in. It's like a quiz where you have to answer all the questions before turning it in."
+        },
+        {
+          "code": "<input type='email' id='email'>",
+          "description": "Here, an input element for an email is created. The type 'email' tells the browser to check if the entered text looks like an email. It's like having someone check if you wrote your address correctly."
+        },
+        {
+          "code": "document.getElementById('email').addEventListener('input', function(event) {\n  if (event.target.value.includes('@')) {\n    event.target.style.borderColor = 'green';\n  } else {\n    event.target.style.borderColor = 'red';\n  }\n});",
+          "description": "In JavaScript, this event listener checks what's typed into the email field. If it includes '@', the border turns green. If not, it turns red. It's like a signal light telling you if you're on the right track while typing."
+        },
+        {
+          "code": "<input type='password' minlength='8'>",
+          "description": "A password field is set to require at least 8 characters. The 'minlength' attribute ensures the password isn't too short. It's like setting a lock that needs a long enough key to open."
+        },
+        {
+          "code": "document.getElementById('form').addEventListener('submit', function(event) {\n  // Validation code here\n  event.preventDefault();\n});",
+          "description": "This JavaScript stops the form from being submitted until it passes certain checks (validation code). 'event.preventDefault()' is like a guard that only lets you through once everything is correct."
+        }
+      ]
+    },
+    "10": {
+      "codeDescriptionPairs": [
+        {
+          "code": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error:', error));",
+          "description": "This code uses 'fetch' to get data from a web address. It's like sending a request to a library for a book. When the book (data) arrives, it's shown in the console. If there's a problem, like the book can't be found, an error message is shown."
+        },
+        {
+          "code": "fetch('https://api.example.com/post', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({name: 'Alice'})\n})\n.then(response => response.json())\n.then(data => console.log(data));",
+          "description": "Here, 'fetch' is used to send (POST) data, like a name, to a server. It's like filling out a form and mailing it. The server responds, and the reply is displayed. It's similar to getting a receipt or confirmation in return."
+        },
+        {
+          "code": "async function getData() {\n  try {\n    let response = await fetch('https://api.example.com/data');\n    let data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.error('Error:', error);\n  }\n}\ngetData();",
+          "description": "This function 'getData' uses 'async/await' to wait for the fetch to complete. It's like asking someone to get a book and waiting until they come back. If they can't get the book, an error is reported."
+        },
+        {
+          "code": "fetch('https://api.example.com/update', {\n  method: 'PUT',\n  body: JSON.stringify({id: 1, name: 'Bob'})\n})\n.then(response => response.json())\n.then(data => console.log(data));",
+          "description": "This 'fetch' sends a 'PUT' request to update information, like changing a book's details in a library's system. The server's response to this change is then shown, like getting a note saying 'Update successful'."
+        },
+        {
+          "code": "fetch('https://api.example.com/delete', { method: 'DELETE' })\n  .then(() => console.log('Item deleted'));",
+          "description": "Here, 'fetch' is used to send a 'DELETE' request, like asking to remove a book from a library. When it's done, it says 'Item deleted', like getting a confirmation that the book is no longer there."
+        }
+      ]
+    },
+    "11": {
+      "codeDescriptionPairs": [
+        {
+          "code": "<img src='dog.jpg' alt='A friendly dog'>",
+          "description": "The 'alt' attribute in an '<img>' tag describes the picture. Here, it says 'A friendly dog'. This helps people who can't see the image understand what it is, like having a friend describe a photo."
+        },
+        {
+          "code": "<a href='page.html' aria-label='Learn more about dogs'>More Info</a>",
+          "description": "The 'aria-label' attribute gives more information about a link. It's used by screen readers to help people who can't see the screen. It's like a guide telling you where a link will take you."
+        },
+        {
+          "code": "<button aria-expanded='false' aria-controls='menu'>Menu</button>",
+          "description": "ARIA attributes like 'aria-expanded' and 'aria-controls' tell screen readers about the state of a button and what it does. It's like having signs that tell you if a door is open and what's behind it."
+        },
+        {
+          "code": "<input type='text' id='name' name='name' aria-required='true'>",
+          "description": "'aria-required' tells people using screen readers that this input field must be filled out. It's like putting a big sign on a form that says, 'This part is important!'"
+        },
+        {
+          "code": "<h1>Main Title</h1>\n<h2>Subsection</h2>",
+          "description": "Using headings ('<h1>', '<h2>') in the right order gives structure to a webpage. It helps screen readers understand the page layout, like a table of contents in a book."
+        }
+      ]
+    },
+    "12": {
+      "codeDescriptionPairs": [
+        {
+          "code": "<title>My Awesome Website</title>",
+          "description": "The '<title>' tag is very important for SEO. It's like the name of a book. It should be clear and descriptive so search engines and people know what your website is about."
+        },
+        {
+          "code": "<meta name='description' content='Learn all about my awesome website and what we do.'>",
+          "description": "A meta description briefly explains what your webpage is about. It's like a summary on the back of a book. This helps search engines understand your page's content and show it to the right people."
+        },
+        {
+          "code": "<h1>Main Title of Your Web Page</h1>",
+          "description": "Using '<h1>' for your main title helps search engines understand the primary topic of your page. It's like the headline of a newspaper article. There should be only one '<h1>' tag per page."
+        },
+        {
+          "code": "<img src='cat.jpg' alt='A playful cat'>",
+          "description": "Images should have 'alt' text that describes the image. This helps search engines understand what the image is about and also helps people who can't see the image. It's like a caption in a photo album."
+        },
+        {
+          "code": "<a href='https://example.com'>Visit Example</a>",
+          "description": "Links should use descriptive text. Instead of saying 'click here,' say what the link is about, like 'Visit Example.' This helps search engines understand where the link goes and why it's important."
+        }
+      ]
+    },
+    "13": {
+      "codeDescriptionPairs": [
+        {
+          "code": "/* Minimize CSS */\nbutton {\n  background-color: blue;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n}",
+          "description": "Minimizing CSS means removing extra spaces and making the file size smaller. It's like packing a suitcase neatly so everything fits better and it's easier to carry."
+        },
+        {
+          "code": "<img src='image.jpg' loading='lazy'>",
+          "description": "Lazy loading images with 'loading=\"lazy\"' means they only load when you scroll down to them. It's like only opening parts of a book you are reading, saving effort."
+        },
+        {
+          "code": "<script src='script.js' defer></script>",
+          "description": "Using 'defer' in a script tag tells the browser to load the script after the page has loaded. It's like setting up decorations after guests have arrived, so they don't have to wait outside."
+        },
+        {
+          "code": "/* Compress Images */\n<img src='compressed-image.jpg' alt='Descriptive Text'>",
+          "description": "Compressing images makes their file size smaller without losing quality. It's like squeezing a sponge so it fits in a smaller bucket but still does its job."
+        },
+        {
+          "code": "/* Use a Content Delivery Network (CDN) */\n<script src='https://cdn.example.com/library.js'></script>",
+          "description": "A CDN lets you load files like scripts from a network of servers close to the user. It's like having lots of small stores around town, so people don't have to travel far to get what they need."
+        }
+      ]
+    }
+  },
+  "3": {
+    "1": {
+      "codeDescriptionPairs": [
+        {
+          "code": "const element = <h1>Hello, World!</h1>;",
+          "description": "This is a basic JSX element. It resembles HTML, but it's actually JavaScript. JSX lets you write HTML-like syntax which gets transformed into JavaScript, enabling a more intuitive way to create UI elements."
+        },
+        {
+          "code": "const name = 'React';\nconst element = <h1>Hello, {name}</h1>;",
+          "description": "JSX is flexible. Here, we embed a JavaScript expression inside curly braces. The variable 'name' is displayed within the <h1> tag. This demonstrates how JSX smoothly integrates JavaScript with markup."
+        },
+        {
+          "code": "function formatName(user) {\n  return user.firstName + ' ' + user.lastName;\n}\nconst user = { firstName: 'Harper', lastName: 'Perez' };\nconst element = <h1>Hello, {formatName(user)}!</h1>;",
+          "description": "JSX can also use JavaScript functions. In this example, we call the 'formatName' function within JSX to display a user's full name. It illustrates the seamless integration of JavaScript functions in JSX."
+        },
+        {
+          "code": "const element = (\n  <div>\n    <h1>Hello!</h1>\n    <h2>Good to see you here.</h2>\n  </div>\n);",
+          "description": "JSX allows nesting elements, just like HTML. This example creates a <div> with two headings. It shows how to organize multiple elements hierarchically in JSX."
+        },
+        {
+          "code": "const element = <img src={user.avatarUrl} alt='Profile' />;",
+          "description": "Attributes in JSX can be expressed using JavaScript expressions. Here, the 'src' attribute of an <img> tag is dynamically set to a user's avatar URL, demonstrating JSX's dynamic attribute assignment."
+        },
+        {
+          "code": "const element = <button onClick={() => console.log('Button clicked')}>Click me</button>;",
+          "description": "Event handling in JSX is straightforward. This code sets an onClick event handler on a button, which logs a message when clicked. It showcases how to handle user interactions in JSX."
+        },
+        {
+          "code": "const element = (\n  <React.Fragment>\n    <h1>Part 1</h1>\n    <h1>Part 2</h1>\n  </React.Fragment>\n);",
+          "description": "React Fragments (<React.Fragment>) let you group multiple elements without adding extra nodes to the DOM. This is useful for returning multiple elements from a component without an unnecessary wrapper."
+        }
+      ]
+    },
+    "2": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function Welcome(props) {\n  return <h1>Hello, {props.name}</h1>;\n}",
+          "description": "This is a functional component that receives 'props'. 'props' are like parameters for components. Here, the 'Welcome' component takes 'props' and uses 'props.name' to display a greeting message."
+        },
+        {
+          "code": "const element = <Welcome name='Sara' />;",
+          "description": "Props are passed to components like attributes in HTML. In this example, the 'Welcome' component is given a prop 'name' with the value 'Sara', demonstrating how to pass data to components."
+        },
+        {
+          "code": "class Counter extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { count: 0 };\n  }\n}",
+          "description": "Class components can have 'state', a JavaScript object. This 'Counter' component initializes its state with a 'count' property set to 0. The 'state' is unique to each component instance."
+        },
+        {
+          "code": "incrementCount() {\n  this.setState({ count: this.state.count + 1 });\n}",
+          "description": "State can be updated using 'this.setState()'. This 'incrementCount' method updates the 'count' in the component's state, demonstrating how to modify state within class components."
+        },
+        {
+          "code": "function Counter() {\n  const [count, setCount] = React.useState(0);\n}",
+          "description": "Functional components use the 'useState' hook for state management. This 'Counter' component uses 'useState' to create 'count' state variable and 'setCount' to update it."
+        },
+        {
+          "code": "<button onClick={() => setCount(count + 1)}>Increase</button>",
+          "description": "This button, when clicked, calls 'setCount' to increase the 'count' state. It shows how to handle events and update state in functional components using the 'useState' hook."
+        },
+        {
+          "code": "const element = <Counter />;",
+          "description": "Components with state can be used like any other component. This example shows how to render the 'Counter' component, demonstrating how stateful components integrate into UI."
+        }
+      ]
+    },
+    "3": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function Welcome() {\n  return <h1>Hello, World!</h1>;\n}",
+          "description": "This is a functional component named 'Welcome'. It's like a recipe for making a part of a webpage. Here, it tells the computer to show 'Hello, World!' on the screen."
+        },
+        {
+          "code": "function Greeting(props) {\n  return <h1>Hello, {props.name}!</h1>;\n}",
+          "description": "Components can use 'props' to get data from outside. Think of 'props' like a gift box with different things inside. This 'Greeting' component uses 'props.name' to say hello to a specific person."
+        },
+        {
+          "code": "const element = <Greeting name='Alice' />;",
+          "description": "Here we use the 'Greeting' component. We tell it to say hello to 'Alice' by giving it 'name' as a prop. It's like saying, 'Hey Greeting, say hello to Alice!'"
+        },
+        {
+          "code": "function Goodbye() {\n  return <h1>Goodbye, have a nice day!</h1>;\n}",
+          "description": "This is another functional component called 'Goodbye'. It always says 'Goodbye, have a nice day!' It's a simple way to make a part of a webpage that always says the same thing."
+        },
+        {
+          "code": "const element = <div>\n  <Welcome />\n  <Greeting name='Bob' />\n  <Goodbye />\n</div>;",
+          "description": "We can put components together like building blocks. This code shows a part of a webpage with a welcome message, a personalized greeting to Bob, and a goodbye message."
+        }
+      ]
+    },
+    "4": {
+      "codeDescriptionPairs": [
+        {
+          "code": "class Welcome extends React.Component {\n  render() {\n    return <h1>Hello, World!</h1>;\n  }\n}",
+          "description": "This is a class component named 'Welcome'. Think of it as a special recipe for making part of a webpage. It has a 'render' part that tells what should be shown on the screen, like 'Hello, World!'."
+        },
+        {
+          "code": "class Greeting extends React.Component {\n  render() {\n    return <h1>Hello, {this.props.name}!</h1>;\n  }\n}",
+          "description": "Class components can also use 'props', like gifts with things inside. This 'Greeting' component takes a 'name' from 'props' and says hello to that person. 'this.props.name' is like asking, 'Who should I say hello to?'."
+        },
+        {
+          "code": "const element = <Greeting name='Lucy' />;",
+          "description": "Here, we use the 'Greeting' component to say hello to 'Lucy'. We give it a 'name' prop, just like telling it, 'Please say hello to Lucy'."
+        },
+        {
+          "code": "class Farewell extends React.Component {\n  render() {\n    return <h1>Goodbye, see you later!</h1>;\n  }\n}",
+          "description": "Here's another class component called 'Farewell'. Its job is to always say 'Goodbye, see you later!'. It's a simple way to make a part of a webpage that doesn't change."
+        },
+        {
+          "code": "const element = <div>\n  <Welcome />\n  <Greeting name='Emma' />\n  <Farewell />\n</div>;",
+          "description": "Just like blocks, we can put different components together. This shows a part of a webpage with a welcome message, a personalized greeting to Emma, and a goodbye message."
+        }
+      ]
+    },
+    "5": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function Counter() {\n  const [count, setCount] = React.useState(0);\n  return <h1>{count}</h1>;\n}",
+          "description": "The 'useState' hook lets us keep track of numbers or other things in a component. In this 'Counter', we start counting from 0. 'count' holds the number, and 'setCount' is used to change it."
+        },
+        {
+          "code": "const [count, setCount] = React.useState(0);\n<button onClick={() => setCount(count + 1)}>Add 1</button>",
+          "description": "Here's how we change the count. When you click the button, 'setCount' adds 1 to 'count'. It's like saying, 'Every time someone clicks, add one more to the count'."
+        },
+        {
+          "code": "const [name, setName] = React.useState('Alice');\nreturn <h1>Hello, {name}!</h1>;",
+          "description": "useState can track other things too, like names. Here, 'name' starts as 'Alice', and 'setName' can change it. We use {name} to show the name on the screen."
+        },
+        {
+          "code": "const [isHappy, setIsHappy] = React.useState(true);\nif (isHappy) {\n  return <h1>I am happy!</h1>;\n} else {\n  return <h1>I am sad.</h1>;\n}",
+          "description": "useState can also keep track of if something is true or not. Here, 'isHappy' starts as true, meaning happy. Depending on 'isHappy', it shows a different message."
+        },
+        {
+          "code": "const [color, setColor] = React.useState('blue');\nreturn <h1 style={{ color: color }}>This is {color}!</h1>;",
+          "description": "You can even track colors with useState. 'color' starts as 'blue', and 'setColor' can change it. The text color changes based on what 'color' is."
+        }
+      ]
+    },
+
+    "6": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function Timer() {\n  const [seconds, setSeconds] = React.useState(0);\n  React.useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds(seconds => seconds + 1);\n    }, 1000);\n    return () => clearInterval(interval);\n  }, []);\n  return <h1>{seconds} seconds have passed</h1>;\n}",
+          "description": "The 'useEffect' hook can do things over and over. Here, it makes a timer that counts seconds. The '[]' at the end is like a list of things to watch. Since it's empty, the timer starts only once when the component first appears."
+        },
+        {
+          "code": "const [name, setName] = React.useState('Alice');\nReact.useEffect(() => {\n  document.title = 'Hello ' + name;\n}, [name]);",
+          "description": "useEffect can watch for changes in things like 'name'. Here, '[name]' means it will only do its job (changing the webpage's title) when 'name' changes. If 'name' stays the same, it won't do anything."
+        },
+        {
+          "code": "const [count, setCount] = React.useState(0);\nReact.useEffect(() => {\n  if (count > 5) {\n    alert('Count is over 5!');\n  }\n}, [count]);",
+          "description": "In this example, useEffect is keeping an eye on 'count'. The '[count]' tells it to work only when 'count' changes. When 'count' goes over 5, it shows an alert."
+        },
+        {
+          "code": "const [color, setColor] = React.useState('red');\nReact.useEffect(() => {\n  console.log('Color changed to', color);\n}, [color]);",
+          "description": "Just like with 'name' and 'count', useEffect watches 'color'. The '[color]' in the list means it will only react when 'color' changes. Each time 'color' changes, it writes a message in the console."
+        },
+        {
+          "code": "React.useEffect(() => {\n  console.log('This runs after every render');\n});",
+          "description": "If useEffect doesn't have a list at the end, like this one, it does its job every single time the component updates or changes, not just once or when certain things change."
+        }
+      ]
+    },
+
+    "7": {
+      "codeDescriptionPairs": [
+        {
+          "code": "import { BrowserRouter as Router, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <div>\n        <nav>\n          <Link to='/'>Home</Link>\n          <Link to='/about'>About</Link>\n        </nav>\n\n        <Route path='/' exact>\n          <Home />\n        </Route>\n        <Route path='/about'>\n          <About />\n        </Route>\n      </div>\n    </Router>\n  );\n}\n\nfunction Home() {\n  return <h1>Welcome to the Home Page</h1>;\n}\n\nfunction About() {\n  return <h1>About Us</h1>;\n}",
+          "description": "Basic routing in React lets us show different pages without reloading the whole site. Here, we use <Router> to hold our pages. <Link> is like a signpost, telling where to go. <Route> shows the right page when we click a link."
+        },
+        {
+          "code": "const App = () => (\n  <Router>\n    <nav>\n      <Link to='/'>Home</Link>\n      <Link to='/gallery'>Gallery</Link>\n    </nav>\n    <Route path='/' exact component={Home} />\n    <Route path='/gallery' component={Gallery} />\n  </Router>\n);",
+          "description": "In this example, we have two links: one for 'Home' and another for 'Gallery'. When we click on 'Home', it shows the Home page. When we click on 'Gallery', it shows the Gallery page. Each <Route> connects a path to a component."
+        },
+        {
+          "code": "function Contact() {\n  return <h1>Contact Us</h1>;\n}\n\n// In App component\n<Route path='/contact' component={Contact} />",
+          "description": "Here's how to add a 'Contact Us' page. We make a 'Contact' component that says 'Contact Us'. Then, in our App, we use <Route> to connect '/contact' path to the Contact component. Now, we have a Contact Us page!"
+        },
+        {
+          "code": "import { Switch } from 'react-router-dom';\n\n// In App component\n<Switch>\n  <Route exact path='/' component={Home} />\n  <Route path='/about' component={About} />\n  <Route path='/contact' component={Contact} />\n</Switch>",
+          "description": "The <Switch> in React Router makes sure only one route shows at a time. It's like having only one book open on a table. When we go to a path, <Switch> finds the first matching <Route> and shows only that page."
+        },
+        {
+          "code": "import { Redirect } from 'react-router-dom';\n\n// In App component\n<Route exact path='/'>\n  <Redirect to='/home' />\n</Route>",
+          "description": "Sometimes we want to send visitors to a different page automatically. <Redirect> helps with this. Here, if someone goes to '/', they get sent to '/home' instead, like a secret path that takes you somewhere else."
+        }
+      ]
+    },
+    "8": {
+      "codeDescriptionPairs": [
+        {
+          "code": "import { BrowserRouter as Router, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <Link to='/profile/john'>John's Profile</Link>\n\n      <Route path='/profile/:username' component={Profile} />\n    </Router>\n  );\n}\n\nfunction Profile({ match }) {\n  return <h1>Hello, {match.params.username}!</h1>;\n}",
+          "description": "Route parameters let us make web pages more personal. Here, ':username' in the path is a placeholder. When someone clicks on 'John's Profile', it takes them to '/profile/john', and the Profile page says 'Hello, John!'."
+        },
+        {
+          "code": "function Product({ match }) {\n  return <h1>Product ID: {match.params.productId}</h1>;\n}\n\n// In App component\n<Route path='/product/:productId' component={Product} />",
+          "description": "We can use route parameters for things like product IDs. In this example, ':productId' changes based on what product someone wants to see. If they go to '/product/42', it will show 'Product ID: 42'."
+        },
+        {
+          "code": "import { useParams } from 'react-router-dom';\n\nfunction Article() {\n  let { articleId } = useParams();\n  return <h1>Reading article {articleId}</h1>;\n}",
+          "description": "Route parameters can also be used with the 'useParams' hook. This hook makes it easier to get parameters like 'articleId'. In this example, the page will show the article number that someone chooses."
+        },
+        {
+          "code": "<Link to={`/product/${productId}`}>View Product</Link>\n\n// In App component\n<Route path='/product/:productId' component={Product} />",
+          "description": "We can create links that use route parameters too. This link goes to a product page based on 'productId'. If 'productId' is 5, the link goes to '/product/5', and the Product page shows info for product 5."
+        },
+        {
+          "code": "function User({ match }) {\n  return <h1>Welcome, User {match.params.userId}</h1>;\n}\n\n// In App component\n<Route path='/user/:userId' component={User} />",
+          "description": "Route parameters are handy for user pages. If we have a path like '/user/:userId', and someone goes to '/user/123', the User component will say 'Welcome, User 123', showing a special message for each user."
+        }
+      ]
+    },
+    "9": {
+      "codeDescriptionPairs": [
+        {
+          "code": "import { BrowserRouter as Router, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <Route path='/shop' component={Shop} />\n    </Router>\n  );\n}\n\nfunction Shop() {\n  return (\n    <div>\n      <h1>Shop</h1>\n      <Link to='/shop/books'>Books</Link>\n      <Route path='/shop/books' component={Books} />\n    </div>\n  );\n}\n\nfunction Books() {\n  return <h2>Here are some books</h2>;\n}",
+          "description": "Nested routes are like paths within paths. In this example, inside the 'Shop' component, there's another <Route> for 'Books'. When you click on 'Books' in the shop, it shows the 'Books' section, all inside the shop."
+        },
+        {
+          "code": "function Dashboard() {\n  return (\n    <div>\n      <h1>Dashboard</h1>\n      <Link to='/dashboard/profile'>My Profile</Link>\n      <Route path='/dashboard/profile' component={Profile} />\n    </div>\n  );\n}\n\n// In App component\n<Route path='/dashboard' component={Dashboard} />",
+          "description": "Here's another example with a 'Dashboard'. Inside the Dashboard, there's a link to 'My Profile'. When clicked, it shows the Profile page, but still under the Dashboard. It's like a room inside a house."
+        },
+        {
+          "code": "function Blog() {\n  return (\n    <div>\n      <h1>Blog</h1>\n      <Link to='/blog/123'>Blog Post 123</Link>\n      <Route path='/blog/:postId' component={BlogPost} />\n    </div>\n  );\n}\n\n// In App component\n<Route path='/blog' component={Blog} />",
+          "description": "Nested routes can also use parameters. In this 'Blog', each blog post has its own link. When you click on a post, like 'Blog Post 123', it shows that specific post's page, all under the Blog."
+        },
+        {
+          "code": "function Category() {\n  return (\n    <div>\n      <h1>Category</h1>\n      <Link to='/category/books'>Books</Link>\n      <Link to='/category/movies'>Movies</Link>\n      <Route path='/category/:categoryName' component={CategoryDetails} />\n    </div>\n  );\n}\n\n// In App component\n<Route path='/category' component={Category} />",
+          "description": "Categories can have nested routes too. This example has 'Books' and 'Movies' inside 'Category'. Clicking on either link shows details for that category, like a folder inside another folder."
+        },
+        {
+          "code": "function Product() {\n  return (\n    <div>\n      <h1>Product</h1>\n      <Link to='/product/42/reviews'>Reviews</Link>\n      <Route path='/product/:productId/reviews' component={Reviews} />\n    </div>\n  );\n}\n\n// In App component\n<Route path='/product/:productId' component={Product} />",
+          "description": "Products can have their own nested routes, like 'Reviews'. When you look at a product, you can click to see its reviews. It's like opening a book and finding a chapter about reviews."
+        }
+      ]
+    },
+    "10": {
+      "codeDescriptionPairs": [
+        {
+          "code": "import React, { createContext, useContext } from 'react';\n\nconst ThemeContext = createContext('light');\n\nfunction App() {\n  return (\n    <ThemeContext.Provider value='dark'>\n      <Toolbar />\n    </ThemeContext.Provider>\n  );\n}\n\nfunction Toolbar() {\n  const theme = useContext(ThemeContext);\n  return <h1>Theme is: {theme}</h1>;\n}",
+          "description": "The Context API is like a magical bag that holds data you can share with many parts of your app. Here, we create a 'ThemeContext' with a default value 'light'. In 'App', we set its value to 'dark' and share it with 'Toolbar'."
+        },
+        {
+          "code": "const UserContext = createContext({ name: 'Guest' });\n\nfunction Greeting() {\n  const user = useContext(UserContext);\n  return <h1>Hello, {user.name}!</h1>;\n}\n\n// In App component\n<UserContext.Provider value={{ name: 'Alice' }}>\n  <Greeting />\n</UserContext.Provider>",
+          "description": "Context can hold different kinds of data, like a user's name. We create 'UserContext' with a default name 'Guest'. Inside 'App', we change it to 'Alice'. Now, 'Greeting' says 'Hello, Alice!' using this data."
+        },
+        {
+          "code": "const ColorContext = createContext('blue');\n\nfunction Button() {\n  const color = useContext(ColorContext);\n  return <button style={{ backgroundColor: color }}>Click Me</button>;\n}\n\n// In App component\n<ColorContext.Provider value='green'>\n  <Button />\n</ColorContext.Provider>",
+          "description": "Context can also share things like colors. Here, 'ColorContext' starts with 'blue'. But in the App, we set it to 'green'. The 'Button' then uses 'green' for its background color."
+        },
+        {
+          "code": "const SizeContext = createContext('medium');\n\nfunction Text() {\n  const size = useContext(SizeContext);\n  return <p style={{ fontSize: size }}>Some text</p>;\n}\n\n// In App component\n<SizeContext.Provider value='large'>\n  <Text />\n</SizeContext.Provider>",
+          "description": "Context is great for sharing styles, like text size. 'SizeContext' starts as 'medium'. In the App, we change it to 'large', so the 'Text' component uses 'large' size for its font."
+        },
+        {
+          "code": "const NumberContext = createContext(5);\n\nfunction Display() {\n  const number = useContext(NumberContext);\n  return <h1>The number is {number}</h1>;\n}\n\n// In App component\n<NumberContext.Provider value={10}>\n  <Display />\n</NumberContext.Provider>",
+          "description": "We can use Context to share numbers too. 'NumberContext' has a default number 5. In 'App', we change it to 10. The 'Display' component then shows 'The number is 10' using this shared number."
+        }
+      ]
+    },
+    "11": {
+      "codeDescriptionPairs": [
+        {
+          "code": "import React, { useEffect, useState } from 'react';\nimport axios from 'axios';\n\nfunction App() {\n  const [data, setData] = useState(null);\n\n  useEffect(() => {\n    axios.get('https://api.example.com/data')\n      .then(response => {\n        setData(response.data);\n      });\n  }, []);\n\n  return <div>{data ? <p>{data}</p> : <p>Loading...</p>}</div>;\n}",
+          "description": "Axios is like a helper for talking to the internet. We use it to ask for data from a website. Here, we ask 'https://api.example.com/data' for some data. While waiting, we show 'Loading...' and then the data when it arrives."
+        },
+        {
+          "code": "axios.post('https://api.example.com/submit', { name: 'Alice' })\n  .then(response => {\n    console.log('Data sent!', response);\n  });",
+          "description": "We can also use Axios to send data. This example sends the name 'Alice' to a website. It's like mailing a letter. After sending, it tells us 'Data sent!' in the console, a special place for messages."
+        },
+        {
+          "code": "axios.get('https://api.example.com/books')\n  .then(response => {\n    console.log('Books:', response.data);\n  })\n  .catch(error => {\n    console.error('Error fetching books:', error);\n  });",
+          "description": "Sometimes, asking for data might not work. Axios can handle this too. When asking for 'books', if there's a problem, it will show 'Error fetching books:' with the problem details in the console."
+        },
+        {
+          "code": "axios.put('https://api.example.com/update', { id: 1, title: 'New Title' })\n  .then(response => {\n    console.log('Updated!', response);\n  });",
+          "description": "Axios can also be used to change data. Here, we change the title of something with ID 1. It's like updating a diary entry. After changing, it tells us 'Updated!' in the console."
+        },
+        {
+          "code": "axios.delete('https://api.example.com/remove/1')\n  .then(response => {\n    console.log('Removed!', response);\n  });",
+          "description": "We can use Axios to remove data too. This example removes something with ID 1. It's like erasing a drawing. Once removed, it shows 'Removed!' in the console to let us know."
+        }
+      ]
+    },
+
+    "12": {
+      "codeDescriptionPairs": [
+        {
+          "code": "import React, { useEffect, useState } from 'react';\n\nfunction FetchData() {\n  const [data, setData] = useState('Loading...');\n\n  useEffect(() => {\n    setTimeout(() => {\n      setData('Data loaded!');\n    }, 2000);\n  }, []);\n\n  return <p>{data}</p>;\n}",
+          "description": "Async operations are like tasks that take time to finish. Here, we use 'setTimeout' to simulate waiting for data. It's like asking someone to get a toy, and they say 'Wait here, I'll be back soon!' After 2 seconds, we show 'Data loaded!'."
+        },
+        {
+          "code": "import axios from 'axios';\n\nfunction App() {\n  const [data, setData] = useState('Waiting for data...');\n\n  useEffect(() => {\n    axios.get('https://api.example.com/data')\n      .then(response => {\n        setData(response.data);\n      });\n  }, []);\n\n  return <div>{data}</div>;\n}",
+          "description": "Using Axios for async operations is like asking for something from the internet. We start by showing 'Waiting for data...'. When Axios gets the data, we update and show it. It's like waiting for a package to arrive and then opening it."
+        },
+        {
+          "code": "function loadData() {\n  return new Promise(resolve => {\n    setTimeout(() => {\n      resolve('Data loaded after 3 seconds!');\n    }, 3000);\n  });\n}\n\n// In useEffect\nloadData().then(data => {\n  setData(data);\n});",
+          "description": "Promises in JavaScript are like a promise from a friend. They promise to do something and tell us when it's done. Here, 'loadData' promises to give us data after 3 seconds. When it's done, we show the data."
+        },
+        {
+          "code": "async function fetchData() {\n  const response = await axios.get('https://api.example.com/data');\n  return response.data;\n}\n\n// In useEffect\nfetchData().then(data => {\n  setData(data);\n});",
+          "description": "Async functions and 'await' make working with async operations like telling someone, 'Wait here, I'll go check.' The function 'fetchData' waits for data from the internet. When it gets it, we update and show the data."
+        },
+        {
+          "code": "useEffect(() => {\n  let isSubscribed = true;\n  fetchData().then(data => {\n    if (isSubscribed) {\n      setData(data);\n    }\n  });\n  return () => {\n    isSubscribed = false;\n  };\n}, []);",
+          "description": "Sometimes, we need to be careful with async operations. If we leave a page before getting our data, we don't need it anymore. The 'isSubscribed' check helps us update data only if we are still on the page."
+        }
+      ]
+    },
+    "13": {
+      "codeDescriptionPairs": [
+        {
+          "code": "class WelcomeClass extends React.Component {\n  constructor(props) {\n    super(props);\n    console.log('Class: Setting up!');\n  }\n\n  render() {\n    return <h1>Hello from a Class!</h1>;\n  }\n\n  componentDidMount() {\n    console.log('Class: Welcome is now on the screen!');\n  }\n}",
+          "description": "In a class component like 'WelcomeClass', we use 'constructor' to set up, 'render' to show things, and 'componentDidMount' to do something after it's all set up, like saying 'The class component is ready!'"
+        },
+        {
+          "code": "function WelcomeFunction() {\n  React.useEffect(() => {\n    console.log('Function: Welcome is on the screen!');\n  }, []);\n\n  return <h1>Hello from a Function!</h1>;\n}",
+          "description": "In a functional component like 'WelcomeFunction', we don't have 'constructor' or 'componentDidMount'. Instead, we use 'useEffect' with an empty '[]' to do something when it first appears, like 'The function component is ready!'"
+        },
+        {
+          "code": "class TimerClass extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { seconds: 0 };\n    console.log('Class: Timer is being set up.');\n  }\n\n  render() {\n    return <h1>Class Time: {this.state.seconds}</h1>;\n  }\n\n  componentDidMount() {\n    this.interval = setInterval(() => {\n      this.setState({ seconds: this.state.seconds + 1 });\n    }, 1000);\n    console.log('Class: Timer has started!');\n  }\n}",
+          "description": "In 'TimerClass', a class component, we set up a timer in 'constructor', show it in 'render', and start it in 'componentDidMount'. It's like a clock that starts ticking when everything is ready."
+        },
+        {
+          "code": "function TimerFunction() {\n  const [seconds, setSeconds] = React.useState(0);\n\n  React.useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds(seconds => seconds + 1);\n    }, 1000);\n    return () => clearInterval(interval);\n  }, []);\n\n  return <h1>Function Time: {seconds}</h1>;\n}",
+          "description": "In 'TimerFunction', a functional component, we use 'useState' for the timer and 'useEffect' to start it. It's like a stopwatch that we start as soon as we see it. This is different from class components because it's all in one place."
+        },
+        {
+          "code": "class MessageClass extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { message: 'Class Loading...' };\n  }\n\n  render() {\n    return <h1>{this.state.message}</h1>;\n  }\n\n  componentDidMount() {\n    setTimeout(() => {\n      this.setState({ message: 'Class Hello!' });\n    }, 2000);\n  }\n}",
+          "description": "In 'MessageClass', a class component, we prepare a message in 'constructor', show it in 'render', and change it after 2 seconds in 'componentDidMount', like revealing a surprise in a play."
+        },
+        {
+          "code": "function MessageFunction() {\n  const [message, setMessage] = React.useState('Function Loading...');\n\n  React.useEffect(() => {\n    setTimeout(() => {\n      setMessage('Function Hello!');\n    }, 2000);\n  }, []);\n\n  return <h1>{message}</h1>;\n}",
+          "description": "In 'MessageFunction', a functional component, we set up and change the message with 'useState' and 'useEffect'. It's like setting up a surprise and showing it later, but in a more straightforward way than in class components."
+        }
+      ]
+    },
+    "14": {
+      "codeDescriptionPairs": [
+        {
+          "code": "class CounterClass extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { count: 0 };\n  }\n\n  componentDidUpdate() {\n    console.log('Class: Counter updated to', this.state.count);\n  }\n\n  render() {\n    return (\n      <button onClick={() => this.setState({ count: this.state.count + 1 })}>\n        Class Count: {this.state.count}\n      </button>\n    );\n  }\n}",
+          "description": "In a class component like 'CounterClass', the updating phase happens when we change something, like the count. 'componentDidUpdate' is used to do something after the update, like saying 'Class: Counter updated to...' with the new count."
+        },
+        {
+          "code": "function CounterFunction() {\n  const [count, setCount] = React.useState(0);\n\n  React.useEffect(() => {\n    console.log('Function: Counter updated to', count);\n  }, [count]);\n\n  return (\n    <button onClick={() => setCount(count + 1)}>\n      Function Count: {count}\n    </button>\n  );\n}",
+          "description": "In a functional component like 'CounterFunction', we use 'useState' for the count and 'useEffect' to know when it changes. When the count changes, 'useEffect' runs, saying 'Function: Counter updated to...' with the new count."
+        },
+        {
+          "code": "class ColorChangerClass extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { color: 'blue' };\n  }\n\n  componentDidUpdate() {\n    console.log('Class: Color changed to', this.state.color);\n  }\n\n  render() {\n    return (\n      <button onClick={() => this.setState({ color: 'green' })}>Change Color</button>\n    );\n  }\n}",
+          "description": "In 'ColorChangerClass', when we click to change the color, it updates. 'componentDidUpdate' tells us 'Class: Color changed to...' with the new color, like announcing a change in a game."
+        },
+        {
+          "code": "function ColorChangerFunction() {\n  const [color, setColor] = React.useState('blue');\n\n  React.useEffect(() => {\n    console.log('Function: Color changed to', color);\n  }, [color]);\n\n  return (\n    <button onClick={() => setColor('green')}>Change Color</button>\n  );\n}",
+          "description": "In 'ColorChangerFunction', we change the color with a button. 'useState' tracks the color, and 'useEffect' tells us when it changes, like 'Function: Color changed to...' with the new color, showing how the game updates."
+        },
+        {
+          "code": "class MessageUpdaterClass extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { message: 'Hello!' };\n  }\n\n  componentDidUpdate() {\n    console.log('Class: Message updated to', this.state.message);\n  }\n\n  render() {\n    return (\n      <button onClick={() => this.setState({ message: 'Goodbye!' })}>Update Message</button>\n    );\n  }\n}",
+          "description": "In 'MessageUpdaterClass', clicking the button changes the message. 'componentDidUpdate' lets us know, like saying 'Class: Message updated to...' with the new message. It's like changing the words on a sign."
+        },
+        {
+          "code": "function MessageUpdaterFunction() {\n  const [message, setMessage] = React.useState('Hello!');\n\n  React.useEffect(() => {\n    console.log('Function: Message updated to', message);\n  }, [message]);\n\n  return (\n    <button onClick={() => setMessage('Goodbye!')}>Update Message</button>\n  );\n}",
+          "description": "In 'MessageUpdaterFunction', when we update the message, 'useState' tracks it and 'useEffect' tells us it changed, like 'Function: Message updated to...' with the new message. It's like changing a note you wrote."
+        }
+      ]
+    },
+    "15": {
+      "codeDescriptionPairs": [
+        {
+          "code": "class FarewellClass extends React.Component {\n  componentWillUnmount() {\n    console.log('Class: Saying goodbye before leaving.');\n  }\n\n  render() {\n    return <h1>Goodbye from a Class Component!</h1>;\n  }\n}",
+          "description": "In a class component like 'FarewellClass', 'componentWillUnmount' is used when the component is about to disappear. It's like saying 'Goodbye' before leaving a party. We can use it to do things like turning off lights or closing doors."
+        },
+        {
+          "code": "function FarewellFunction() {\n  React.useEffect(() => {\n    return () => console.log('Function: Saying goodbye before leaving.');\n  }, []);\n\n  return <h1>Goodbye from a Function Component!</h1>;\n}",
+          "description": "In functional components, we handle goodbyes with 'useEffect'. We return a function that says 'Goodbye' when the component goes away. It's like leaving a note saying 'I was here' before you leave a place."
+        },
+        {
+          "code": "class TimerClass extends React.Component {\n  componentDidMount() {\n    this.timerID = setInterval(() => console.log('Class: Tick'), 1000);\n  }\n\n  componentWillUnmount() {\n    clearInterval(this.timerID);\n    console.log('Class: Timer stopped.');\n  }\n\n  render() {\n    return <h1>Class Timer</h1>;\n  }\n}",
+          "description": "In 'TimerClass', we start a timer in 'componentDidMount' and stop it in 'componentWillUnmount'. It's like using a stopwatch; you start it when you begin and stop it when you're done."
+        },
+        {
+          "code": "function TimerFunction() {\n  React.useEffect(() => {\n    const timerID = setInterval(() => console.log('Function: Tick'), 1000);\n    return () => {\n      clearInterval(timerID);\n      console.log('Function: Timer stopped.');\n    };\n  }, []);\n\n  return <h1>Function Timer</h1>;\n}",
+          "description": "In 'TimerFunction', we use 'useEffect' for both starting and stopping a timer. We start the timer and then return a function that stops it. It's like playing a game where you start the clock and then stop it when the game is over."
+        },
+        {
+          "code": "class EventListenerClass extends React.Component {\n  componentDidMount() {\n    window.addEventListener('resize', this.handleResize);\n  }\n\n  componentWillUnmount() {\n    window.removeEventListener('resize', this.handleResize);\n    console.log('Class: Stopped listening to resize events.');\n  }\n\n  handleResize = () => console.log('Class: Window resized!');\n\n  render() {\n    return <h1>Class Event Listener</h1>;\n  }\n}",
+          "description": "In 'EventListenerClass', we listen to window resize events in 'componentDidMount' and stop listening in 'componentWillUnmount'. It's like paying attention to when a room gets bigger or smaller, and then stopping when you leave the room."
+        },
+        {
+          "code": "function EventListenerFunction() {\n  React.useEffect(() => {\n    const handleResize = () => console.log('Function: Window resized!');\n    window.addEventListener('resize', handleResize);\n    return () => {\n      window.removeEventListener('resize', handleResize);\n      console.log('Function: Stopped listening to resize events.');\n    };\n  }, []);\n\n  return <h1>Function Event Listener</h1>;\n}",
+          "description": "In 'EventListenerFunction', we also listen to window resize events, but we use 'useEffect'. When the component is gone, we stop listening. It's like being aware of changes around you until you decide to stop paying attention."
+        }
+      ]
+    },
+    "16": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function withBlueBackground(Component) {\n  return function(props) {\n    return (\n      <div style={{ backgroundColor: 'blue' }}>\n        <Component {...props} />\n      </div>\n    );\n  };\n}\n\nfunction Message(props) {\n  return <h1>{props.text}</h1>;\n}\n\nconst BlueBackgroundMessage = withBlueBackground(Message);",
+          "description": "Higher-Order Components (HOCs) are like special tools that add extra features to components. Here, 'withBlueBackground' is a HOC that gives a blue background to any component. We use it to make 'Message' have a blue background."
+        },
+        {
+          "code": "function withLargeText(Component) {\n  return function(props) {\n    return (\n      <div style={{ fontSize: '24px' }}>\n        <Component {...props} />\n      </div>\n    );\n  };\n}\n\nconst LargeTextMessage = withLargeText(Message);",
+          "description": "Another HOC, 'withLargeText', makes the text of a component large. We wrap our 'Message' component in it, and now 'Message' shows big text. It's like putting on glasses that make everything look bigger."
+        },
+        {
+          "code": "function withLogging(Component) {\n  return function(props) {\n    console.log('Component is being used!');\n    return <Component {...props} />;\n  };\n}\n\nconst LoggingMessage = withLogging(Message);",
+          "description": "The 'withLogging' HOC adds a logging feature. Every time a component is used, it writes a message in the console. When we use it with 'Message', it tells us in the console every time 'Message' is shown."
+        },
+        {
+          "code": "function Welcome(props) {\n  return <h1>Welcome, {props.name}!</h1>;\n}\n\nconst BlueBackgroundWelcome = withBlueBackground(Welcome);",
+          "description": "HOCs can be used with different components. Here, we use 'withBlueBackground' with a 'Welcome' component. Now, 'Welcome' also has a blue background. It's like giving the same hat to different people."
+        },
+        {
+          "code": "const LargeTextWelcome = withLargeText(Welcome);\nconst LoggingWelcome = withLogging(Welcome);",
+          "description": "We can also use 'withLargeText' and 'withLogging' on 'Welcome'. Now 'Welcome' can have big text or logging, just like 'Message'. HOCs let us share cool features between different components easily."
+        }
+      ]
+    },
+    "17": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function PictureFrame(props) {\n  return <div style={{ border: '2px solid black' }}>{props.render()}</div>;\n}\n\nfunction App() {\n  return (\n    <PictureFrame render={() => <h1>A picture of a cat</h1>} />\n  );\n}",
+          "description": "Render props are like giving a component a special tool to draw anything. 'PictureFrame' gets a 'render' prop, which tells it what to draw inside. In 'App', we tell 'PictureFrame' to draw 'A picture of a cat'. It's like choosing a picture to put in a frame."
+        },
+        {
+          "code": "function Counter(props) {\n  return <div>{props.render(10)}</div>;\n}\n\nfunction App() {\n  return (\n    <Counter render={(count) => <h1>Count is: {count}</h1>} />\n  );\n}",
+          "description": "Here, 'Counter' takes a 'render' prop, which uses a number. In 'App', we give 'Counter' a 'render' that shows 'Count is: 10'. It's like telling 'Counter' how to count and show the number in a fun way."
+        },
+        {
+          "code": "function MouseTracker(props) {\n  const [x, y, setXY] = React.useState({ x: 0, y: 0 });\n  const handleMouseMove = (event) => {\n    setXY({ x: event.clientX, y: event.clientY });\n  };\n\n  return <div onMouseMove={handleMouseMove}>{props.render(x, y)}</div>;\n}\n\nfunction App() {\n  return (\n    <MouseTracker render={(x, y) => <h1>Mouse is at ({x}, {y})</h1>} />\n  );\n}",
+          "description": "In 'MouseTracker', we use 'render' to show where the mouse is. 'MouseTracker' tracks the mouse and then uses 'render' to display its position. In 'App', we tell 'MouseTracker' to show 'Mouse is at (x, y)' with the current mouse position."
+        },
+        {
+          "code": "function List(props) {\n  return <ul>{props.items.map(props.render)}</ul>;\n}\n\nfunction App() {\n  return (\n    <List\n      items={['Apple', 'Banana', 'Orange']}\n      render={(item) => <li>{item}</li>}\n    />\n  );\n}",
+          "description": "With 'List', we use 'render' to show a list of things. 'List' takes 'items' and uses 'render' to display each item. In 'App', we give 'List' fruits like 'Apple', 'Banana', 'Orange' and tell it to put each one in a list item."
+        },
+        {
+          "code": "function Greeting(props) {\n  return <div>{props.render('Hello, world!')}</div>;\n}\n\nfunction App() {\n  return (\n    <Greeting render={(greeting) => <h1>{greeting}</h1>} />\n  );\n}",
+          "description": "In 'Greeting', we use 'render' to show a greeting message. 'Greeting' takes 'render' and uses it to display a message. In 'App', we tell 'Greeting' to show 'Hello, world!' in a big, bold way."
+        }
+      ]
+    },
+    "18": {
+      "codeDescriptionPairs": [
+        {
+          "code": "function TabContainer(props) {\n  return <div>{props.children}</div>;\n}\n\nfunction Tab(props) {\n  return <button style={{ margin: '5px' }}>{props.title}</button>;\n}\n\nfunction App() {\n  return (\n    <TabContainer>\n      <Tab title='Home' />\n      <Tab title='Profile' />\n      <Tab title='Messages' />\n    </TabContainer>\n  );\n}",
+          "description": "Compound components are like a toy set with different pieces. Here, 'TabContainer' holds 'Tab' components. Each 'Tab' is like a different toy piece. In 'App', we put 'Home', 'Profile', and 'Messages' tabs together in the container."
+        },
+        {
+          "code": "function Accordion(props) {\n  return <div>{props.children}</div>;\n}\n\nfunction AccordionItem(props) {\n  return <h3>{props.title}</h3>;\n}\n\nfunction App() {\n  return (\n    <Accordion>\n      <AccordionItem title='First Item' />\n      <AccordionItem title='Second Item' />\n    </Accordion>\n  );\n}",
+          "description": "In an 'Accordion', we use 'AccordionItem' for each part. It's like having a book where each 'AccordionItem' is a chapter. We can add as many chapters (items) as we want to the 'Accordion' book."
+        },
+        {
+          "code": "function Toolbox(props) {\n  return <div>{props.children}</div>;\n}\n\nfunction Tool(props) {\n  return <span>{props.name}</span>;\n}\n\nfunction App() {\n  return (\n    <Toolbox>\n      <Tool name='Hammer' />\n      <Tool name='Screwdriver' />\n    </Toolbox>\n  );\n}",
+          "description": "A 'Toolbox' is another example. We fill the 'Toolbox' with different 'Tool' components, like a real toolbox filled with tools like hammers and screwdrivers. It shows how we can group related components together."
+        },
+        {
+          "code": "function Menu(props) {\n  return <ul>{props.children}</ul>;\n}\n\nfunction MenuItem(props) {\n  return <li>{props.children}</li>;\n}\n\nfunction App() {\n  return (\n    <Menu>\n      <MenuItem>Item 1</MenuItem>\n      <MenuItem>Item 2</MenuItem>\n      <MenuItem>Item 3</MenuItem>\n    </Menu>\n  );\n}",
+          "description": "In a 'Menu', 'MenuItem' components are like different dishes. We put several 'MenuItem' dishes in our 'Menu' to make a full meal. This way, we can easily decide what items our menu has."
+        },
+        {
+          "code": "function Gallery(props) {\n  return <div>{props.children}</div>;\n}\n\nfunction Picture(props) {\n  return <img src={props.src} alt={props.alt} style={{ width: '100px', height: '100px' }} />\n}\n\nfunction App() {\n  return (\n    <Gallery>\n      <Picture src='cat.jpg' alt='A cat' />\n      <Picture src='dog.jpg' alt='A dog' />\n    </Gallery>\n  );\n}",
+          "description": "A 'Gallery' with 'Picture' components is like a photo album. Each 'Picture' is a different photo. In 'Gallery', we add 'Picture' components of a cat and a dog, like putting photos in an album."
+        }
+      ]
+    }
+  }
+}

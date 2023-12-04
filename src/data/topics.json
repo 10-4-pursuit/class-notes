@@ -1,0 +1,254 @@
+{
+  "1": [
+    {
+      "id": 1,
+      "title": "Basic Syntax and Structure",
+      "description": "Learn the foundational syntax and structure of JavaScript, including how to write basic commands and statements."
+    },
+    {
+      "id": 2,
+      "title": "Variables and Data Types",
+      "description": "Explore different data types in JavaScript and how to use variables to store data."
+    },
+    {
+      "id": 3,
+      "title": "Operators",
+      "description": "Understand the different operators in JavaScript for performing arithmetic, comparison, and logical operations."
+    },
+    {
+      "id": 4,
+      "title": "Control Structures: Conditional Statements",
+      "description": "Learn how to use conditional statements like if-else to control the flow of your program."
+    },
+    {
+      "id": 5,
+      "title": "Control Structures: Loops",
+      "description": "Explore how to use different types of loops (for, while, do-while) for repeating actions in your code."
+    },
+    {
+      "id": 6,
+      "title": "Functions: Basics",
+      "description": "Learn how to define and call functions, a fundamental aspect of structuring JavaScript code."
+    },
+    {
+      "id": 7,
+      "title": "Functions: Parameters and Return Values",
+      "description": "Understand how to pass data to functions and use return values."
+    },
+    {
+      "id": 8,
+      "title": "Scope and Closure",
+      "description": "Explore the concepts of scope and closure in JavaScript and how they affect the accessibility of variables."
+    },
+    {
+      "id": 9,
+      "title": "Working with Arrays: Basics",
+      "description": "Learn about arrays, how to create them, and basic methods to manipulate array data."
+    },
+    {
+      "id": 10,
+      "title": "Working with Arrays: Advanced Methods",
+      "description": "Delve into more advanced array methods and techniques for handling array data."
+    },
+    {
+      "id": 11,
+      "title": "Object-Oriented JavaScript: Objects and Properties",
+      "description": "Understand how to create objects in JavaScript and work with their properties."
+    },
+    {
+      "id": 12,
+      "title": "Object-Oriented JavaScript: Methods and 'this' Keyword",
+      "description": "Learn about defining methods in objects and the use of the 'this' keyword."
+    },
+    {
+      "id": 13,
+      "title": "Asynchronous JavaScript: Callbacks",
+      "description": "Get introduced to asynchronous programming and how to use callbacks."
+    },
+    {
+      "id": 14,
+      "title": "Asynchronous JavaScript: Promises",
+      "description": "Explore the concept of Promises in JavaScript for handling asynchronous operations."
+    },
+    {
+      "id": 15,
+      "title": "Asynchronous JavaScript: Async/Await",
+      "description": "Understand how to use the async and await keywords for writing asynchronous code in a more readable way."
+    },
+    {
+      "id": 16,
+      "title": "Error Handling and Debugging",
+      "description": "Learn about techniques for handling errors and debugging JavaScript code."
+    },
+    {
+      "id": 17,
+      "title": "Best Practices",
+      "description": "Discover best practices in JavaScript coding for writing efficient and maintainable code."
+    },
+    {
+      "id": 18,
+      "title": "Modern JavaScript Features",
+      "description": "Explore modern JavaScript features introduced in ES6 and beyond for more powerful and concise coding."
+    }
+  ],
+  "2": [
+    {
+      "id": 1,
+      "title": "HTML Fundamentals",
+      "description": "Learn the basic structure of a webpage using HTML5. Understand elements, tags, attributes, and the document structure."
+    },
+    {
+      "id": 2,
+      "title": "Semantic HTML",
+      "description": "Explore the use of semantic elements in HTML5 for meaningful web page structure and improved accessibility."
+    },
+    {
+      "id": 3,
+      "title": "CSS Basics",
+      "description": "Introduction to CSS for styling web pages. Understand selectors, properties, and values."
+    },
+    {
+      "id": 4,
+      "title": "CSS Box Model",
+      "description": "Dive into the CSS box model concept, including margins, borders, padding, and content areas, and how they affect element layout."
+    },
+    {
+      "id": 5,
+      "title": "Flexbox and Grid Layouts",
+      "description": "Learn about modern layout tools in CSS: Flexbox for one-dimensional layouts and Grid for two-dimensional layouts."
+    },
+    {
+      "id": 6,
+      "title": "Responsive Web Design",
+      "description": "Understand how to create responsive layouts using CSS media queries to adapt to different screen sizes and devices."
+    },
+    {
+      "id": 7,
+      "title": "DOM Manipulation with JavaScript",
+      "description": "Learn how to use JavaScript to select, modify, and interact with HTML elements via the Document Object Model (DOM)."
+    },
+    {
+      "id": 8,
+      "title": "Event Handling in JavaScript",
+      "description": "Discover how to handle user interactions in web pages through events and event listeners in JavaScript."
+    },
+    {
+      "id": 9,
+      "title": "Web Forms and Validation",
+      "description": "Explore how to create interactive forms in HTML and validate form data using both HTML5 and JavaScript."
+    },
+    {
+      "id": 10,
+      "title": "Fetching Data with JavaScript",
+      "description": "Learn to use the Fetch API in JavaScript for making HTTP requests and handling responses from web servers."
+    },
+    {
+      "id": 11,
+      "title": "Web Accessibility",
+      "description": "Understand the principles of web accessibility to create websites that are usable by people with various disabilities."
+    },
+    {
+      "id": 12,
+      "title": "SEO Basics",
+      "description": "Learn the fundamentals of Search Engine Optimization (SEO) for improving website visibility in search engines."
+    },
+    {
+      "id": 13,
+      "title": "Performance Optimization",
+      "description": "Explore techniques for optimizing the performance of web pages, including loading times and rendering efficiency."
+    }
+  ],
+  "3": [
+    {
+      "id": 1,
+      "title": "Understanding JSX",
+      "description": "Learn about JSX syntax, embedding expressions in JSX, and JSX vs. HTML differences."
+    },
+    {
+      "id": 2,
+      "title": "Props and State",
+      "description": "Explore how to pass data to components using props and manage internal state."
+    },
+    {
+      "id": 3,
+      "title": "Creating Functional Components",
+      "description": "Understand how to create and use functional components in React."
+    },
+    {
+      "id": 4,
+      "title": "Class Components",
+      "description": "Learn about class components, their syntax, and when to use them over functional components."
+    },
+
+    {
+      "id": 5,
+      "title": "useState Hook",
+      "description": "Learn about managing state in functional components using the useState hook."
+    },
+    {
+      "id": 6,
+      "title": "useEffect Hook",
+      "description": "Understand the useEffect hook for side effects in functional components."
+    },
+    {
+      "id": 7,
+      "title": "Basic Routing",
+      "description": "Learn how to set up basic routing and navigate between pages in a React application."
+    },
+    {
+      "id": 8,
+      "title": "Route Parameters",
+      "description": "Understand how to use route parameters for dynamic routing."
+    },
+    {
+      "id": 9,
+      "title": "Nested Routes",
+      "description": "Explore the concept of nested routes for complex application structures."
+    },
+    {
+      "id": 10,
+      "title": "Context API",
+      "description": "Learn about the Context API for prop drilling and state management across components."
+    },
+    {
+      "id": 11,
+      "title": "Using Axios for API Requests",
+      "description": "Understand how to make API requests using Axios, a promise-based HTTP client."
+    },
+    {
+      "id": 12,
+      "title": "Handling Async Operations",
+      "description": "Explore patterns for handling asynchronous operations and updating state accordingly."
+    },
+    {
+      "id": 13,
+      "title": "Mounting Phase",
+      "description": "Learn about the mounting phase in class components, including the constructor, render, and componentDidMount methods."
+    },
+    {
+      "id": 14,
+      "title": "Updating Phase",
+      "description": "Understand the updating phase, focusing on how and when a component updates."
+    },
+    {
+      "id": 15,
+      "title": "Unmounting Phase",
+      "description": "Explore the unmounting phase, including the componentWillUnmount method."
+    },
+    {
+      "id": 16,
+      "title": "Higher-Order Components",
+      "description": "Learn about higher-order components (HOCs) for reusing component logic."
+    },
+    {
+      "id": 17,
+      "title": "Render Props",
+      "description": "Understand the render props pattern for sharing dynamic functionality between components."
+    },
+    {
+      "id": 18,
+      "title": "Compound Components",
+      "description": "Explore the compound component pattern for flexible component composition."
+    }
+  ]
+}

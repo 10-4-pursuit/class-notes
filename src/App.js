@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SkillSetsIndex from './components/SkillSetsIndex';
+import TopicsIndex from './components/TopicsIndex';
+import TopicsShow from './components/TopicsShow';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/skillsets" element={<SkillSetsIndex />} />
+        <Route path="/skillsets/:id/topics" element={<TopicsIndex />} />
+        <Route path="/skillsets/:id/topics/:topicId" element={<TopicsShow />} />
+      </Routes>
+    </Router>
   );
 }
 
