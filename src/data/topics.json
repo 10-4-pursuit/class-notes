@@ -95,7 +95,8 @@
     {
       "id": 1,
       "title": "HTML Fundamentals",
-      "description": "Learn the basic structure of a webpage using HTML5. Understand elements, tags, attributes, and the document structure."
+      "description": "Learn the basic structure of a webpage using HTML5. Understand elements, tags, attributes, and the document structure.",
+      "links": []
     },
     {
       "id": 2,
@@ -162,7 +163,12 @@
     {
       "id": 1,
       "title": "Understanding JSX",
-      "description": "Learn about JSX syntax, embedding expressions in JSX, and JSX vs. HTML differences."
+      "description": "Learn about JSX syntax, embedding expressions in JSX, and JSX vs. HTML differences.",
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-01-cra-intro",
+        "https://github.com/10-4-pursuit/03-02-jsx-elements-practice",
+        "https://github.com/10-4-pursuit/03-03-jsx-fragments-events"
+      ]
     },
     {
       "id": 2,
