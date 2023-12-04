@@ -12,11 +12,13 @@ function TopicsShow() {
   let { id, topicId } = useParams();
   const samples = content[id][topicId] || [];
 
+  const topic = topics[id].find(t => t.id === Number(topicId));
   const links = samples.links || [];
+  const exercises = topic.exercises || [];
 
   return (
     <div>
-      <h1>Topic: {topics[id][topicId].title}</h1>
+      <h1>Topic: {topic.title}</h1>
       {samples.codeDescriptionPairs.map((sample, index) => (
         <div key={index} className="code-description-container">
           <div className="code-container">
@@ -42,7 +44,19 @@ function TopicsShow() {
           )
         }
       </div>
-
+      <div className="exercises-container">
+        <h2 className="exercises-heading">Exercises</h2>
+        <div className="exercise-card">
+          {exercises.map((repo, index) => (
+            <div key={index} className="exercise-item">
+              <a href={repo.url} target="_blank" rel="noopener noreferrer" className="exercise-link">
+                {repo}
+              </a>
+              {/* Include additional repo details if needed */}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
