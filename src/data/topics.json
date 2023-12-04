@@ -95,8 +95,7 @@
     {
       "id": 1,
       "title": "HTML Fundamentals",
-      "description": "Learn the basic structure of a webpage using HTML5. Understand elements, tags, attributes, and the document structure.",
-      "links": []
+      "description": "Learn the basic structure of a webpage using HTML5. Understand elements, tags, attributes, and the document structure."
     },
     {
       "id": 2,
@@ -168,93 +167,190 @@
         "https://github.com/10-4-pursuit/03-01-cra-intro",
         "https://github.com/10-4-pursuit/03-02-jsx-elements-practice",
         "https://github.com/10-4-pursuit/03-03-jsx-fragments-events"
+      ],
+      "links": [
+        {
+          "name": "Introduction to JSX by React Documentation",
+          "type": "documentation",
+          "url": "https://reactjs.org/docs/introducing-jsx.html"
+        },
+        {
+          "name": "JSX in Depth by React Documentation",
+          "type": "documentation",
+          "url": "https://reactjs.org/docs/jsx-in-depth.html"
+        }
       ]
     },
     {
       "id": 2,
       "title": "Props and State",
-      "description": "Explore how to pass data to components using props and manage internal state."
+      "description": "Explore how to pass data to components using props and manage internal state.",
+      "links": [
+        {
+          "name": "ReactJS Tutorial - Props and State by Academind",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=O6P86uwfdR0"
+        },
+        {
+          "name": "ReactJS Tutorial - Understanding State & Props by The Net Ninja",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=9U3IhLAnSxM"
+        }
+      ]
     },
     {
       "id": 3,
       "title": "Creating Functional Components",
-      "description": "Understand how to create and use functional components in React."
+      "description": "Understand how to create and use functional components in React.",
+      "links": [
+        {
+          "name": "ReactJS Tutorial - Functional Components by Codevolution",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=7e5PNUUoFEU"
+        },
+        {
+          "name": "React Functional Components by The Net Ninja",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=Z5iWr6Srsj8"
+        }
+      ]
     },
     {
       "id": 4,
       "title": "Class Components",
-      "description": "Learn about class components, their syntax, and when to use them over functional components."
+      "description": "Learn about class components, their syntax, and when to use them over functional components.",
+      "links": [
+        {
+          "name": "ReactJS Tutorial - Class Components by Programming with Mosh",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=23bpWVTkDuI"
+        },
+        {
+          "name": "React Class Components by Codevolution",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=bttnioOacEM"
+        }
+      ]
     },
-
     {
       "id": 5,
       "title": "useState Hook",
-      "description": "Learn about managing state in functional components using the useState hook."
+      "description": "Learn about managing state in functional components using the useState hook.",
+      "links": [
+        {
+          "name": "React Hooks Tutorial - useState() Hook by Academind",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=O6P86uwfdR0"
+        }
+      ]
     },
     {
       "id": 6,
       "title": "useEffect Hook",
-      "description": "Understand the useEffect hook for side effects in functional components."
+      "description": "Understand the useEffect hook for side effects in functional components.",
+      "links": [
+        {
+          "name": "React Hooks Tutorial - useEffect() Hook by Academind",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=0ZJgIjIuY7U"
+        }
+      ]
     },
     {
       "id": 7,
       "title": "Basic Routing",
-      "description": "Learn how to set up basic routing and navigate between pages in a React application."
+      "description": "Learn how to set up basic routing and navigate between pages in a React application.",
+      "links": [
+        {
+          "name": "React Router Tutorial | React For Beginners by Academind",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=Law7wfdg_ls"
+        }
+      ]
     },
     {
       "id": 8,
       "title": "Route Parameters",
-      "description": "Understand how to use route parameters for dynamic routing."
+      "description": "Understand how to use route parameters for dynamic routing.",
+      "links": [
+        {
+          "name": "React Router Tutorial | Route Parameters by The Net Ninja",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=Law7wfdg_ls"
+        }
+      ]
     },
     {
       "id": 9,
       "title": "Nested Routes",
-      "description": "Explore the concept of nested routes for complex application structures."
+      "description": "Explore the concept of nested routes for complex application structures.",
+      "links": [
+        {
+          "name": "React Router Nested Routes Tutorial by Codevolution",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=Law7wfdg_ls"
+        }
+      ]
     },
     {
       "id": 10,
       "title": "Context API",
-      "description": "Learn about the Context API for prop drilling and state management across components."
+      "description": "Learn about the Context API for prop drilling and state management across components.",
+      "links": [
+        {
+          "name": "React Context & useContext() Hook Tutorial by Academind",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=XLJN4JfniH4"
+        }
+      ]
     },
     {
       "id": 11,
       "title": "Using Axios for API Requests",
-      "description": "Understand how to make API requests using Axios, a promise-based HTTP client."
+      "description": "Understand how to make API requests using Axios, a promise-based HTTP client.",
+      "links": []
     },
     {
       "id": 12,
       "title": "Handling Async Operations",
-      "description": "Explore patterns for handling asynchronous operations and updating state accordingly."
+      "description": "Explore patterns for handling asynchronous operations and updating state accordingly.",
+      "links": []
     },
     {
       "id": 13,
       "title": "Mounting Phase",
-      "description": "Learn about the mounting phase in class components, including the constructor, render, and componentDidMount methods."
+      "description": "Learn about the mounting phase in class components, including the constructor, render, and componentDidMount methods.",
+      "links": []
     },
     {
       "id": 14,
       "title": "Updating Phase",
-      "description": "Understand the updating phase, focusing on how and when a component updates."
+      "description": "Understand the updating phase, focusing on how and when a component updates.",
+      "links": []
     },
     {
       "id": 15,
       "title": "Unmounting Phase",
-      "description": "Explore the unmounting phase, including the componentWillUnmount method."
+      "description": "Explore the unmounting phase, including the componentWillUnmount method.",
+      "links": []
     },
     {
       "id": 16,
       "title": "Higher-Order Components",
-      "description": "Learn about higher-order components (HOCs) for reusing component logic."
+      "description": "Learn about higher-order components (HOCs) for reusing component logic.",
+      "links": []
     },
     {
       "id": 17,
       "title": "Render Props",
-      "description": "Understand the render props pattern for sharing dynamic functionality between components."
+      "description": "Understand the render props pattern for sharing dynamic functionality between components.",
+      "links": []
     },
     {
       "id": 18,
       "title": "Compound Components",
-      "description": "Explore the compound component pattern for flexible component composition."
+      "description": "Explore the compound component pattern for flexible component composition.",
+      "links": []
     }
   ]
 }
