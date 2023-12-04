@@ -3,12 +3,22 @@
     {
       "id": 1,
       "title": "Basic Syntax and Structure",
-      "description": "Learn the foundational syntax and structure of JavaScript, including how to write basic commands and statements."
+      "description": "Learn the foundational syntax and structure of JavaScript, including how to write basic commands and statements.",
+      "exercises": [
+        "https://github.com/10-4-pursuit/01-01-javascript-basic-syntax",
+        "https://github.com/10-4-pursuit/01-02-javascript-control-structures",
+        "https://github.com/10-4-pursuit/01-03-javascript-functions-practice"
+      ]
     },
     {
       "id": 2,
       "title": "Variables and Data Types",
-      "description": "Explore different data types in JavaScript and how to use variables to store data."
+      "description": "Explore different data types in JavaScript and how to use variables to store data.",
+      "exercises": [
+        "https://github.com/10-4-pursuit/01-04-variables-and-datatypes-basic",
+        "https://github.com/10-4-pursuit/01-05-variables-and-datatypes-arrays",
+        "https://github.com/10-4-pursuit/01-06-javascript-objects-practice"
+      ]
     },
     {
       "id": 3,

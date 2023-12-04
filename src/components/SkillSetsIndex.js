@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 // Example data structure for skillsets
 const skillsets = [
-  { id: 1, title: 'JavaScript Fundamentals', icon: 'icon1.png' },
-  { id: 2, title: 'HTML/CSS', icon: 'icon2.png' },
-  { id: 3, title: 'React', icon: 'icon3.png' }
+  { id: 1, title: 'JavaScript Fundamentals', icon: '/01-icon.png' },
+  { id: 2, title: 'HTML/CSS', icon: '/02-icon.png' },
+  { id: 3, title: 'React', icon: '/03-icon.png' }
   // ... other skillsets
 ];
 

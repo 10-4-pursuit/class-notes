@@ -10,6 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<SkillSetsIndex />}></Route>
         <Route path="/skillsets" element={<SkillSetsIndex />} />
         <Route path="/skillsets/:id/topics" element={<TopicsIndex />} />
         <Route path="/skillsets/:id/topics/:topicId" element={<TopicsShow />} />
