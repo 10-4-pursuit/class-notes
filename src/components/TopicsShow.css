@@ -1,0 +1,52 @@
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #0077cc;
+  margin-top: 20px;
+}
+
+.code-description-container {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: stretch; /* Ensure equal height */
+}
+
+.code-container, .description-container {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.code-container {
+  margin-right: 10px;
+  background-color: #f0f0f0;
+}
+
+.description-container {
+  background-color: #f7f7f7;
+}
+
+pre {
+  white-space: pre-wrap; /* Ensure code wraps */
+  overflow-x: auto; /* Scroll horizontally if needed */
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+  .code-description-container {
+    flex-direction: column;
+  }
+
+  .code-container {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

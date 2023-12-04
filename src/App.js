@@ -4,6 +4,8 @@ import SkillSetsIndex from './components/SkillSetsIndex';
 import TopicsIndex from './components/TopicsIndex';
 import TopicsShow from './components/TopicsShow';
 
+import "./App.css";
+
 function App() {
   return (
     <Router>
