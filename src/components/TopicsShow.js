@@ -51,7 +51,7 @@ function TopicsShow() {
           {exercises.map((repo, index) => (
             <div key={index} className="exercise-item">
               <a
-                href={repo.url}
+                href={repo}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="exercise-link"
