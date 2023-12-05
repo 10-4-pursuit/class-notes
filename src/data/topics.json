@@ -206,6 +206,12 @@
           "type": "video",
           "url": "https://www.youtube.com/watch?v=9U3IhLAnSxM"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-04-display-props",
+        "https://github.com/10-4-pursuit/03-05-state-functional-counter",
+        "https://github.com/10-4-pursuit/03-06-props-user-greeting",
+        "https://github.com/10-4-pursuit/03-07-state-toggle-component"
       ]
     },
     {
@@ -223,6 +229,11 @@
           "type": "video",
           "url": "https://www.youtube.com/watch?v=Z5iWr6Srsj8"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-08-simple-greeting",
+        "https://github.com/10-4-pursuit/03-09-custom-message",
+        "https://github.com/10-4-pursuit/03-10-user-profile"
       ]
     },
     {
@@ -240,6 +251,11 @@
           "type": "video",
           "url": "https://www.youtube.com/watch?v=bttnioOacEM"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-11-class-component-basics",
+        "https://github.com/10-4-pursuit/03-12-class-component-props",
+        "https://github.com/10-4-pursuit/03-13-component-composition-class"
       ]
     },
     {
@@ -252,6 +268,11 @@
           "type": "video",
           "url": "https://www.youtube.com/watch?v=O6P86uwfdR0"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-14-usestate-counter",
+        "https://github.com/10-4-pursuit/03-15-usestate-name-change",
+        "https://github.com/10-4-pursuit/03-16-usestate-color-switcher"
       ]
     },
     {
@@ -264,6 +285,11 @@
           "type": "video",
           "url": "https://www.youtube.com/watch?v=0ZJgIjIuY7U"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-17-useeffect-timer",
+        "https://github.com/10-4-pursuit/03-18-useeffect-title-change",
+        "https://github.com/10-4-pursuit/03-19-useeffect-color-logger"
       ]
     },
     {
