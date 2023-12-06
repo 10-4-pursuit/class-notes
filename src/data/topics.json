@@ -23,17 +23,34 @@
     {
       "id": 3,
       "title": "Operators",
-      "description": "Understand the different operators in JavaScript for performing arithmetic, comparison, and logical operations."
+      "description": "Understand the different operators in JavaScript for performing arithmetic, comparison, and logical operations.",
+      "exercises": [
+        "https://github.com/10-4-pursuit/01-07-arithmetic-exploration",
+        "https://github.com/10-4-pursuit/01-08-variable-manipulation",
+        "https://github.com/10-4-pursuit/01-09-basic-comparison"
+      ]
     },
     {
       "id": 4,
       "title": "Control Structures: Conditional Statements",
-      "description": "Learn how to use conditional statements like if-else to control the flow of your program."
+      "description": "Learn how to use conditional statements like if-else to control the flow of your program.",
+      "exercises": [
+        "https://github.com/10-4-pursuit/01-10-age-checker",
+        "https://github.com/10-4-pursuit/01-11-grade-report",
+        "https://github.com/10-4-pursuit/01-12-weather-advice",
+        "https://github.com/10-4-pursuit/01-13-even-or-odd"
+      ]
     },
     {
       "id": 5,
       "title": "Control Structures: Loops",
-      "description": "Explore how to use different types of loops (for, while, do-while) for repeating actions in your code."
+      "description": "Explore how to use different types of loops (for, while, do-while) for repeating actions in your code.",
+      "exercises": [
+        "https://github.com/10-4-pursuit/01-14-sum-of-numbers",
+        "https://github.com/10-4-pursuit/01-15-reverse-countdown",
+        "https://github.com/10-4-pursuit/01-16-odd-numbers-loop",
+        "https://github.com/10-4-pursuit/01-17-multiplication-table"
+      ]
     },
     {
       "id": 6,
