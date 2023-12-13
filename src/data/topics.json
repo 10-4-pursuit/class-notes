@@ -254,16 +254,6 @@
           "url": "https://www.loom.com/share/de58380b00c7409e8452b031b6eedae3"
         },
         {
-          "name": "9.5 useState (pt. 1)",
-          "type": "video",
-          "url": "https://www.loom.com/share/fbd33ef4d393495890ca0869abfc076a"
-        },
-        {
-          "name": "9.5 useState (pt. 2)",
-          "type": "video",
-          "url": "https://www.loom.com/share/88fb315d61b94bff8da328125ef4fc8c"
-        },
-        {
           "name": "9.5 Conditional Rendering (pt. 1)",
           "type": "video",
           "url": "https://www.loom.com/share/ac7ea5f5c4844d9991342259a3e76109"
@@ -373,6 +363,16 @@
           "name": "React Router Tutorial | React For Beginners by Academind",
           "type": "video",
           "url": "https://www.youtube.com/watch?v=Law7wfdg_ls"
+        },
+        {
+          "name": "9.5 useState (pt. 1)",
+          "type": "video",
+          "url": "https://www.loom.com/share/fbd33ef4d393495890ca0869abfc076a"
+        },
+        {
+          "name": "9.5 useState (pt. 2)",
+          "type": "video",
+          "url": "https://www.loom.com/share/88fb315d61b94bff8da328125ef4fc8c"
         }
       ]
     },
