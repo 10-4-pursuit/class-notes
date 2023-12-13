@@ -205,6 +205,21 @@
           "name": "JSX in Depth by React Documentation",
           "type": "documentation",
           "url": "https://reactjs.org/docs/jsx-in-depth.html"
+        },
+        {
+          "name": "9.5 Intro to Node (pt. 1)",
+          "type": "video",
+          "url": "https://www.loom.com/share/9828f2c0b46c451699225494c17544d9"
+        },
+        {
+          "name": "9.5 Intro to Create React App",
+          "type": "video",
+          "url": "https://www.loom.com/share/6fe78d2a26ce4eee9eaebeb1c912094d"
+        },
+        {
+          "name": "9.5 Use of Components and Fragments",
+          "type": "video",
+          "url": "https://www.loom.com/share/e45af5b257f54e1a80a841879d0c4e3f"
         }
       ]
     },
@@ -222,6 +237,41 @@
           "name": "ReactJS Tutorial - Understanding State & Props by The Net Ninja",
           "type": "video",
           "url": "https://www.youtube.com/watch?v=9U3IhLAnSxM"
+        },
+        {
+          "name": "9.5 Intro to Props",
+          "type": "video",
+          "url": "https://www.loom.com/share/c8bd1d57d2444fdbb996191b56602606"
+        },
+        {
+          "name": "9.5 Rendering Multiple Items",
+          "type": "video",
+          "url": "https://www.loom.com/share/a714a952b1d144e187364ff266fb2a17"
+        },
+        {
+          "name": "9.5 Rendering Multiple Items (addendum)",
+          "type": "video",
+          "url": "https://www.loom.com/share/de58380b00c7409e8452b031b6eedae3"
+        },
+        {
+          "name": "9.5 useState (pt. 1)",
+          "type": "video",
+          "url": "https://www.loom.com/share/fbd33ef4d393495890ca0869abfc076a"
+        },
+        {
+          "name": "9.5 useState (pt. 2)",
+          "type": "video",
+          "url": "https://www.loom.com/share/88fb315d61b94bff8da328125ef4fc8c"
+        },
+        {
+          "name": "9.5 Conditional Rendering (pt. 1)",
+          "type": "video",
+          "url": "https://www.loom.com/share/ac7ea5f5c4844d9991342259a3e76109"
+        },
+        {
+          "name": "9.5 Conditional Rendering (pt. 2)",
+          "type": "video",
+          "url": "https://www.loom.com/share/a9a00f1183b1462684e8e1f78d10ebfc"
         }
       ],
       "exercises": [
@@ -245,6 +295,11 @@
           "name": "React Functional Components by The Net Ninja",
           "type": "video",
           "url": "https://www.youtube.com/watch?v=Z5iWr6Srsj8"
+        },
+        {
+          "name": "9.5 Functional Components",
+          "type": "video",
+          "url": "https://www.loom.com/share/d11424a810464806ab4cf63f0ebcec30"
         }
       ],
       "exercises": [
