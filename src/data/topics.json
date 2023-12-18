@@ -329,6 +329,16 @@
           "name": "React Hooks Tutorial - useState() Hook by Academind",
           "type": "video",
           "url": "https://www.youtube.com/watch?v=O6P86uwfdR0"
+        },
+        {
+          "name": "9.5 useState (pt. 1)",
+          "type": "video",
+          "url": "https://www.loom.com/share/fbd33ef4d393495890ca0869abfc076a"
+        },
+        {
+          "name": "9.5 useState (pt. 2)",
+          "type": "video",
+          "url": "https://www.loom.com/share/88fb315d61b94bff8da328125ef4fc8c"
         }
       ],
       "exercises": [
@@ -363,17 +373,11 @@
           "name": "React Router Tutorial | React For Beginners by Academind",
           "type": "video",
           "url": "https://www.youtube.com/watch?v=Law7wfdg_ls"
-        },
-        {
-          "name": "9.5 useState (pt. 1)",
-          "type": "video",
-          "url": "https://www.loom.com/share/fbd33ef4d393495890ca0869abfc076a"
-        },
-        {
-          "name": "9.5 useState (pt. 2)",
-          "type": "video",
-          "url": "https://www.loom.com/share/88fb315d61b94bff8da328125ef4fc8c"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-20-introduction-to-node-packages",
+        "https://github.com/10-4-pursuit/03-21-basic-introduction-to-react-router"
       ]
     },
     {
