@@ -390,6 +390,12 @@
           "type": "video",
           "url": "https://www.youtube.com/watch?v=Law7wfdg_ls"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-22-basic-dynamic-routing",
+        "https://github.com/10-4-pursuit/03-23-dynamic-product-details",
+        "https://github.com/10-4-pursuit/03-24-nested-dynamic-routes",
+        "https://github.com/10-4-pursuit/03-25-dynamic-redirects"
       ]
     },
     {
