@@ -277,11 +277,6 @@
       "description": "Understand how to create and use functional components in React.",
       "links": [
         {
-          "name": "ReactJS Tutorial - Functional Components by Codevolution",
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=7e5PNUUoFEU"
-        },
-        {
           "name": "React Functional Components by The Net Ninja",
           "type": "video",
           "url": "https://www.youtube.com/watch?v=Z5iWr6Srsj8"
@@ -399,18 +394,6 @@
       ]
     },
     {
-      "id": 9,
-      "title": "Nested Routes",
-      "description": "Explore the concept of nested routes for complex application structures.",
-      "links": [
-        {
-          "name": "React Router Nested Routes Tutorial by Codevolution",
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=Law7wfdg_ls"
-        }
-      ]
-    },
-    {
       "id": 10,
       "title": "Context API",
       "description": "Learn about the Context API for prop drilling and state management across components.",
@@ -420,6 +403,11 @@
           "type": "video",
           "url": "https://www.youtube.com/watch?v=XLJN4JfniH4"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/03-26-creating-updating-context",
+        "https://github.com/10-4-pursuit/03-27-advanced-state-context",
+        "https://github.com/10-4-pursuit/03-28-nested-contexts"
       ]
     },
     {

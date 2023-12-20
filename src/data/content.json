@@ -932,52 +932,54 @@
       ]
     },
     "9": {
-      "codeDescriptionPairs": [
-        {
-          "code": "import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';\nimport { useParams } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <Link to='/profile/john'>John's Profile</Link>\n\n      <Routes>\n        <Route path='/profile/:username' element={<Profile />} />\n      </Routes>\n    </Router>\n  );\n}\n\nfunction Profile() {\n  let { username } = useParams();\n  return <h1>Hello, {username}!</h1>;\n}",
-          "description": "Route parameters let us make web pages more personal. Here, ':username' in the path is a placeholder. When someone clicks on 'John's Profile', it takes them to '/profile/john', and the Profile page says 'Hello, John!'."
-        },
-        {
-          "code": "function Product() {\n  let { productId } = useParams();\n  return <h1>Product ID: {productId}</h1>;\n}\n\n// In App component\n<Routes>\n  <Route path='/product/:productId' element={<Product />} />\n</Routes>",
-          "description": "We can use route parameters for things like product IDs. In this example, ':productId' changes based on what product someone wants to see. If they go to '/product/42', it will show 'Product ID: 42'."
-        },
-        {
-          "code": "import { useParams } from 'react-router-dom';\n\nfunction Article() {\n  let { articleId } = useParams();\n  return <h1>Reading article {articleId}</h1>;\n}",
-          "description": "Route parameters can also be used with the 'useParams' hook. This hook makes it easier to get parameters like 'articleId'. In this example, the page will show the article number that someone chooses."
-        },
-        {
-          "code": "<Link to={`/product/${productId}`}>View Product</Link>\n\n// In App component\n<Routes>\n  <Route path='/product/:productId' element={<Product />} />\n</Routes>",
-          "description": "We can create links that use route parameters too. This link goes to a product page based on 'productId'. If 'productId' is 5, the link goes to '/product/5', and the Product page shows info for product 5."
-        },
-        {
-          "code": "function User() {\n  let { userId } = useParams();\n  return <h1>Welcome, User {userId}</h1>;\n}\n\n// In App component\n<Routes>\n  <Route path='/user/:userId' element={<User />} />\n</Routes>",
-          "description": "Route parameters are handy for user pages. If we have a path like '/user/:userId', and someone goes to '/user/123', the User component will say 'Welcome, User 123', showing a special message for each user."
-        }
-      ]
+        "codeDescriptionPairs": [
+          {
+            "code": "import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <nav>\n        <Link to='/dashboard'>Dashboard</Link>\n        <Link to='/dashboard/profile'>Profile</Link>\n        <Link to='/dashboard/settings'>Settings</Link>\n      </nav>\n      <Routes>\n        <Route path='/dashboard' element={<Dashboard />}> \n          <Route path='profile' element={<Profile />} />\n          <Route path='settings' element={<Settings />} />\n        </Route>\n      </Routes>\n    </Router>\n  );\n}\n\nfunction Dashboard() {\n  return (\n    <div>\n      <h1>Dashboard</h1>\n      <Outlet />\n    </div>\n  );\n}\n\nfunction Profile() {\n  // Profile component logic\n}\n\nfunction Settings() {\n  // Settings component logic\n}",
+            "description": "This example shows how to set up nested routes in a dashboard application. The main 'Dashboard' has links to different sections like 'Profile' and 'Settings'. When you click these links, the URL changes and shows different content without leaving the Dashboard."
+          },
+          {
+            "code": "import { useParams } from 'react-router-dom';\n\nfunction UserProfile() {\n  let { username } = useParams();\n  return <h1>Welcome, {username}</h1>;\n}\n\n// In App component\n<Routes>\n  <Route path='/user/:username' element={<UserProfile />} />\n</Routes>",
+            "description": "This snippet demonstrates using route parameters. When a user visits a URL like '/user/john', the 'UserProfile' component shows a personalized greeting using the 'username' from the URL."
+          },
+          {
+            "code": "import { useParams } from 'react-router-dom';\n\nfunction ProductDetails() {\n  let { productId } = useParams();\n  // Logic to fetch and display product details based on productId\n  return <div>Product Details for {productId}</div>;\n}\n\n// In App component\n<Routes>\n  <Route path='/product/:productId' element={<ProductDetails />} />\n</Routes>",
+            "description": "Here, we use route parameters to show details of a specific product. The 'ProductDetails' component displays information based on the 'productId' in the URL."
+          },
+          {
+            "code": "import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';\n\nfunction UserRedirect() {\n  let navigate = useNavigate();\n  // Logic to decide if user should be redirected\n  navigate('/home');\n  return <div>Redirecting...</div>;\n}\n\n// In App component\n<Routes>\n  <Route path='/user-redirect' element={<UserRedirect />} />\n</Routes>",
+            "description": "This code shows how to redirect a user to a different route. The 'UserRedirect' component uses the 'useNavigate' function to send the user to the '/home' route if certain conditions are met."
+          },
+          {
+            "code": "import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';\n\nfunction Blog() {\n  return (\n    <Router>\n      <nav>\n        <Link to='/blog'>Blog Home</Link>\n        <Link to='/blog/post-1'>First Post</Link>\n      </nav>\n      <Routes>\n        <Route path='/blog' element={<BlogHome />}> \n          <Route path=':postId' element={<BlogPost />} />\n        </Route>\n      </Routes>\n    </Router>\n  );\n}\n\nfunction BlogHome() {\n  // Blog home component logic\n}\n\nfunction BlogPost() {\n  let { postId } = useParams();\n  // Blog post component logic based on postId\n}",
+            "description": "This example illustrates nested routing in a blog application. The main 'Blog' component has a navigation bar with links to the blog home and individual posts. Clicking on these links renders different components within the blog layout."
+          }
+        ]
     },
     "10": {
       "codeDescriptionPairs": [
         {
-          "code": "import React, { createContext, useContext } from 'react';\n\nconst ThemeContext = createContext('light');\n\nfunction App() {\n  return (\n    <ThemeContext.Provider value='dark'>\n      <Toolbar />\n    </ThemeContext.Provider>\n  );\n}\n\nfunction Toolbar() {\n  const theme = useContext(ThemeContext);\n  return <h1>Theme is: {theme}</h1>;\n}",
-          "description": "The Context API is like a magical bag that holds data you can share with many parts of your app. Here, we create a 'ThemeContext' with a default value 'light'. In 'App', we set its value to 'dark' and share it with 'Toolbar'."
+            "code": "import React from 'react';\n\nconst UserContext = React.createContext(null);\n\nexport default UserContext;",
+            "description": "We start by making a special space called 'UserContext' where we can store user information. It's like a box where we can put things and take them out in different parts of our app."
         },
         {
-          "code": "const UserContext = createContext({ name: 'Guest' });\n\nfunction Greeting() {\n  const user = useContext(UserContext);\n  return <h1>Hello, {user.name}!</h1>;\n}\n\n// In App component\n<UserContext.Provider value={{ name: 'Alice' }}>\n  <Greeting />\n</UserContext.Provider>",
-          "description": "Context can hold different kinds of data, like a user's name. We create 'UserContext' with a default name 'Guest'. Inside 'App', we change it to 'Alice'. Now, 'Greeting' says 'Hello, Alice!' using this data."
+            "code": "import React, { useState } from 'react';\nimport UserContext from './UserContext';\n\nconst UserProvider = ({ children }) => {\n    const [user, setUser] = useState({ name: 'John Doe', age: 30 });\n    const contextValue = { user, setUser };\n    return (\n        <UserContext.Provider value={contextValue}>\n            {children}\n        </UserContext.Provider>\n    );\n};\n\nexport default UserProvider;",
+            "description": "Here, we create a 'UserProvider'. It's like a manager for our 'UserContext'. We put a user's name and age in it. 'props.children' lets us put any part of our app inside 'UserProvider'. This way, those parts can use or change the user's details. It's like saying, 'Everything inside this area can see and use what's in our box.'"
         },
         {
-          "code": "const ColorContext = createContext('blue');\n\nfunction Button() {\n  const color = useContext(ColorContext);\n  return <button style={{ backgroundColor: color }}>Click Me</button>;\n}\n\n// In App component\n<ColorContext.Provider value='green'>\n  <Button />\n</ColorContext.Provider>",
-          "description": "Context can also share things like colors. Here, 'ColorContext' starts with 'blue'. But in the App, we set it to 'green'. The 'Button' then uses 'green' for its background color."
+            "code": "import React, { useContext } from 'react';\nimport UserContext from './UserContext';\n\nconst UserProfile = () => {\n    const { user } = useContext(UserContext);\n    return (\n        <div>\n            <h1>User Profile</h1>\n            <p>Name: {user.name}</p>\n            <p>Age: {user.age}</p>\n        </div>\n    );\n};\n\nexport default UserProfile;",
+            "description": "In 'UserProfile', we use our 'UserContext' to show the user's name and age. It's like looking inside our box to see what information is there about the user."
         },
         {
-          "code": "const SizeContext = createContext('medium');\n\nfunction Text() {\n  const size = useContext(SizeContext);\n  return <p style={{ fontSize: size }}>Some text</p>;\n}\n\n// In App component\n<SizeContext.Provider value='large'>\n  <Text />\n</SizeContext.Provider>",
-          "description": "Context is great for sharing styles, like text size. 'SizeContext' starts as 'medium'. In the App, we change it to 'large', so the 'Text' component uses 'large' size for its font."
+            "code": "import React, { useContext, useState } from 'react';\nimport UserContext from './UserContext';\n\nconst ChangeUserName = () => {\n    const [newName, setNewName] = useState('');\n    const { user, setUser } = useContext(UserContext);\n\n    const handleChange = (e) => {\n        setNewName(e.target.value);\n    };\n\n    const handleSubmit = (e) => {\n        e.preventDefault();\n        setUser({ ...user, name: newName });\n    };\n\n    return (\n        <form onSubmit={handleSubmit}>\n            <input type=\"text\" value={newName} onChange={handleChange} />\n            <button type=\"submit\">Change Name</button>\n        </form>\n    );\n};\n\nexport default ChangeUserName;",
+            "description": "In 'ChangeUserName', we let people change the user's name. It's like taking the name out of our box, changing it, and then putting it back for others to see the new name."
         },
         {
-          "code": "const NumberContext = createContext(5);\n\nfunction Display() {\n  const number = useContext(NumberContext);\n  return <h1>The number is {number}</h1>;\n}\n\n// In App component\n<NumberContext.Provider value={10}>\n  <Display />\n</NumberContext.Provider>",
-          "description": "We can use Context to share numbers too. 'NumberContext' has a default number 5. In 'App', we change it to 10. The 'Display' component then shows 'The number is 10' using this shared number."
+            "code": "import React from 'react';\nimport UserProvider from './UserProvider';\nimport UserProfile from './UserProfile';\nimport ChangeUserName from './ChangeUserName';\n\nconst App = () => {\n    return (\n        <UserProvider>\n            <UserProfile />\n            <ChangeUserName />\n        </UserProvider>\n    );\n};\n\nexport default App;",
+            "description": "Finally, in 'App', we bring everything together. We use 'UserProvider' and put 'UserProfile' and 'ChangeUserName' inside it. This is like using 'props.children' in 'UserProvider'. It means 'UserProfile' and 'ChangeUserName' can use and change what's in our 'UserContext' box."
         }
-      ]
+    ]
+    
+    
     },
     "11": {
       "codeDescriptionPairs": [
