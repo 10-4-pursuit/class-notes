@@ -882,30 +882,31 @@
     "7": {
       "codeDescriptionPairs": [
         {
-          "code": "import { BrowserRouter as Router, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <div>\n        <nav>\n          <Link to='/'>Home</Link>\n          <Link to='/about'>About</Link>\n        </nav>\n\n        <Route path='/' exact>\n          <Home />\n        </Route>\n        <Route path='/about'>\n          <About />\n        </Route>\n      </div>\n    </Router>\n  );\n}\n\nfunction Home() {\n  return <h1>Welcome to the Home Page</h1>;\n}\n\nfunction About() {\n  return <h1>About Us</h1>;\n}",
-          "description": "Basic routing in React lets us show different pages without reloading the whole site. Here, we use <Router> to hold our pages. <Link> is like a signpost, telling where to go. <Route> shows the right page when we click a link."
+          "code": "import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <div>\n        <nav>\n          <Link to='/'>Home</Link>\n          <Link to='/about'>About</Link>\n        </nav>\n\n        <Routes>\n          <Route path='/' element={<Home />} exact />\n          <Route path='/about' element={<About />} />\n        </Routes>\n      </div>\n    </Router>\n  );\n}\n\nfunction Home() {\n  return <h1>Welcome to the Home Page</h1>;\n}\n\nfunction About() {\n  return <h1>About Us</h1>;\n}",
+          "description": "Basic routing in React lets us show different pages without reloading the whole site. Here, we use <Router> to hold our pages. <Link> is like a signpost, telling where to go. <Routes> and <Route> with the `element` prop shows the right page when we click a link."
         },
         {
-          "code": "const App = () => (\n  <Router>\n    <nav>\n      <Link to='/'>Home</Link>\n      <Link to='/gallery'>Gallery</Link>\n    </nav>\n    <Route path='/' exact component={Home} />\n    <Route path='/gallery' component={Gallery} />\n  </Router>\n);",
-          "description": "In this example, we have two links: one for 'Home' and another for 'Gallery'. When we click on 'Home', it shows the Home page. When we click on 'Gallery', it shows the Gallery page. Each <Route> connects a path to a component."
+          "code": "import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';\n\nconst App = () => (\n  <Router>\n    <nav>\n      <Link to='/'>Home</Link>\n      <Link to='/gallery'>Gallery</Link>\n    </nav>\n    <Routes>\n      <Route path='/' element={<Home />} exact />\n      <Route path='/gallery' element={<Gallery />} />\n    </Routes>\n  </Router>\n);",
+          "description": "In this example, we have two links: one for 'Home' and another for 'Gallery'. When we click on 'Home', it shows the Home page. When we click on 'Gallery', it shows the Gallery page. Each <Route> connects a path to a component with the `element` prop."
         },
         {
-          "code": "function Contact() {\n  return <h1>Contact Us</h1>;\n}\n\n// In App component\n<Route path='/contact' component={Contact} />",
-          "description": "Here's how to add a 'Contact Us' page. We make a 'Contact' component that says 'Contact Us'. Then, in our App, we use <Route> to connect '/contact' path to the Contact component. Now, we have a Contact Us page!"
+          "code": "import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\n\nfunction Contact() {\n  return <h1>Contact Us</h1>;\n}\n\n// In App component\n<Routes>\n  <Route path='/contact' element={<Contact />} />\n</Routes>",
+          "description": "Here's how to add a 'Contact Us' page. We make a 'Contact' component that says 'Contact Us'. Then, in our App, we use <Routes> and <Route> with the `element` prop to connect '/contact' path to the Contact component. Now, we have a Contact Us page!"
         },
         {
-          "code": "import { Switch } from 'react-router-dom';\n\n// In App component\n<Switch>\n  <Route exact path='/' component={Home} />\n  <Route path='/about' component={About} />\n  <Route path='/contact' component={Contact} />\n</Switch>",
-          "description": "The <Switch> in React Router makes sure only one route shows at a time. It's like having only one book open on a table. When we go to a path, <Switch> finds the first matching <Route> and shows only that page."
+          "code": "import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\n\n// In App component\n<Router>\n  <Routes>\n    <Route exact path='/' element={<Home />} />\n    <Route path='/about' element={<About />} />\n    <Route path='/contact' element={<Contact />} />\n  </Routes>\n</Router>",
+          "description": "The <Routes> in React Router makes sure only one route shows at a time. It's like having only one book open on a table. When we go to a path, <Routes> finds the first matching <Route> with the `element` prop and shows only that page."
         },
         {
-          "code": "import { Redirect } from 'react-router-dom';\n\n// In App component\n<Route exact path='/'>\n  <Redirect to='/home' />\n</Route>",
-          "description": "Sometimes we want to send visitors to a different page automatically. <Redirect> helps with this. Here, if someone goes to '/', they get sent to '/home' instead, like a secret path that takes you somewhere else."
+          "code": "import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';\n\n// In App component\n<Routes>\n  <Route exact path='/' element={<Navigate to='/home' replace />} />\n</Routes>",
+          "description": "Sometimes we want to send visitors to a different page automatically. Instead of <Redirect>, we now use <Navigate> for this. Here, if someone goes to '/', they get sent to '/home' instead, like a secret path that takes you somewhere else."
         },
         {
-          "code": "import { Link, Routes, Route } from 'react-router-dom';\nimport { useParams } from 'react-router-dom';\n\nfunction Product() {\n  let { productId } = useParams();\n  return <h1>Product ID: {productId}</h1>;\n}\n\n// In App component\n<Link to={`/product/${productId}`}>View Product</Link>\n<Routes>\n  <Route path='/product/:productId' element={<Product />} />\n</Routes>",
+          "code": "import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';\n\nfunction Product() {\n  let { productId } = useParams();\n  return <h1>Product ID: {productId}</h1>;\n}\n\n// In App component\n<Router>\n  <Link to={`/product/${productId}`}>View Product</Link>\n  <Routes>\n    <Route path='/product/:productId' element={<Product />} />\n  </Routes>\n</Router>",
           "description": "We can create links that use route parameters too. This link goes to a product page based on 'productId'. If 'productId' is 5, the link goes to '/product/5', and the Product page shows info for product 5."
         }
       ]
+      
     },
     "8": {
       "codeDescriptionPairs": [
