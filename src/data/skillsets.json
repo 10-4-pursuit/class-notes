@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "JavaScript Fundamentals", "icon": "/01-icon.png" },
+  { "id": 2, "title": "HTML/CSS", "icon": "/02-icon.png" },
+  { "id": 3, "title": "React", "icon": "/03-icon.png" },
+  { "id": 4, "title": "Express and Postgres", "icon": "/04-icon.png" }
+]

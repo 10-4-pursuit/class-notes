@@ -458,5 +458,77 @@
       "description": "Explore the compound component pattern for flexible component composition.",
       "links": []
     }
+  ],
+  "4": [
+    {
+      "id": 1,
+      "title": "Introduction to Node.js and Express",
+      "description": "Learn the basics of Node.js for server-side programming and how to set up an Express server to handle web requests."
+    },
+    {
+      "id": 2,
+      "title": "Understanding Express Middleware",
+      "description": "Introduction to middleware in Express. Learn about built-in middleware, writing custom middleware, and using third-party middleware like `cors` and `express.json` for handling JSON data and cross-origin requests."
+    },
+    {
+      "id": 3,
+      "title": "Exploring MVC Architecture",
+      "description": "Understand the Model-View-Controller (MVC) architectural pattern and how to implement it in an Express application for better code organization."
+    },
+    {
+      "id": 4,
+      "title": "Building RESTful APIs with Express",
+      "description": "Learn how to create a RESTful API using Express that can perform CRUD operations on a mock database."
+    },
+    {
+      "id": 5,
+      "title": "Connecting React with Express",
+      "description": "Discover how to use React to create dynamic front-end views that interact with your Express API."
+    },
+    {
+      "id": 6,
+      "title": "Database Fundamentals",
+      "description": "Introduction to databases, focusing on types of databases, basic database concepts, and the importance of databases in modern web applications."
+    },
+    {
+      "id": 7,
+      "title": "Working with PostgreSQL and its CLI",
+      "description": "Get started with PostgreSQL, a powerful open-source relational database, and learn how to interact with it using its command-line interface."
+    },
+    {
+      "id": 8,
+      "title": "CRUD Operations with SQL",
+      "description": "Master the basics of SQL for creating, reading, updating, and deleting data in a database."
+    },
+    {
+      "id": 9,
+      "title": "Understanding SQL JOINs",
+      "description": "Explore how to use JOIN operations in SQL to query data from multiple tables simultaneously."
+    },
+    {
+      "id": 10,
+      "title": "Integrating PostgreSQL with Node.js using pg-promise",
+      "description": "Learn how to use the pg-promise library to connect your Node.js application to a PostgreSQL database and perform database operations."
+    },
+    {
+      "id": 11,
+      "title": "Introduction to Prisma",
+      "description": "Learn about Prisma, an ORM for Node.js and TypeScript, and how it simplifies database workflows with a focus on type-safety and developer productivity."
+    },
+    {
+      "id": 12,
+      "title": "Using Prisma with Express",
+      "description": "Integrate Prisma into your Express application to manage database operations more efficiently and securely."
+    },
+    {
+      "id": 13,
+      "title": "Advanced Database Operations with Prisma",
+      "description": "Dive deeper into Prisma's capabilities for handling complex queries, migrations, and model relations in your web applications."
+    },
+    {
+      "id": 14,
+      "title": "Building a Multi-Model Backend",
+      "description": "Understand how to structure a backend with multiple related models and implement relationships between them."
+    }
   ]
 }

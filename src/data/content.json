@@ -1187,5 +1187,188 @@
         }
       ]
     }
+  },
+  "4": {
+    "1": {
+      "codeDescriptionPairs": [
+        {
+          "code": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on http://localhost:3000');\n});",
+          "description": "This code snippet demonstrates how to set up a basic Express server. The `express` library is imported, and an Express app is created. A route is defined to respond with 'Hello World!' when the root URL (/) is accessed. Finally, the app starts listening on port 3000."
+        }
+      ]
+    },
+    "2": {
+      "codeDescriptionPairs": [
+        {
+          "code": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\n\n// Middleware\napp.use(cors()); // Enables CORS\napp.use(express.json()); // Parses incoming requests with JSON payloads\n\napp.post('/data', (req, res) => {\n  console.log(req.body); // Logs the parsed request body\n  res.send('Data received');\n});\n\napp.listen(3000, () => console.log('Server running on http://localhost:3000'));",
+          "description": "This example introduces two middleware functions in an Express application. `cors()` is used to enable CORS, allowing the server to accept requests from different origins. `express.json()` is a built-in middleware function in Express that parses incoming requests with JSON payloads, making it easy to access request data. The example demonstrates receiving JSON data in a POST request and logging it to the console."
+        }
+      ]
+    },
+    "3": {
+      "codeDescriptionPairs": [
+        {
+          "code": "// app.js\nconst express = require('express');\nconst app = express();\nconst userRoutes = require('./routes/userRoutes');\n\napp.use('/users', userRoutes);\n\napp.listen(3000, () => {\n  console.log('MVC app running on http://localhost:3000');\n});\n\n// routes/userRoutes.js\nconst express = require('express');\nconst router = express.Router();\nconst userController = require('../controllers/userController');\n\nrouter.get('/', userController.index);\n\nmodule.exports = router;",
+          "description": "This example illustrates a simple MVC structure in an Express application. The `app.js` file sets up the server and imports route definitions from `userRoutes.js`, which in turn use functions defined in `userController.js` to handle requests. This separation of concerns aligns with the MVC pattern, organizing code into models, views, and controllers."
+        }
+      ]
+    },
+    "4": {
+      "codeDescriptionPairs": [
+        {
+          "code": "const express = require('express');\nconst app = express();\napp.use(express.json());\n\nlet todos = [{ id: 1, task: 'Learn Express', completed: false }];\n\napp.get('/todos', (req, res) => {\n  res.json(todos);\n});\n\napp.post('/todos', (req, res) => {\n  const todo = { id: todos.length + 1, task: req.body.task, completed: false };\n  todos.push(todo);\n  res.status(201).send(todo);\n});\n\napp.listen(3000, () => console.log('API running on http://localhost:3000'));",
+          "description": "This code snippet shows how to create a simple RESTful API for managing todo items using Express. It defines routes for retrieving all todos (`GET /todos`) and adding a new todo (`POST /todos`), demonstrating CRUD operations."
+        }
+      ]
+    },
+    "5": {
+      "codeDescriptionPairs": [
+        {
+          "code": "// server.js (Express Backend)\nconst express = require('express');\nconst cors = require('cors');\nconst app = express();\n\napp.use(cors()); // Enable CORS\napp.use(express.json()); // Parse JSON bodies\n\nconst data = [{ id: 1, content: 'Hello from the server!' }];\n\napp.get('/api/data', (req, res) => {\n  res.json(data);\n});\n\napp.listen(3000, () => console.log('Server running on http://localhost:3000'));",
+          "description": "This Express server example demonstrates setting up a basic API endpoint (`/api/data`) that returns a JSON array when accessed. CORS is enabled using the `cors` middleware, allowing the React frontend to make requests to this server. The `express.json()` middleware is used to parse JSON request bodies. This server listens on port 3000 and serves data upon a GET request to the `/api/data` route."
+        },
+        {
+          "code": "// FetchData.js (React Frontend)\nimport React, { useState, useEffect } from 'react';\n\nfunction FetchData() {\n  const [data, setData] = useState([]);\n\n  useEffect(() => {\n    fetch('http://localhost:3000/api/data')\n      .then(response => response.json())\n      .then(data => setData(data))\n      .catch(error => console.error('Error fetching data:', error));\n  }, []);\n\n  return (\n    <div>\n      {data.map(item => (\n        <p key={item.id}>{item.content}</p>\n      ))}\n    </div>\n  );\n}\n\nexport default FetchData;",
+          "description": "This React component, `FetchData`, demonstrates how to fetch data from the Express backend API endpoint we set up previously (`/api/data`). It uses the `useState` hook to maintain the fetched data state and the `useEffect` hook to perform the fetch operation when the component mounts. The data from the Express server is displayed as a list of paragraphs. Note the use of `http://localhost:3000` to match the server's address."
+        }
+      ]
+    } ,
+    "6": {
+      "codeDescriptionPairs": [
+        {
+          "code": "// Example SQL query to create a table\nCREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  username VARCHAR(50) NOT NULL,\n  email VARCHAR(100) NOT NULL\n);",
+          "description": "This SQL code snippet demonstrates how to create a simple table named `users` in a database. The table includes three fields: `id`, `username`, and `email`. The `id` field is set as the primary key and will auto-increment (SERIAL) with each new entry. This example lays the foundation for understanding how databases store data."
+        }
+      ]
+    },
+    "7": {
+      "codeDescriptionPairs": [
+        {
+          "code": "// Connecting to a PostgreSQL database using the psql CLI\n\\connect databasename\n\n// Listing all tables in the database\n\\dt\n\n// Querying data from a table\nSELECT * FROM tablename;",
+          "description": "This example shows basic commands for interacting with a PostgreSQL database using its command-line interface (CLI), `psql`. It includes connecting to a database (`\\connect databasename`), listing all tables within the database (`\\dt`), and querying all data from a specific table (`SELECT * FROM tablename`). These commands are fundamental for database management and manipulation."
+        }
+      ]
+    },
+    "8": {
+      "codeDescriptionPairs": [
+        {
+          "code": "-- Create a new user\nINSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');",
+          "description": "This SQL statement performs a Create operation, inserting a new record into the `users` table with a username and email."
+        },
+        {
+          "code": "-- Read/get all users\nSELECT * FROM users;",
+          "description": "This SQL query performs a Read operation, retrieving all records from the `users` table."
+        },
+        {
+          "code": "-- Update a user's email\nUPDATE users SET email = 'john_doe_updated@example.com' WHERE username = 'john_doe';",
+          "description": "This SQL statement performs an Update operation, changing the email of a user identified by their username in the `users` table."
+        },
+        {
+          "code": "-- Delete a user\nDELETE FROM users WHERE username = 'john_doe';",
+          "description": "This SQL statement performs a Delete operation, removing a record from the `users` table based on the username."
+        }
+      ]
+    },
+    "9": {
+      "codeDescriptionPairs": [
+        {
+          "code": "-- INNER JOIN\nSELECT users.username, orders.order_date\nFROM users\nINNER JOIN orders ON users.id = orders.user_id;",
+          "description": "This SQL statement uses an INNER JOIN to select the username from the `users` table and the order date from the `orders` table. It retrieves only the rows that have matching values in both tables, i.e., only users who have placed orders."
+        },
+        {
+          "code": "-- LEFT JOIN\nSELECT users.username, orders.order_date\nFROM users\nLEFT JOIN orders ON users.id = orders.user_id;",
+          "description": "This SQL statement uses a LEFT JOIN to select all users and their order dates. If a user has not placed any orders, the `order_date` for that user will be NULL. This includes all users, regardless of whether they have placed orders."
+        },
+        {
+          "code": "-- RIGHT JOIN\nSELECT users.username, orders.order_date\nFROM users\nRIGHT JOIN orders ON users.id = orders.user_id;",
+          "description": "This SQL statement uses a RIGHT JOIN to select all orders and their corresponding user names. If there are orders that do not match any user in the `users` table, the `username` will be NULL. This includes all orders, even those not linked to a user."
+        },
+        {
+          "code": "-- FULL OUTER JOIN\nSELECT users.username, orders.order_date\nFROM users\nFULL OUTER JOIN orders ON users.id = orders.user_id;",
+          "description": "This SQL statement uses a FULL OUTER JOIN to select all users and all orders. If there are users without orders or orders without a corresponding user, the result set will include rows with NULL values for the missing side. This ensures no data is excluded from either table."
+        }
+      ]
+    },
+    "10": {
+      "codeDescriptionPairs": [
+          {
+              "code": "// db.js\nconst pgp = require('pg-promise')();\nconst dbConfig = {\n  host: 'localhost',\n  port: 5432,\n  database: 'your_database_name',\n  user: 'your_database_user',\n  password: 'your_database_password'\n};\nconst db = pgp(dbConfig);\nmodule.exports = db;\n\n// index.js\nconst db = require('./db');\n\nasync function fetchUsers() {\n  try {\n    const users = await db.any('SELECT * FROM users');\n    console.log(users);\n  } catch (error) {\n    console.error('Error fetching users:', error);\n  }\n}\n\nasync function createUser(username, email) {\n  try {\n    await db.none('INSERT INTO users (username, email) VALUES ($1, $2)', [username, email]);\n    console.log('User created successfully');\n  } catch (error) {\n    console.error('Error creating user:', error);\n  }\n}\n\nasync function updateUserEmail(userId, newEmail) {\n  try {\n    await db.none('UPDATE users SET email = $1 WHERE id = $2', [newEmail, userId]);\n    console.log('User email updated successfully');\n  } catch (error) {\n    console.error('Error updating user email:', error);\n  }\n}\n\nasync function deleteUser(userId) {\n  try {\n    await db.none('DELETE FROM users WHERE id = $1', [userId]);\n    console.log('User deleted successfully');\n  } catch (error) {\n    console.error('Error deleting user:', error);\n  }\n}",
+              "description": "This set of code snippets demonstrates the configuration and use of `pg-promise` for connecting a Node.js application to a PostgreSQL database. It includes the setup of the database connection (`db.js`) and example functions in `index.js` for performing CRUD operations: fetching all users, creating a new user, updating a user's email, and deleting a user. Each function uses async/await syntax for handling asynchronous operations with the database. This approach encapsulates database interaction logic within reusable functions, showcasing a practical method for database manipulation in server-side applications."
+          }
+      ]
+    },
+    "11": {
+      "codeDescriptionPairs": [
+          {
+              "code": "// 1. Install Prisma CLI as a dev dependency\nnpm install prisma --save-dev\n\n// 2. Install @prisma/client\nnpm install @prisma/client\n\n// 3. Initialize Prisma in your project\nnpx prisma init",
+              "description": "This set of commands sets up Prisma in a Node.js project. First, it installs the Prisma CLI as a development dependency. Next, it installs `@prisma/client` for querying your database. Finally, `npx prisma init` initializes Prisma, creating a `prisma` folder with a `schema.prisma` file for your database schema and a `.env` file for environment variables."
+          },
+          {
+              "code": "// schema.prisma\nmodel User {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  name      String?\n  posts     Post[]\n}\n\nmodel Post {\n  id        Int      @id @default(autoincrement())\n  title     String\n  content   String?\n  published Boolean  @default(false)\n  authorId  Int\n  author    User     @relation(fields: [authorId], references: [id])\n}",
+              "description": "This example defines two models in the Prisma schema: `User` and `Post`. Each `User` can have multiple `Post`s. The schema demonstrates Prisma's syntax for defining models, including attributes like `@id` for the primary key, `@default` for default values, `@unique` for unique constraints, and `@relation` for relations between models."
+          },
+          {
+              "code": "// 4. Migrate your database\nnpx prisma migrate dev --name init\n\n// 5. Use Prisma Client in your project\nconst { PrismaClient } = require('@prisma/client');\nconst prisma = new PrismaClient();\n\nasync function main() {\n  // Create a new user\n  const newUser = await prisma.user.create({\n    data: {\n      email: 'alice@example.com',\n      name: 'Alice',\n    },\n  });\n  console.log('New User:', newUser);\n\n  // Fetch all users\n  const allUsers = await prisma.user.findMany();\n  console.log('All Users:', allUsers);\n\n  // Update a user\n  const updateUser = await prisma.user.update({\n    where: { email: 'alice@example.com' },\n    data: { name: 'Alice Wonderland' },\n  });\n  console.log('Updated User:', updateUser);\n\n  // Delete a user\n  const deleteUser = await prisma.user.delete({\n    where: { email: 'alice@example.com' },\n  });\n  console.log('User Deleted:', deleteUser);\n}\n\nmain()\n  .catch(e => {\n    throw e;\n  })\n  .finally(async () => {\n    await prisma.$disconnect();\n  });",
+              "description": "This code snippet demonstrates how to perform basic CRUD operations using Prisma Client in a Node.js application. After defining your models in `schema.prisma` and migrating your database, you can use Prisma Client to easily create, read (fetch), update, and delete records in your database. The example includes functions to create a new user, fetch all users, update a user's name, and delete a user, showcasing Prisma's intuitive API for database operations. It also illustrates proper handling of asynchronous operations with async/await syntax and clean-up with `prisma.$disconnect()`."
+          }
+      ]
+  },
+  "12": {
+    "codeDescriptionPairs": [
+      {
+        "code": "// app.js\nconst express = require('express');\nconst { PrismaClient } = require('@prisma/client');\nconst prisma = new PrismaClient();\nconst app = express();\n\napp.use(express.json()); // Middleware to parse JSON requests\n\n// Endpoint to get all users\napp.get('/users', async (req, res) => {\n  const users = await prisma.user.findMany();\n  res.json(users);\n});\n\n// Endpoint to create a new user\napp.post('/users', async (req, res) => {\n  const { name, email } = req.body;\n  const newUser = await prisma.user.create({\n    data: { name, email }\n  });\n  res.json(newUser);\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on http://localhost:3000');\n});",
+        "description": "This example demonstrates integrating Prisma with an Express application to handle API requests. It uses `express.json()` middleware for parsing incoming JSON requests. Two endpoints are defined: one for fetching all users (`GET /users`), and another for creating a new user (`POST /users`), utilizing Prisma's `findMany` and `create` methods, respectively. This setup showcases a straightforward approach to building RESTful APIs with Prisma and Express, allowing for efficient data retrieval and manipulation."
+      }
+    ]
+  },
+  "13": {
+    "codeDescriptionPairs": [
+      {
+        "code": "// Filtering and Sorting\nconst filteredUsers = await prisma.user.findMany({\n  where: {\n    email: {\n      endsWith: '@example.com'\n    }\n  },\n  orderBy: {\n    createdAt: 'desc'\n  }\n});",
+        "description": "This Prisma query demonstrates filtering and sorting operations. It retrieves users whose email ends with '@example.com' and orders the results by the `createdAt` field in descending order. This showcases how to apply conditions and sort results in your queries."
+      },
+      {
+        "code": "// Pagination\nconst paginatedUsers = await prisma.user.findMany({\n  skip: 10,\n  take: 5\n});",
+        "description": "This example illustrates pagination with Prisma. It skips the first 10 records and then takes the next 5 records. Pagination is essential for efficiently handling large datasets by dividing them into manageable chunks."
+      },
+      {
+        "code": "// Relations and Eager Loading\nconst userWithPosts = await prisma.user.findUnique({\n  where: { id: 1 },\n  include: { posts: true }\n});",
+        "description": "This query fetches a user along with all their posts using eager loading. By setting `include: { posts: true }`, Prisma automatically retrieves related posts for the user, demonstrating how to work with relational data."
+      },
+      {
+        "code": "// Transactions\nconst createUserAndPost = await prisma.$transaction([\n  prisma.user.create({\n    data: { name: 'John Doe', email: 'john@example.com' }\n  }),\n  prisma.post.create({\n    data: { title: 'Hello World', content: 'This is a post', published: false, authorId: 1 }\n  })\n]);",
+        "description": "This example shows how to perform a transaction with Prisma, creating a user and a post in a single atomic operation. Transactions ensure that all operations succeed or fail together, maintaining data integrity."
+      }
+    ]
+  },
+  "14": {
+    "codeDescriptionPairs": [
+      {
+        "code": "// schema.prisma\nmodel User {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  name      String?\n  posts     Post[]\n  comments  Comment[]\n}\n\nmodel Post {\n  id        Int      @id @default(autoincrement())\n  title     String\n  content   String?\n  published Boolean  @default(false)\n  author    User     @relation(fields: [authorId], references: [id])\n  authorId  Int\n  comments  Comment[]\n}\n\nmodel Comment {\n  id        Int      @id @default(autoincrement())\n  text      String\n  author    User     @relation(fields: [authorId], references: [id])\n  authorId  Int\n  post      Post     @relation(fields: [postId], references: [id])\n  postId    Int\n}",
+        "description": "This Prisma schema defines three related models for a blogging platform: `User`, `Post`, and `Comment`. Each `User` can create multiple `Post`s and `Comment`s, each `Post` can have multiple `Comment`s, and each `Comment` is associated with one `User` and one `Post`. This structure demonstrates how to define relations in Prisma, using `@relation` attributes to establish one-to-many and many-to-one relationships between models."
+      },
+      {
+        "code": "// Creating a post with a connected user\nconst newPost = await prisma.post.create({\n  data: {\n    title: 'My first post',\n    content: 'Content of the first post',\n    author: {\n      connect: { email: 'alice@example.com' }\n    }\n  }\n});",
+        "description": "This example shows how to create a `Post` and connect it to an existing `User` by their email. The `connect` operation links the `Post` to a `User` already present in the database, illustrating how to work with relational data during creation."
+      },
+      {
+        "code": "// Fetching posts and their comments\nconst postsWithComments = await prisma.post.findMany({\n  include: { comments: true }\n});",
+        "description": "This query retrieves all `Post`s along with their associated `Comment`s using eager loading. The `include` property specifies that the related `Comment`s should be fetched alongside each `Post`, showcasing efficient data retrieval across related models."
+      },
+      {
+        "code": "// Nested writes: Creating a post with comments\nconst postWithComments = await prisma.post.create({\n  data: {\n    title: 'Another post',\n    content: 'With some comments',\n    comments: {\n      create: [{ text: 'Great post!' }, { text: 'Looking forward to more!' }]\n    },\n    author: {\n      connect: { email: 'alice@example.com' }\n    }\n  }\n});",
+        "description": "This example demonstrates a nested write operation with Prisma, where a new `Post` is created along with multiple `Comment`s in a single transaction. It also connects the new `Post` to an existing `User`, showcasing how to handle complex write operations involving multiple models and relationships."
+      }
+    ]
+  }
+  
+  
+  
+    
+    
+    
+       
+    
+      
   }
 }
