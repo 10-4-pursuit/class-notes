@@ -1202,14 +1202,35 @@
         {
           "code": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\n\n// Middleware\napp.use(cors()); // Enables CORS\napp.use(express.json()); // Parses incoming requests with JSON payloads\n\napp.post('/data', (req, res) => {\n  console.log(req.body); // Logs the parsed request body\n  res.send('Data received');\n});\n\napp.listen(3000, () => console.log('Server running on http://localhost:3000'));",
           "description": "This example introduces two middleware functions in an Express application. `cors()` is used to enable CORS, allowing the server to accept requests from different origins. `express.json()` is a built-in middleware function in Express that parses incoming requests with JSON payloads, making it easy to access request data. The example demonstrates receiving JSON data in a POST request and logging it to the console."
+        },
+        {
+          "code": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\n\n// Custom Middleware\nconst requestLogger = (req, res, next) => {\n  console.log(`${req.method} ${req.url}`);\n  next(); // Proceed to the next middleware or route handler\n};\n\n// Middleware\napp.use(cors()); // Enables CORS\napp.use(express.json()); // Parses incoming requests with JSON payloads\napp.use(requestLogger); // Use the custom request logging middleware\n\napp.post('/data', (req, res) => {\n  console.log(req.body); // Logs the parsed request body\n  res.send('Data received');\n});\n\napp.listen(3000, () => console.log('Server running on http://localhost:3000'));",
+          "description": "This code snippet extends the Express application by introducing a custom middleware function named `requestLogger`. This middleware logs the HTTP method and URL of each request to the console before passing control to the next function in the stack using `next()`. It's positioned after the `cors()` and `express.json()` middleware to demonstrate how middleware ordering affects request processing. The example illustrates custom middleware's role in performing specific tasks (like logging) that complement built-in and third-party middleware functionalities."
         }
       ]
     },
     "3": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/mvc_architecture_explanation.md",
       "codeDescriptionPairs": [
         {
-          "code": "// app.js\nconst express = require('express');\nconst app = express();\nconst userRoutes = require('./routes/userRoutes');\n\napp.use('/users', userRoutes);\n\napp.listen(3000, () => {\n  console.log('MVC app running on http://localhost:3000');\n});\n\n// routes/userRoutes.js\nconst express = require('express');\nconst router = express.Router();\nconst userController = require('../controllers/userController');\n\nrouter.get('/', userController.index);\n\nmodule.exports = router;",
-          "description": "This example illustrates a simple MVC structure in an Express application. The `app.js` file sets up the server and imports route definitions from `userRoutes.js`, which in turn use functions defined in `userController.js` to handle requests. This separation of concerns aligns with the MVC pattern, organizing code into models, views, and controllers."
+          "code": "// controllers/userController.js\nconst User = require('../models/User');\n\nexports.index = async (req, res) => {\n  const users = await User.findAll();\n  res.send(users);\n};\n\nexports.show = async (req, res) => {\n  const user = await User.findById(req.params.id);\n  res.send(user);\n};",
+          "description": "The `userController` handles user-related routes. It includes an `index` function to list all users and a `show` function to display a single user by ID. These functions interact with the `User` model to retrieve data from the database."
+        },
+        {
+          "code": "// controllers/postController.js\nconst Post = require('../models/Post');\n\nexports.index = async (req, res) => {\n  const posts = await Post.findAll();\n  res.send(posts);\n};\n\nexports.show = async (req, res) => {\n  const post = await Post.findById(req.params.id);\n  if (!post) {\n    return res.status(404).send('Post not found');\n  }\n  res.send(post);\n};",
+          "description": "The `postController` manages routes related to posts. Similar to `userController`, it has an `index` function for listing posts and a `show` function for displaying a specific post by ID, utilizing the `Post` model for data retrieval."
+        },
+        {
+          "code": "// app.js\nconst express = require('express');\nconst app = express();\nconst userRoutes = require('./routes/userRoutes');\nconst postRoutes = require('./routes/postRoutes');\n\napp.use('/users', userRoutes);\napp.use('/posts', postRoutes);\n\napp.listen(3000, () => {\n  console.log('MVC app running on http://localhost:3000');\n});",
+          "description": "This snippet sets up the Express server and routes. It imports and uses the routes defined in `userRoutes.js` and `postRoutes.js`, connecting them to their respective controllers. This demonstrates how routes are organized in an MVC application, facilitating separation of concerns."
+        },
+        {
+          "code": "// routes/userRoutes.js\nconst express = require('express');\nconst router = express.Router();\nconst userController = require('../controllers/userController');\n\nrouter.get('/', userController.index);\nrouter.get('/:id', userController.show);\n\nmodule.exports = router;",
+          "description": "Defines user-related routes that map to `userController` actions. It demonstrates how Express routes are structured to handle HTTP GET requests for listing all users and displaying a single user by ID."
+        },
+        {
+          "code": "// routes/postRoutes.js\nconst express = require('express');\nconst router = express.Router();\nconst postController = require('../controllers/postController');\n\nrouter.get('/', postController.index);\nrouter.get('/:id', postController.show);\n\nmodule.exports = router;",
+          "description": "Illustrates how post-related routes are set up to connect with `postController` actions. This setup allows the application to serve HTTP GET requests for retrieving all posts and fetching a specific post detail."
         }
       ]
     },
