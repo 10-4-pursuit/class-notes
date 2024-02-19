@@ -463,72 +463,243 @@
     {
       "id": 1,
       "title": "Introduction to Node.js and Express",
-      "description": "Learn the basics of Node.js for server-side programming and how to set up an Express server to handle web requests."
+      "description": "Learn the basics of Node.js for server-side programming and how to set up an Express server to handle web requests.",
+      "links": [
+        {
+          "name": "Node.js Crash Course",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4",
+          "length": "30 minutes"
+        },
+        {
+          "name": "Node.js Documentation",
+          "type": "documentation",
+          "url": "https://nodejs.org/en/docs/",
+          "length": "2 hours"
+        }
+      ]
     },
     {
       "id": 2,
       "title": "Understanding Express Middleware",
-      "description": "Introduction to middleware in Express. Learn about built-in middleware, writing custom middleware, and using third-party middleware like `cors` and `express.json` for handling JSON data and cross-origin requests."
+      "description": "Introduction to middleware in Express. Learn about built-in middleware, writing custom middleware, and using third-party middleware like `cors` and `express.json` for handling JSON data and cross-origin requests.",
+      "links": [
+        {
+          "name": "Express Middleware Explained",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=lY6icfhap2o",
+          "length": "20 minutes"
+        },
+        {
+          "name": "Express Middleware Documentation",
+          "type": "documentation",
+          "url": "https://expressjs.com/en/guide/using-middleware.html",
+          "length": "1 hour"
+        }
+      ]
     },
     {
       "id": 3,
       "title": "Exploring MVC Architecture",
-      "description": "Understand the Model-View-Controller (MVC) architectural pattern and how to implement it in an Express application for better code organization."
+      "description": "Understand the Model-View-Controller (MVC) architectural pattern and how to implement it in an Express application for better code organization.",
+      "links": [
+        {
+          "name": "Understanding MVC in 10 minutes",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=DUg2SWWK18I",
+          "length": "10 minutes"
+        },
+        {
+          "name": "MVC Architecture Explained",
+          "type": "reading",
+          "url": "https://www.freecodecamp.org/news/the-model-view-controller-mvc-pattern-and-rails-explained/",
+          "length": "45 minutes"
+        }
+      ]
     },
     {
       "id": 4,
       "title": "Building RESTful APIs with Express",
-      "description": "Learn how to create a RESTful API using Express that can perform CRUD operations on a mock database."
+      "description": "Learn how to create a RESTful API using Express that can perform CRUD operations on a mock database.",
+      "links": [
+        {
+          "name": "Building RESTful APIs with Node.js and Express",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=pKd0Rpw7O48",
+          "length": "40 minutes"
+        },
+        {
+          "name": "RESTful API Documentation",
+          "type": "documentation",
+          "url": "https://restfulapi.net/",
+          "length": "1.5 hours"
+        }
+      ]
     },
     {
       "id": 5,
       "title": "Connecting React with Express",
-      "description": "Discover how to use React to create dynamic front-end views that interact with your Express API."
+      "description": "Discover how to use React to create dynamic front-end views that interact with your Express API.",
+      "links": [
+        {
+          "name": "Connecting React with Express - Full Stack Tutorial",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=7CqJlxBYj-M",
+          "length": "35 minutes"
+        },
+        {
+          "name": "React Documentation",
+          "type": "documentation",
+          "url": "https://reactjs.org/docs/getting-started.html",
+          "length": "2 hours"
+        }
+      ]
     },
     {
       "id": 6,
       "title": "Database Fundamentals",
-      "description": "Introduction to databases, focusing on types of databases, basic database concepts, and the importance of databases in modern web applications."
+      "description": "Introduction to databases, focusing on types of databases, basic database concepts, and the importance of databases in modern web applications.",
+      "links": [
+        {
+          "name": "Database Fundamentals Explained",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=ztHopE5Wnpc",
+          "length": "25 minutes"
+        },
+        {
+          "name": "Database Fundamentals Documentation",
+          "type": "reading",
+          "url": "https://www.codecademy.com/articles/what-is-a-database",
+          "length": "1 hour"
+        }
+      ]
     },
     {
       "id": 7,
       "title": "Working with PostgreSQL and its CLI",
-      "description": "Get started with PostgreSQL, a powerful open-source relational database, and learn how to interact with it using its command-line interface."
+      "description": "Get started with PostgreSQL, a powerful open-source relational database, and learn how to interact with it using its command-line interface.",
+      "links": [
+        {
+          "name": "PostgreSQL Tutorial for Beginners",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=qw--VYLpxG4",
+          "length": "30 minutes"
+        },
+        {
+          "name": "PostgreSQL Documentation",
+          "type": "documentation",
+          "url": "https://www.postgresql.org/docs/",
+          "length": "2 hours"
+        }
+      ]
     },
     {
       "id": 8,
       "title": "CRUD Operations with SQL",
-      "description": "Master the basics of SQL for creating, reading, updating, and deleting data in a database."
+      "description": "Master the basics of SQL for creating, reading, updating, and deleting data in a database.",
+      "links": [
+        {
+          "name": "SQL CRUD Operations Tutorial",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+          "length": "15 minutes"
+        },
+        {
+          "name": "SQL Documentation",
+          "type": "documentation",
+          "url": "https://www.w3schools.com/sql/",
+          "length": "1.5 hours"
+        }
+      ]
     },
     {
       "id": 9,
       "title": "Understanding SQL JOINs",
-      "description": "Explore how to use JOIN operations in SQL to query data from multiple tables simultaneously."
+      "description": "Explore how to use JOIN operations in SQL to query data from multiple tables simultaneously.",
+      "links": [
+        {
+          "name": "SQL Joins Explained",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=9yeOJ3Z9Qmw",
+          "length": "20 minutes"
+        },
+        {
+          "name": "SQL JOINs Documentation",
+          "type": "documentation",
+          "url": "https://www.w3schools.com/sql/sql_join.asp",
+          "length": "1 hour"
+        }
+      ]
     },
     {
       "id": 10,
       "title": "Integrating PostgreSQL with Node.js using pg-promise",
-      "description": "Learn how to use the pg-promise library to connect your Node.js application to a PostgreSQL database and perform database operations."
+      "description": "Learn how to use the pg-promise library to connect your Node.js application to a PostgreSQL database and perform database operations.",
+      "links": [
+        {
+          "name": "Node.js PostgreSQL Tutorial",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=ufdHsFClAk0",
+          "length": "40 minutes"
+        },
+        {
+          "name": "pg-promise Documentation",
+          "type": "documentation",
+          "url": "https://vitaly-t.github.io/pg-promise/",
+          "length": "1 hour"
+        }
+      ]
     },
     {
       "id": 11,
       "title": "Introduction to Prisma",
-      "description": "Learn about Prisma, an ORM for Node.js and TypeScript, and how it simplifies database workflows with a focus on type-safety and developer productivity."
+      "description": "Learn about Prisma, an ORM for Node.js and TypeScript, and how it simplifies database workflows with a focus on type-safety and developer productivity.",
+      "links": [
+        {
+          "name": "Prisma Introduction and Basics",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=4fGEJ3G8cJo",
+          "length": "25 minutes"
+        },
+        {
+          "name": "Prisma Documentation",
+          "type": "documentation",
+          "url": "https://www.prisma.io/docs/",
+          "length": "2 hours"
+        }
+      ]
     },
     {
       "id": 12,
       "title": "Using Prisma with Express",
-      "description": "Integrate Prisma into your Express application to manage database operations more efficiently and securely."
+      "description": "Integrate Prisma into your Express application to manage database operations more efficiently and securely.",
+      "links": [
+        {
+          "name": "Using Prisma with Express - Tutorial",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=LbAKugNoYjY",
+          "length": "30 minutes"
+        }
+      ]
     },
     {
       "id": 13,
       "title": "Advanced Database Operations with Prisma",
-      "description": "Dive deeper into Prisma's capabilities for handling complex queries, migrations, and model relations in your web applications."
+      "description": "Dive deeper into Prisma's capabilities for handling complex queries, migrations, and model relations in your web applications.",
+      "links": [
+        {
+          "name": "Advanced Prisma Techniques",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=eKCD9djJQKc",
+          "length": "35 minutes"
+        }
+      ]
     },
     {
       "id": 14,
       "title": "Building a Multi-Model Backend",
-      "description": "Understand how to structure a backend with multiple related models and implement relationships between them."
+      "description": "Understand how to structure a backend with multiple related models and implement relationships between them.",
+      "links": []
     }
   ]
 }

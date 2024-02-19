@@ -906,7 +906,6 @@
           "description": "We can create links that use route parameters too. This link goes to a product page based on 'productId'. If 'productId' is 5, the link goes to '/product/5', and the Product page shows info for product 5."
         }
       ]
-      
     },
     "8": {
       "codeDescriptionPairs": [
@@ -933,54 +932,52 @@
       ]
     },
     "9": {
-        "codeDescriptionPairs": [
-          {
-            "code": "import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <nav>\n        <Link to='/dashboard'>Dashboard</Link>\n        <Link to='/dashboard/profile'>Profile</Link>\n        <Link to='/dashboard/settings'>Settings</Link>\n      </nav>\n      <Routes>\n        <Route path='/dashboard' element={<Dashboard />}> \n          <Route path='profile' element={<Profile />} />\n          <Route path='settings' element={<Settings />} />\n        </Route>\n      </Routes>\n    </Router>\n  );\n}\n\nfunction Dashboard() {\n  return (\n    <div>\n      <h1>Dashboard</h1>\n      <Outlet />\n    </div>\n  );\n}\n\nfunction Profile() {\n  // Profile component logic\n}\n\nfunction Settings() {\n  // Settings component logic\n}",
-            "description": "This example shows how to set up nested routes in a dashboard application. The main 'Dashboard' has links to different sections like 'Profile' and 'Settings'. When you click these links, the URL changes and shows different content without leaving the Dashboard."
-          },
-          {
-            "code": "import { useParams } from 'react-router-dom';\n\nfunction UserProfile() {\n  let { username } = useParams();\n  return <h1>Welcome, {username}</h1>;\n}\n\n// In App component\n<Routes>\n  <Route path='/user/:username' element={<UserProfile />} />\n</Routes>",
-            "description": "This snippet demonstrates using route parameters. When a user visits a URL like '/user/john', the 'UserProfile' component shows a personalized greeting using the 'username' from the URL."
-          },
-          {
-            "code": "import { useParams } from 'react-router-dom';\n\nfunction ProductDetails() {\n  let { productId } = useParams();\n  // Logic to fetch and display product details based on productId\n  return <div>Product Details for {productId}</div>;\n}\n\n// In App component\n<Routes>\n  <Route path='/product/:productId' element={<ProductDetails />} />\n</Routes>",
-            "description": "Here, we use route parameters to show details of a specific product. The 'ProductDetails' component displays information based on the 'productId' in the URL."
-          },
-          {
-            "code": "import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';\n\nfunction UserRedirect() {\n  let navigate = useNavigate();\n  // Logic to decide if user should be redirected\n  navigate('/home');\n  return <div>Redirecting...</div>;\n}\n\n// In App component\n<Routes>\n  <Route path='/user-redirect' element={<UserRedirect />} />\n</Routes>",
-            "description": "This code shows how to redirect a user to a different route. The 'UserRedirect' component uses the 'useNavigate' function to send the user to the '/home' route if certain conditions are met."
-          },
-          {
-            "code": "import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';\n\nfunction Blog() {\n  return (\n    <Router>\n      <nav>\n        <Link to='/blog'>Blog Home</Link>\n        <Link to='/blog/post-1'>First Post</Link>\n      </nav>\n      <Routes>\n        <Route path='/blog' element={<BlogHome />}> \n          <Route path=':postId' element={<BlogPost />} />\n        </Route>\n      </Routes>\n    </Router>\n  );\n}\n\nfunction BlogHome() {\n  // Blog home component logic\n}\n\nfunction BlogPost() {\n  let { postId } = useParams();\n  // Blog post component logic based on postId\n}",
-            "description": "This example illustrates nested routing in a blog application. The main 'Blog' component has a navigation bar with links to the blog home and individual posts. Clicking on these links renders different components within the blog layout."
-          }
-        ]
+      "codeDescriptionPairs": [
+        {
+          "code": "import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Router>\n      <nav>\n        <Link to='/dashboard'>Dashboard</Link>\n        <Link to='/dashboard/profile'>Profile</Link>\n        <Link to='/dashboard/settings'>Settings</Link>\n      </nav>\n      <Routes>\n        <Route path='/dashboard' element={<Dashboard />}> \n          <Route path='profile' element={<Profile />} />\n          <Route path='settings' element={<Settings />} />\n        </Route>\n      </Routes>\n    </Router>\n  );\n}\n\nfunction Dashboard() {\n  return (\n    <div>\n      <h1>Dashboard</h1>\n      <Outlet />\n    </div>\n  );\n}\n\nfunction Profile() {\n  // Profile component logic\n}\n\nfunction Settings() {\n  // Settings component logic\n}",
+          "description": "This example shows how to set up nested routes in a dashboard application. The main 'Dashboard' has links to different sections like 'Profile' and 'Settings'. When you click these links, the URL changes and shows different content without leaving the Dashboard."
+        },
+        {
+          "code": "import { useParams } from 'react-router-dom';\n\nfunction UserProfile() {\n  let { username } = useParams();\n  return <h1>Welcome, {username}</h1>;\n}\n\n// In App component\n<Routes>\n  <Route path='/user/:username' element={<UserProfile />} />\n</Routes>",
+          "description": "This snippet demonstrates using route parameters. When a user visits a URL like '/user/john', the 'UserProfile' component shows a personalized greeting using the 'username' from the URL."
+        },
+        {
+          "code": "import { useParams } from 'react-router-dom';\n\nfunction ProductDetails() {\n  let { productId } = useParams();\n  // Logic to fetch and display product details based on productId\n  return <div>Product Details for {productId}</div>;\n}\n\n// In App component\n<Routes>\n  <Route path='/product/:productId' element={<ProductDetails />} />\n</Routes>",
+          "description": "Here, we use route parameters to show details of a specific product. The 'ProductDetails' component displays information based on the 'productId' in the URL."
+        },
+        {
+          "code": "import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';\n\nfunction UserRedirect() {\n  let navigate = useNavigate();\n  // Logic to decide if user should be redirected\n  navigate('/home');\n  return <div>Redirecting...</div>;\n}\n\n// In App component\n<Routes>\n  <Route path='/user-redirect' element={<UserRedirect />} />\n</Routes>",
+          "description": "This code shows how to redirect a user to a different route. The 'UserRedirect' component uses the 'useNavigate' function to send the user to the '/home' route if certain conditions are met."
+        },
+        {
+          "code": "import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';\n\nfunction Blog() {\n  return (\n    <Router>\n      <nav>\n        <Link to='/blog'>Blog Home</Link>\n        <Link to='/blog/post-1'>First Post</Link>\n      </nav>\n      <Routes>\n        <Route path='/blog' element={<BlogHome />}> \n          <Route path=':postId' element={<BlogPost />} />\n        </Route>\n      </Routes>\n    </Router>\n  );\n}\n\nfunction BlogHome() {\n  // Blog home component logic\n}\n\nfunction BlogPost() {\n  let { postId } = useParams();\n  // Blog post component logic based on postId\n}",
+          "description": "This example illustrates nested routing in a blog application. The main 'Blog' component has a navigation bar with links to the blog home and individual posts. Clicking on these links renders different components within the blog layout."
+        }
+      ]
     },
     "10": {
       "codeDescriptionPairs": [
         {
-            "code": "import React from 'react';\n\nconst UserContext = React.createContext(null);\n\nexport default UserContext;",
-            "description": "We start by making a special space called 'UserContext' where we can store user information. It's like a box where we can put things and take them out in different parts of our app."
+          "code": "import React from 'react';\n\nconst UserContext = React.createContext(null);\n\nexport default UserContext;",
+          "description": "We start by making a special space called 'UserContext' where we can store user information. It's like a box where we can put things and take them out in different parts of our app."
         },
         {
-            "code": "import React, { useState } from 'react';\nimport UserContext from './UserContext';\n\nconst UserProvider = ({ children }) => {\n    const [user, setUser] = useState({ name: 'John Doe', age: 30 });\n    const contextValue = { user, setUser };\n    return (\n        <UserContext.Provider value={contextValue}>\n            {children}\n        </UserContext.Provider>\n    );\n};\n\nexport default UserProvider;",
-            "description": "Here, we create a 'UserProvider'. It's like a manager for our 'UserContext'. We put a user's name and age in it. 'props.children' lets us put any part of our app inside 'UserProvider'. This way, those parts can use or change the user's details. It's like saying, 'Everything inside this area can see and use what's in our box.'"
+          "code": "import React, { useState } from 'react';\nimport UserContext from './UserContext';\n\nconst UserProvider = ({ children }) => {\n    const [user, setUser] = useState({ name: 'John Doe', age: 30 });\n    const contextValue = { user, setUser };\n    return (\n        <UserContext.Provider value={contextValue}>\n            {children}\n        </UserContext.Provider>\n    );\n};\n\nexport default UserProvider;",
+          "description": "Here, we create a 'UserProvider'. It's like a manager for our 'UserContext'. We put a user's name and age in it. 'props.children' lets us put any part of our app inside 'UserProvider'. This way, those parts can use or change the user's details. It's like saying, 'Everything inside this area can see and use what's in our box.'"
         },
         {
-            "code": "import React, { useContext } from 'react';\nimport UserContext from './UserContext';\n\nconst UserProfile = () => {\n    const { user } = useContext(UserContext);\n    return (\n        <div>\n            <h1>User Profile</h1>\n            <p>Name: {user.name}</p>\n            <p>Age: {user.age}</p>\n        </div>\n    );\n};\n\nexport default UserProfile;",
-            "description": "In 'UserProfile', we use our 'UserContext' to show the user's name and age. It's like looking inside our box to see what information is there about the user."
+          "code": "import React, { useContext } from 'react';\nimport UserContext from './UserContext';\n\nconst UserProfile = () => {\n    const { user } = useContext(UserContext);\n    return (\n        <div>\n            <h1>User Profile</h1>\n            <p>Name: {user.name}</p>\n            <p>Age: {user.age}</p>\n        </div>\n    );\n};\n\nexport default UserProfile;",
+          "description": "In 'UserProfile', we use our 'UserContext' to show the user's name and age. It's like looking inside our box to see what information is there about the user."
         },
         {
-            "code": "import React, { useContext, useState } from 'react';\nimport UserContext from './UserContext';\n\nconst ChangeUserName = () => {\n    const [newName, setNewName] = useState('');\n    const { user, setUser } = useContext(UserContext);\n\n    const handleChange = (e) => {\n        setNewName(e.target.value);\n    };\n\n    const handleSubmit = (e) => {\n        e.preventDefault();\n        setUser({ ...user, name: newName });\n    };\n\n    return (\n        <form onSubmit={handleSubmit}>\n            <input type=\"text\" value={newName} onChange={handleChange} />\n            <button type=\"submit\">Change Name</button>\n        </form>\n    );\n};\n\nexport default ChangeUserName;",
-            "description": "In 'ChangeUserName', we let people change the user's name. It's like taking the name out of our box, changing it, and then putting it back for others to see the new name."
+          "code": "import React, { useContext, useState } from 'react';\nimport UserContext from './UserContext';\n\nconst ChangeUserName = () => {\n    const [newName, setNewName] = useState('');\n    const { user, setUser } = useContext(UserContext);\n\n    const handleChange = (e) => {\n        setNewName(e.target.value);\n    };\n\n    const handleSubmit = (e) => {\n        e.preventDefault();\n        setUser({ ...user, name: newName });\n    };\n\n    return (\n        <form onSubmit={handleSubmit}>\n            <input type=\"text\" value={newName} onChange={handleChange} />\n            <button type=\"submit\">Change Name</button>\n        </form>\n    );\n};\n\nexport default ChangeUserName;",
+          "description": "In 'ChangeUserName', we let people change the user's name. It's like taking the name out of our box, changing it, and then putting it back for others to see the new name."
         },
         {
-            "code": "import React from 'react';\nimport UserProvider from './UserProvider';\nimport UserProfile from './UserProfile';\nimport ChangeUserName from './ChangeUserName';\n\nconst App = () => {\n    return (\n        <UserProvider>\n            <UserProfile />\n            <ChangeUserName />\n        </UserProvider>\n    );\n};\n\nexport default App;",
-            "description": "Finally, in 'App', we bring everything together. We use 'UserProvider' and put 'UserProfile' and 'ChangeUserName' inside it. This is like using 'props.children' in 'UserProvider'. It means 'UserProfile' and 'ChangeUserName' can use and change what's in our 'UserContext' box."
+          "code": "import React from 'react';\nimport UserProvider from './UserProvider';\nimport UserProfile from './UserProfile';\nimport ChangeUserName from './ChangeUserName';\n\nconst App = () => {\n    return (\n        <UserProvider>\n            <UserProfile />\n            <ChangeUserName />\n        </UserProvider>\n    );\n};\n\nexport default App;",
+          "description": "Finally, in 'App', we bring everything together. We use 'UserProvider' and put 'UserProfile' and 'ChangeUserName' inside it. This is like using 'props.children' in 'UserProvider'. It means 'UserProfile' and 'ChangeUserName' can use and change what's in our 'UserContext' box."
         }
-    ]
-    
-    
+      ]
     },
     "11": {
       "codeDescriptionPairs": [
@@ -1190,6 +1187,7 @@
   },
   "4": {
     "1": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/intro_node_and_express.md",
       "codeDescriptionPairs": [
         {
           "code": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on http://localhost:3000');\n});",
@@ -1198,6 +1196,7 @@
       ]
     },
     "2": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/understanding_express_middleware.md",
       "codeDescriptionPairs": [
         {
           "code": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\n\n// Middleware\napp.use(cors()); // Enables CORS\napp.use(express.json()); // Parses incoming requests with JSON payloads\n\napp.post('/data', (req, res) => {\n  console.log(req.body); // Logs the parsed request body\n  res.send('Data received');\n});\n\napp.listen(3000, () => console.log('Server running on http://localhost:3000'));",
@@ -1235,6 +1234,7 @@
       ]
     },
     "4": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/building_restful_api_with_express",
       "codeDescriptionPairs": [
         {
           "code": "const express = require('express');\nconst app = express();\napp.use(express.json());\n\nlet todos = [{ id: 1, task: 'Learn Express', completed: false }];\n\napp.get('/todos', (req, res) => {\n  res.json(todos);\n});\n\napp.post('/todos', (req, res) => {\n  const todo = { id: todos.length + 1, task: req.body.task, completed: false };\n  todos.push(todo);\n  res.status(201).send(todo);\n});\n\napp.listen(3000, () => console.log('API running on http://localhost:3000'));",
@@ -1243,6 +1243,7 @@
       ]
     },
     "5": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/connecting_react_with_express",
       "codeDescriptionPairs": [
         {
           "code": "// server.js (Express Backend)\nconst express = require('express');\nconst cors = require('cors');\nconst app = express();\n\napp.use(cors()); // Enable CORS\napp.use(express.json()); // Parse JSON bodies\n\nconst data = [{ id: 1, content: 'Hello from the server!' }];\n\napp.get('/api/data', (req, res) => {\n  res.json(data);\n});\n\napp.listen(3000, () => console.log('Server running on http://localhost:3000'));",
@@ -1253,8 +1254,9 @@
           "description": "This React component, `FetchData`, demonstrates how to fetch data from the Express backend API endpoint we set up previously (`/api/data`). It uses the `useState` hook to maintain the fetched data state and the `useEffect` hook to perform the fetch operation when the component mounts. The data from the Express server is displayed as a list of paragraphs. Note the use of `http://localhost:3000` to match the server's address."
         }
       ]
-    } ,
+    },
     "6": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/database_fundamentals.md",
       "codeDescriptionPairs": [
         {
           "code": "// Example SQL query to create a table\nCREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  username VARCHAR(50) NOT NULL,\n  email VARCHAR(100) NOT NULL\n);",
@@ -1263,6 +1265,7 @@
       ]
     },
     "7": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/working_with_postgresql",
       "codeDescriptionPairs": [
         {
           "code": "// Connecting to a PostgreSQL database using the psql CLI\n\\connect databasename\n\n// Listing all tables in the database\n\\dt\n\n// Querying data from a table\nSELECT * FROM tablename;",
@@ -1271,6 +1274,7 @@
       ]
     },
     "8": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/crud_with_sql.md",
       "codeDescriptionPairs": [
         {
           "code": "-- Create a new user\nINSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');",
@@ -1291,6 +1295,7 @@
       ]
     },
     "9": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/understanding_sql_joins.md",
       "codeDescriptionPairs": [
         {
           "code": "-- INNER JOIN\nSELECT users.username, orders.order_date\nFROM users\nINNER JOIN orders ON users.id = orders.user_id;",
@@ -1311,85 +1316,81 @@
       ]
     },
     "10": {
+      "description": "",
       "codeDescriptionPairs": [
-          {
-              "code": "// db.js\nconst pgp = require('pg-promise')();\nconst dbConfig = {\n  host: 'localhost',\n  port: 5432,\n  database: 'your_database_name',\n  user: 'your_database_user',\n  password: 'your_database_password'\n};\nconst db = pgp(dbConfig);\nmodule.exports = db;\n\n// index.js\nconst db = require('./db');\n\nasync function fetchUsers() {\n  try {\n    const users = await db.any('SELECT * FROM users');\n    console.log(users);\n  } catch (error) {\n    console.error('Error fetching users:', error);\n  }\n}\n\nasync function createUser(username, email) {\n  try {\n    await db.none('INSERT INTO users (username, email) VALUES ($1, $2)', [username, email]);\n    console.log('User created successfully');\n  } catch (error) {\n    console.error('Error creating user:', error);\n  }\n}\n\nasync function updateUserEmail(userId, newEmail) {\n  try {\n    await db.none('UPDATE users SET email = $1 WHERE id = $2', [newEmail, userId]);\n    console.log('User email updated successfully');\n  } catch (error) {\n    console.error('Error updating user email:', error);\n  }\n}\n\nasync function deleteUser(userId) {\n  try {\n    await db.none('DELETE FROM users WHERE id = $1', [userId]);\n    console.log('User deleted successfully');\n  } catch (error) {\n    console.error('Error deleting user:', error);\n  }\n}",
-              "description": "This set of code snippets demonstrates the configuration and use of `pg-promise` for connecting a Node.js application to a PostgreSQL database. It includes the setup of the database connection (`db.js`) and example functions in `index.js` for performing CRUD operations: fetching all users, creating a new user, updating a user's email, and deleting a user. Each function uses async/await syntax for handling asynchronous operations with the database. This approach encapsulates database interaction logic within reusable functions, showcasing a practical method for database manipulation in server-side applications."
-          }
+        {
+          "code": "// db.js\nconst pgp = require('pg-promise')();\nconst dbConfig = {\n  host: 'localhost',\n  port: 5432,\n  database: 'your_database_name',\n  user: 'your_database_user',\n  password: 'your_database_password'\n};\nconst db = pgp(dbConfig);\nmodule.exports = db;\n\n// index.js\nconst db = require('./db');\n\nasync function fetchUsers() {\n  try {\n    const users = await db.any('SELECT * FROM users');\n    console.log(users);\n  } catch (error) {\n    console.error('Error fetching users:', error);\n  }\n}\n\nasync function createUser(username, email) {\n  try {\n    await db.none('INSERT INTO users (username, email) VALUES ($1, $2)', [username, email]);\n    console.log('User created successfully');\n  } catch (error) {\n    console.error('Error creating user:', error);\n  }\n}\n\nasync function updateUserEmail(userId, newEmail) {\n  try {\n    await db.none('UPDATE users SET email = $1 WHERE id = $2', [newEmail, userId]);\n    console.log('User email updated successfully');\n  } catch (error) {\n    console.error('Error updating user email:', error);\n  }\n}\n\nasync function deleteUser(userId) {\n  try {\n    await db.none('DELETE FROM users WHERE id = $1', [userId]);\n    console.log('User deleted successfully');\n  } catch (error) {\n    console.error('Error deleting user:', error);\n  }\n}",
+          "description": "This set of code snippets demonstrates the configuration and use of `pg-promise` for connecting a Node.js application to a PostgreSQL database. It includes the setup of the database connection (`db.js`) and example functions in `index.js` for performing CRUD operations: fetching all users, creating a new user, updating a user's email, and deleting a user. Each function uses async/await syntax for handling asynchronous operations with the database. This approach encapsulates database interaction logic within reusable functions, showcasing a practical method for database manipulation in server-side applications."
+        }
       ]
     },
     "11": {
+      "description": "",
       "codeDescriptionPairs": [
-          {
-              "code": "// 1. Install Prisma CLI as a dev dependency\nnpm install prisma --save-dev\n\n// 2. Install @prisma/client\nnpm install @prisma/client\n\n// 3. Initialize Prisma in your project\nnpx prisma init",
-              "description": "This set of commands sets up Prisma in a Node.js project. First, it installs the Prisma CLI as a development dependency. Next, it installs `@prisma/client` for querying your database. Finally, `npx prisma init` initializes Prisma, creating a `prisma` folder with a `schema.prisma` file for your database schema and a `.env` file for environment variables."
-          },
-          {
-              "code": "// schema.prisma\nmodel User {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  name      String?\n  posts     Post[]\n}\n\nmodel Post {\n  id        Int      @id @default(autoincrement())\n  title     String\n  content   String?\n  published Boolean  @default(false)\n  authorId  Int\n  author    User     @relation(fields: [authorId], references: [id])\n}",
-              "description": "This example defines two models in the Prisma schema: `User` and `Post`. Each `User` can have multiple `Post`s. The schema demonstrates Prisma's syntax for defining models, including attributes like `@id` for the primary key, `@default` for default values, `@unique` for unique constraints, and `@relation` for relations between models."
-          },
-          {
-              "code": "// 4. Migrate your database\nnpx prisma migrate dev --name init\n\n// 5. Use Prisma Client in your project\nconst { PrismaClient } = require('@prisma/client');\nconst prisma = new PrismaClient();\n\nasync function main() {\n  // Create a new user\n  const newUser = await prisma.user.create({\n    data: {\n      email: 'alice@example.com',\n      name: 'Alice',\n    },\n  });\n  console.log('New User:', newUser);\n\n  // Fetch all users\n  const allUsers = await prisma.user.findMany();\n  console.log('All Users:', allUsers);\n\n  // Update a user\n  const updateUser = await prisma.user.update({\n    where: { email: 'alice@example.com' },\n    data: { name: 'Alice Wonderland' },\n  });\n  console.log('Updated User:', updateUser);\n\n  // Delete a user\n  const deleteUser = await prisma.user.delete({\n    where: { email: 'alice@example.com' },\n  });\n  console.log('User Deleted:', deleteUser);\n}\n\nmain()\n  .catch(e => {\n    throw e;\n  })\n  .finally(async () => {\n    await prisma.$disconnect();\n  });",
-              "description": "This code snippet demonstrates how to perform basic CRUD operations using Prisma Client in a Node.js application. After defining your models in `schema.prisma` and migrating your database, you can use Prisma Client to easily create, read (fetch), update, and delete records in your database. The example includes functions to create a new user, fetch all users, update a user's name, and delete a user, showcasing Prisma's intuitive API for database operations. It also illustrates proper handling of asynchronous operations with async/await syntax and clean-up with `prisma.$disconnect()`."
-          }
+        {
+          "code": "// 1. Install Prisma CLI as a dev dependency\nnpm install prisma --save-dev\n\n// 2. Install @prisma/client\nnpm install @prisma/client\n\n// 3. Initialize Prisma in your project\nnpx prisma init",
+          "description": "This set of commands sets up Prisma in a Node.js project. First, it installs the Prisma CLI as a development dependency. Next, it installs `@prisma/client` for querying your database. Finally, `npx prisma init` initializes Prisma, creating a `prisma` folder with a `schema.prisma` file for your database schema and a `.env` file for environment variables."
+        },
+        {
+          "code": "// schema.prisma\nmodel User {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  name      String?\n  posts     Post[]\n}\n\nmodel Post {\n  id        Int      @id @default(autoincrement())\n  title     String\n  content   String?\n  published Boolean  @default(false)\n  authorId  Int\n  author    User     @relation(fields: [authorId], references: [id])\n}",
+          "description": "This example defines two models in the Prisma schema: `User` and `Post`. Each `User` can have multiple `Post`s. The schema demonstrates Prisma's syntax for defining models, including attributes like `@id` for the primary key, `@default` for default values, `@unique` for unique constraints, and `@relation` for relations between models."
+        },
+        {
+          "code": "// 4. Migrate your database\nnpx prisma migrate dev --name init\n\n// 5. Use Prisma Client in your project\nconst { PrismaClient } = require('@prisma/client');\nconst prisma = new PrismaClient();\n\nasync function main() {\n  // Create a new user\n  const newUser = await prisma.user.create({\n    data: {\n      email: 'alice@example.com',\n      name: 'Alice',\n    },\n  });\n  console.log('New User:', newUser);\n\n  // Fetch all users\n  const allUsers = await prisma.user.findMany();\n  console.log('All Users:', allUsers);\n\n  // Update a user\n  const updateUser = await prisma.user.update({\n    where: { email: 'alice@example.com' },\n    data: { name: 'Alice Wonderland' },\n  });\n  console.log('Updated User:', updateUser);\n\n  // Delete a user\n  const deleteUser = await prisma.user.delete({\n    where: { email: 'alice@example.com' },\n  });\n  console.log('User Deleted:', deleteUser);\n}\n\nmain()\n  .catch(e => {\n    throw e;\n  })\n  .finally(async () => {\n    await prisma.$disconnect();\n  });",
+          "description": "This code snippet demonstrates how to perform basic CRUD operations using Prisma Client in a Node.js application. After defining your models in `schema.prisma` and migrating your database, you can use Prisma Client to easily create, read (fetch), update, and delete records in your database. The example includes functions to create a new user, fetch all users, update a user's name, and delete a user, showcasing Prisma's intuitive API for database operations. It also illustrates proper handling of asynchronous operations with async/await syntax and clean-up with `prisma.$disconnect()`."
+        }
       ]
-  },
-  "12": {
-    "codeDescriptionPairs": [
-      {
-        "code": "// app.js\nconst express = require('express');\nconst { PrismaClient } = require('@prisma/client');\nconst prisma = new PrismaClient();\nconst app = express();\n\napp.use(express.json()); // Middleware to parse JSON requests\n\n// Endpoint to get all users\napp.get('/users', async (req, res) => {\n  const users = await prisma.user.findMany();\n  res.json(users);\n});\n\n// Endpoint to create a new user\napp.post('/users', async (req, res) => {\n  const { name, email } = req.body;\n  const newUser = await prisma.user.create({\n    data: { name, email }\n  });\n  res.json(newUser);\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on http://localhost:3000');\n});",
-        "description": "This example demonstrates integrating Prisma with an Express application to handle API requests. It uses `express.json()` middleware for parsing incoming JSON requests. Two endpoints are defined: one for fetching all users (`GET /users`), and another for creating a new user (`POST /users`), utilizing Prisma's `findMany` and `create` methods, respectively. This setup showcases a straightforward approach to building RESTful APIs with Prisma and Express, allowing for efficient data retrieval and manipulation."
-      }
-    ]
-  },
-  "13": {
-    "codeDescriptionPairs": [
-      {
-        "code": "// Filtering and Sorting\nconst filteredUsers = await prisma.user.findMany({\n  where: {\n    email: {\n      endsWith: '@example.com'\n    }\n  },\n  orderBy: {\n    createdAt: 'desc'\n  }\n});",
-        "description": "This Prisma query demonstrates filtering and sorting operations. It retrieves users whose email ends with '@example.com' and orders the results by the `createdAt` field in descending order. This showcases how to apply conditions and sort results in your queries."
-      },
-      {
-        "code": "// Pagination\nconst paginatedUsers = await prisma.user.findMany({\n  skip: 10,\n  take: 5\n});",
-        "description": "This example illustrates pagination with Prisma. It skips the first 10 records and then takes the next 5 records. Pagination is essential for efficiently handling large datasets by dividing them into manageable chunks."
-      },
-      {
-        "code": "// Relations and Eager Loading\nconst userWithPosts = await prisma.user.findUnique({\n  where: { id: 1 },\n  include: { posts: true }\n});",
-        "description": "This query fetches a user along with all their posts using eager loading. By setting `include: { posts: true }`, Prisma automatically retrieves related posts for the user, demonstrating how to work with relational data."
-      },
-      {
-        "code": "// Transactions\nconst createUserAndPost = await prisma.$transaction([\n  prisma.user.create({\n    data: { name: 'John Doe', email: 'john@example.com' }\n  }),\n  prisma.post.create({\n    data: { title: 'Hello World', content: 'This is a post', published: false, authorId: 1 }\n  })\n]);",
-        "description": "This example shows how to perform a transaction with Prisma, creating a user and a post in a single atomic operation. Transactions ensure that all operations succeed or fail together, maintaining data integrity."
-      }
-    ]
-  },
-  "14": {
-    "codeDescriptionPairs": [
-      {
-        "code": "// schema.prisma\nmodel User {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  name      String?\n  posts     Post[]\n  comments  Comment[]\n}\n\nmodel Post {\n  id        Int      @id @default(autoincrement())\n  title     String\n  content   String?\n  published Boolean  @default(false)\n  author    User     @relation(fields: [authorId], references: [id])\n  authorId  Int\n  comments  Comment[]\n}\n\nmodel Comment {\n  id        Int      @id @default(autoincrement())\n  text      String\n  author    User     @relation(fields: [authorId], references: [id])\n  authorId  Int\n  post      Post     @relation(fields: [postId], references: [id])\n  postId    Int\n}",
-        "description": "This Prisma schema defines three related models for a blogging platform: `User`, `Post`, and `Comment`. Each `User` can create multiple `Post`s and `Comment`s, each `Post` can have multiple `Comment`s, and each `Comment` is associated with one `User` and one `Post`. This structure demonstrates how to define relations in Prisma, using `@relation` attributes to establish one-to-many and many-to-one relationships between models."
-      },
-      {
-        "code": "// Creating a post with a connected user\nconst newPost = await prisma.post.create({\n  data: {\n    title: 'My first post',\n    content: 'Content of the first post',\n    author: {\n      connect: { email: 'alice@example.com' }\n    }\n  }\n});",
-        "description": "This example shows how to create a `Post` and connect it to an existing `User` by their email. The `connect` operation links the `Post` to a `User` already present in the database, illustrating how to work with relational data during creation."
-      },
-      {
-        "code": "// Fetching posts and their comments\nconst postsWithComments = await prisma.post.findMany({\n  include: { comments: true }\n});",
-        "description": "This query retrieves all `Post`s along with their associated `Comment`s using eager loading. The `include` property specifies that the related `Comment`s should be fetched alongside each `Post`, showcasing efficient data retrieval across related models."
-      },
-      {
-        "code": "// Nested writes: Creating a post with comments\nconst postWithComments = await prisma.post.create({\n  data: {\n    title: 'Another post',\n    content: 'With some comments',\n    comments: {\n      create: [{ text: 'Great post!' }, { text: 'Looking forward to more!' }]\n    },\n    author: {\n      connect: { email: 'alice@example.com' }\n    }\n  }\n});",
-        "description": "This example demonstrates a nested write operation with Prisma, where a new `Post` is created along with multiple `Comment`s in a single transaction. It also connects the new `Post` to an existing `User`, showcasing how to handle complex write operations involving multiple models and relationships."
-      }
-    ]
-  }
-  
-  
-  
-    
-    
-    
-       
-    
-      
+    },
+    "12": {
+      "description": "",
+      "codeDescriptionPairs": [
+        {
+          "code": "// app.js\nconst express = require('express');\nconst { PrismaClient } = require('@prisma/client');\nconst prisma = new PrismaClient();\nconst app = express();\n\napp.use(express.json()); // Middleware to parse JSON requests\n\n// Endpoint to get all users\napp.get('/users', async (req, res) => {\n  const users = await prisma.user.findMany();\n  res.json(users);\n});\n\n// Endpoint to create a new user\napp.post('/users', async (req, res) => {\n  const { name, email } = req.body;\n  const newUser = await prisma.user.create({\n    data: { name, email }\n  });\n  res.json(newUser);\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on http://localhost:3000');\n});",
+          "description": "This example demonstrates integrating Prisma with an Express application to handle API requests. It uses `express.json()` middleware for parsing incoming JSON requests. Two endpoints are defined: one for fetching all users (`GET /users`), and another for creating a new user (`POST /users`), utilizing Prisma's `findMany` and `create` methods, respectively. This setup showcases a straightforward approach to building RESTful APIs with Prisma and Express, allowing for efficient data retrieval and manipulation."
+        }
+      ]
+    },
+    "13": {
+      "description": "",
+      "codeDescriptionPairs": [
+        {
+          "code": "// Filtering and Sorting\nconst filteredUsers = await prisma.user.findMany({\n  where: {\n    email: {\n      endsWith: '@example.com'\n    }\n  },\n  orderBy: {\n    createdAt: 'desc'\n  }\n});",
+          "description": "This Prisma query demonstrates filtering and sorting operations. It retrieves users whose email ends with '@example.com' and orders the results by the `createdAt` field in descending order. This showcases how to apply conditions and sort results in your queries."
+        },
+        {
+          "code": "// Pagination\nconst paginatedUsers = await prisma.user.findMany({\n  skip: 10,\n  take: 5\n});",
+          "description": "This example illustrates pagination with Prisma. It skips the first 10 records and then takes the next 5 records. Pagination is essential for efficiently handling large datasets by dividing them into manageable chunks."
+        },
+        {
+          "code": "// Relations and Eager Loading\nconst userWithPosts = await prisma.user.findUnique({\n  where: { id: 1 },\n  include: { posts: true }\n});",
+          "description": "This query fetches a user along with all their posts using eager loading. By setting `include: { posts: true }`, Prisma automatically retrieves related posts for the user, demonstrating how to work with relational data."
+        },
+        {
+          "code": "// Transactions\nconst createUserAndPost = await prisma.$transaction([\n  prisma.user.create({\n    data: { name: 'John Doe', email: 'john@example.com' }\n  }),\n  prisma.post.create({\n    data: { title: 'Hello World', content: 'This is a post', published: false, authorId: 1 }\n  })\n]);",
+          "description": "This example shows how to perform a transaction with Prisma, creating a user and a post in a single atomic operation. Transactions ensure that all operations succeed or fail together, maintaining data integrity."
+        }
+      ]
+    },
+    "14": {
+      "description": "",
+      "codeDescriptionPairs": [
+        {
+          "code": "// schema.prisma\nmodel User {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  name      String?\n  posts     Post[]\n  comments  Comment[]\n}\n\nmodel Post {\n  id        Int      @id @default(autoincrement())\n  title     String\n  content   String?\n  published Boolean  @default(false)\n  author    User     @relation(fields: [authorId], references: [id])\n  authorId  Int\n  comments  Comment[]\n}\n\nmodel Comment {\n  id        Int      @id @default(autoincrement())\n  text      String\n  author    User     @relation(fields: [authorId], references: [id])\n  authorId  Int\n  post      Post     @relation(fields: [postId], references: [id])\n  postId    Int\n}",
+          "description": "This Prisma schema defines three related models for a blogging platform: `User`, `Post`, and `Comment`. Each `User` can create multiple `Post`s and `Comment`s, each `Post` can have multiple `Comment`s, and each `Comment` is associated with one `User` and one `Post`. This structure demonstrates how to define relations in Prisma, using `@relation` attributes to establish one-to-many and many-to-one relationships between models."
+        },
+        {
+          "code": "// Creating a post with a connected user\nconst newPost = await prisma.post.create({\n  data: {\n    title: 'My first post',\n    content: 'Content of the first post',\n    author: {\n      connect: { email: 'alice@example.com' }\n    }\n  }\n});",
+          "description": "This example shows how to create a `Post` and connect it to an existing `User` by their email. The `connect` operation links the `Post` to a `User` already present in the database, illustrating how to work with relational data during creation."
+        },
+        {
+          "code": "// Fetching posts and their comments\nconst postsWithComments = await prisma.post.findMany({\n  include: { comments: true }\n});",
+          "description": "This query retrieves all `Post`s along with their associated `Comment`s using eager loading. The `include` property specifies that the related `Comment`s should be fetched alongside each `Post`, showcasing efficient data retrieval across related models."
+        },
+        {
+          "code": "// Nested writes: Creating a post with comments\nconst postWithComments = await prisma.post.create({\n  data: {\n    title: 'Another post',\n    content: 'With some comments',\n    comments: {\n      create: [{ text: 'Great post!' }, { text: 'Looking forward to more!' }]\n    },\n    author: {\n      connect: { email: 'alice@example.com' }\n    }\n  }\n});",
+          "description": "This example demonstrates a nested write operation with Prisma, where a new `Post` is created along with multiple `Comment`s in a single transaction. It also connects the new `Post` to an existing `User`, showcasing how to handle complex write operations involving multiple models and relationships."
+        }
+      ]
+    }
   }
 }
