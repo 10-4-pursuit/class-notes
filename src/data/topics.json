@@ -477,7 +477,8 @@
           "url": "https://nodejs.org/en/docs/",
           "length": "2 hours"
         }
-      ]
+      ],
+      "exercises": ["https://github.com/10-4-pursuit/04-01-express-setup"]
     },
     {
       "id": 2,
@@ -496,6 +497,10 @@
           "url": "https://expressjs.com/en/guide/using-middleware.html",
           "length": "1 hour"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/04-02-use-of-prebuilt-middleware",
+        "https://github.com/10-4-pursuit/04-03-creating-custom-middleware"
       ]
     },
     {
@@ -515,6 +520,10 @@
           "url": "https://www.freecodecamp.org/news/the-model-view-controller-mvc-pattern-and-rails-explained/",
           "length": "45 minutes"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/04-04-mvc-single-resource",
+        "https://github.com/10-4-pursuit/04-05-mvc-double-resource"
       ]
     },
     {

@@ -1234,16 +1234,32 @@
       ]
     },
     "4": {
-      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/building_restful_api_with_express",
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/building_restful_api_with_express.md",
       "codeDescriptionPairs": [
         {
-          "code": "const express = require('express');\nconst app = express();\napp.use(express.json());\n\nlet todos = [{ id: 1, task: 'Learn Express', completed: false }];\n\napp.get('/todos', (req, res) => {\n  res.json(todos);\n});\n\napp.post('/todos', (req, res) => {\n  const todo = { id: todos.length + 1, task: req.body.task, completed: false };\n  todos.push(todo);\n  res.status(201).send(todo);\n});\n\napp.listen(3000, () => console.log('API running on http://localhost:3000'));",
-          "description": "This code snippet shows how to create a simple RESTful API for managing todo items using Express. It defines routes for retrieving all todos (`GET /todos`) and adding a new todo (`POST /todos`), demonstrating CRUD operations."
+          "code": "app.get('/todos', (req, res) => {\n  res.json(todos);\n});",
+          "description": "Retrieves and sends a JSON array of all todo items when a `GET` request is made to `/todos`."
+        },
+        {
+          "code": "app.post('/todos', (req, res) => {\n  const todo = { id: todos.length + 1, task: req.body.task, completed: false };\n  todos.push(todo);\n  res.status(201).send(todo);\n});",
+          "description": "Creates a new todo item with data from the request body and adds it to the todos array. Responds with the newly created todo item and a 201 status code, indicating successful creation."
+        },
+        {
+          "code": "app.put('/todos/:id', (req, res) => {\n  const { id } = req.params;\n  const index = todos.findIndex(todo => todo.id == id);\n  if (index !== -1) {\n    todos[index] = { ...todos[index], ...req.body };\n    res.send(todos[index]);\n  } else {\n    res.status(404).send('Todo not found');\n  }\n});",
+          "description": "Updates an entire todo item identified by `id` in the URL parameter with data from the request body. If the todo is found, it updates and responds with the updated item. Otherwise, it returns a 404 status code."
+        },
+        {
+          "code": "app.patch('/todos/:id', (req, res) => {\n  const { id } = req.params;\n  const index = todos.findIndex(todo => todo.id == id);\n  if (index !== -1) {\n    todos[index] = { ...todos[index], ...req.body };\n    res.send(todos[index]);\n  } else {\n    res.status(404).send('Todo not found');\n  }\n});",
+          "description": "Partially updates a todo item identified by `id` with specific data from the request body. This method is useful for modifying only certain fields of a todo item without replacing the entire object."
+        },
+        {
+          "code": "app.delete('/todos/:id', (req, res) => {\n  const { id } = req.params;\n  const index = todos.findIndex(todo => todo.id == id);\n  if (index !== -1) {\n    todos.splice(index, 1);\n    res.send('Todo successfully deleted');\n  } else {\n    res.status(404).send('Todo not found');\n  }\n});",
+          "description": "Deletes a todo item identified by `id`. If the todo is successfully found and deleted, it responds with a confirmation message. Otherwise, it returns a 404 status code, indicating the todo was not found."
         }
       ]
     },
     "5": {
-      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/connecting_react_with_express",
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/connecting_react_with_express.md",
       "codeDescriptionPairs": [
         {
           "code": "// server.js (Express Backend)\nconst express = require('express');\nconst cors = require('cors');\nconst app = express();\n\napp.use(cors()); // Enable CORS\napp.use(express.json()); // Parse JSON bodies\n\nconst data = [{ id: 1, content: 'Hello from the server!' }];\n\napp.get('/api/data', (req, res) => {\n  res.json(data);\n});\n\napp.listen(3000, () => console.log('Server running on http://localhost:3000'));",
@@ -1265,7 +1281,7 @@
       ]
     },
     "7": {
-      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/working_with_postgresql",
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/working_with_postgresql.md",
       "codeDescriptionPairs": [
         {
           "code": "// Connecting to a PostgreSQL database using the psql CLI\n\\connect databasename\n\n// Listing all tables in the database\n\\dt\n\n// Querying data from a table\nSELECT * FROM tablename;",
