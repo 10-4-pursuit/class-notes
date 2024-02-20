@@ -504,6 +504,29 @@
       ]
     },
     {
+      "id": 4,
+      "title": "Building RESTful APIs with Express",
+      "description": "Learn how to create a RESTful API using Express that can perform CRUD operations on a mock database.",
+      "links": [
+        {
+          "name": "Building RESTful APIs with Node.js and Express",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=pKd0Rpw7O48",
+          "length": "40 minutes"
+        },
+        {
+          "name": "RESTful API Documentation",
+          "type": "documentation",
+          "url": "https://restfulapi.net/",
+          "length": "1.5 hours"
+        }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/04-06-restful-api-i",
+        "https://github.com/10-4-pursuit/04-07-restful-api-ii"
+      ]
+    },
+    {
       "id": 3,
       "title": "Exploring MVC Architecture",
       "description": "Understand the Model-View-Controller (MVC) architectural pattern and how to implement it in an Express application for better code organization.",
@@ -524,25 +547,6 @@
       "exercises": [
         "https://github.com/10-4-pursuit/04-04-mvc-single-resource",
         "https://github.com/10-4-pursuit/04-05-mvc-double-resource"
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Building RESTful APIs with Express",
-      "description": "Learn how to create a RESTful API using Express that can perform CRUD operations on a mock database.",
-      "links": [
-        {
-          "name": "Building RESTful APIs with Node.js and Express",
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=pKd0Rpw7O48",
-          "length": "40 minutes"
-        },
-        {
-          "name": "RESTful API Documentation",
-          "type": "documentation",
-          "url": "https://restfulapi.net/",
-          "length": "1.5 hours"
-        }
       ]
     },
     {
