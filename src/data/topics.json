@@ -566,6 +566,9 @@
           "url": "https://reactjs.org/docs/getting-started.html",
           "length": "2 hours"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/04-08-full-stack-integration"
       ]
     },
     {
