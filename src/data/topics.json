@@ -591,25 +591,6 @@
       ]
     },
     {
-      "id": 7,
-      "title": "Working with PostgreSQL and its CLI",
-      "description": "Get started with PostgreSQL, a powerful open-source relational database, and learn how to interact with it using its command-line interface.",
-      "links": [
-        {
-          "name": "PostgreSQL Tutorial for Beginners",
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=qw--VYLpxG4",
-          "length": "30 minutes"
-        },
-        {
-          "name": "PostgreSQL Documentation",
-          "type": "documentation",
-          "url": "https://www.postgresql.org/docs/",
-          "length": "2 hours"
-        }
-      ]
-    },
-    {
       "id": 8,
       "title": "CRUD Operations with SQL",
       "description": "Master the basics of SQL for creating, reading, updating, and deleting data in a database.",
@@ -626,6 +607,10 @@
           "url": "https://www.w3schools.com/sql/",
           "length": "1.5 hours"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/04-09-intro-sql",
+        "https://github.com/10-4-pursuit/04-10-reversible-sql"
       ]
     },
     {

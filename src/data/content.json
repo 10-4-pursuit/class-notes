@@ -1291,22 +1291,63 @@
     },
     "8": {
       "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/crud_with_sql.md",
+
       "codeDescriptionPairs": [
         {
-          "code": "-- Create a new user\nINSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');",
-          "description": "This SQL statement performs a Create operation, inserting a new record into the `users` table with a username and email."
+          "code": "-- Creates a database to hold multiple tables\nCREATE DATABASE your_database;",
+          "description": "This SQL command creates a new database in PostgreSQL, allowing for the organization and storage of multiple tables and their associated data."
         },
         {
-          "code": "-- Read/get all users\nSELECT * FROM users;",
-          "description": "This SQL query performs a Read operation, retrieving all records from the `users` table."
+          "code": "-- Connect to a PostgreSQL database\n\\c your_database;",
+          "description": "This command connects to a specified database in PostgreSQL, setting the context for subsequent SQL operations."
         },
         {
-          "code": "-- Update a user's email\nUPDATE users SET email = 'john_doe_updated@example.com' WHERE username = 'john_doe';",
-          "description": "This SQL statement performs an Update operation, changing the email of a user identified by their username in the `users` table."
+          "code": "-- Create a table\nCREATE TABLE instructors (\n\tinstructor_id SERIAL PRIMARY KEY, \n\tinstructor_name VARCHAR(100), \n\tsubject VARCHAR(100), \n\ttenure BOOLEAN\n);",
+          "description": "This SQL statement creates a new table named `instructors` with columns for `instructor_id`, `instructor_name`, `subject`, and `tenure`. The `instructor_id` column is an auto-incrementing primary key."
         },
         {
-          "code": "-- Delete a user\nDELETE FROM users WHERE username = 'john_doe';",
-          "description": "This SQL statement performs a Delete operation, removing a record from the `users` table based on the username."
+          "code": "-- Add a column to a table\nALTER TABLE instructors ADD COLUMN email VARCHAR(255);",
+          "description": "This SQL statement adds a new column named `email` of type VARCHAR to the `instructors` table."
+        },
+        {
+          "code": "-- Insert a row into a table\nINSERT INTO instructors (\n\tinstructor_name, \n\tsubject, \n\ttenure, \n\temail\n) VALUES (\n\t'Jane Smith', \n\t'Mathematics',\n\t TRUE, \n\t'jane.smith@example.com'\n);",
+          "description": "This SQL statement inserts a new row into the `instructors` table with specified values for `instructor_name`, `subject`, `tenure`, and `email`."
+        },
+        {
+          "code": "-- Update all rows in a table\nUPDATE instructors SET tenure = TRUE;",
+          "description": "This SQL statement updates the `tenure` status of all instructors in the `instructors` table to TRUE."
+        },
+        {
+          "code": "-- Update multiple filtered rows in a table\nUPDATE instructors SET subject = 'Physics' WHERE tenure = FALSE;",
+          "description": "This SQL statement updates the `subject` to 'Physics' for all instructors in the `instructors` table who do not have tenure."
+        },
+        {
+          "code": "-- Update a single row\nUPDATE instructors SET email = 'jane.doe_updated@example.com' WHERE instructor_name = 'Jane Smith';",
+          "description": "This SQL statement updates the `email` of a specific instructor, identified by `instructor_name`, in the `instructors` table."
+        },
+        {
+          "code": "-- Select a single row\nSELECT * FROM instructors WHERE instructor_name = 'Jane Smith';",
+          "description": "This SQL query retrieves the record for an instructor with a specific `instructor_name` from the `instructors` table."
+        },
+        {
+          "code": "-- Select multiple rows\nSELECT * FROM instructors WHERE tenure = TRUE;",
+          "description": "This SQL query retrieves records for all instructors who have tenure from the `instructors` table."
+        },
+        {
+          "code": "-- Select target columns in a table\nSELECT instructor_name, email FROM instructors;",
+          "description": "This SQL query retrieves only the `instructor_name` and `email` columns for all instructors in the `instructors` table."
+        },
+        {
+          "code": "-- Select all columns from a table\nSELECT * FROM instructors;",
+          "description": "This SQL query retrieves all columns for all instructors in the `instructors` table."
+        },
+        {
+          "code": "-- Delete a row\nDELETE FROM instructors WHERE instructor_name = 'Jane Smith';",
+          "description": "This SQL statement deletes the record for an instructor with a specific `instructor_name` from the `instructors` table."
+        },
+        {
+          "code": "-- List all tables in the current database\n\\dt;",
+          "description": "This PostgreSQL command lists all tables in the current database, helping to verify the existence and structure of tables."
         }
       ]
     },
