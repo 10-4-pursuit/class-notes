@@ -1275,8 +1275,32 @@
       "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/database_fundamentals.md",
       "codeDescriptionPairs": [
         {
-          "code": "// Example SQL query to create a table\nCREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  username VARCHAR(50) NOT NULL,\n  email VARCHAR(100) NOT NULL\n);",
-          "description": "This SQL code snippet demonstrates how to create a simple table named `users` in a database. The table includes three fields: `id`, `username`, and `email`. The `id` field is set as the primary key and will auto-increment (SERIAL) with each new entry. This example lays the foundation for understanding how databases store data."
+          "code": "CREATE DATABASE library;",
+          "description": "This command creates a new database named `library`. It's the first step in setting up an organized data management system, where a database acts as the primary container for all related data."
+        },
+        {
+          "code": "\\c library",
+          "description": "After creating a database, this command is used to connect to the `library` database. It's specific to command-line interfaces like `psql` for PostgreSQL and is essential for performing further operations within the database."
+        },
+        {
+          "code": "CREATE TABLE books (\n  id SERIAL PRIMARY KEY,\n  title VARCHAR(255),\n  author VARCHAR(255),\n  published_year INTEGER\n);",
+          "description": "This SQL statement defines a new table named `books` within the database, specifying columns for `id`, `title`, `author`, and `published_year`. The `id` column is an auto-incrementing primary key, ensuring each record is unique."
+        },
+        {
+          "code": "ALTER TABLE books ADD COLUMN genre VARCHAR(100);",
+          "description": "As database requirements evolve, this command adds a new `genre` column to the existing `books` table. It demonstrates how to modify the table structure to accommodate additional data."
+        },
+        {
+          "code": "ALTER TABLE books DROP COLUMN genre;",
+          "description": "This command removes the `genre` column from the `books` table. It's an example of how to adjust the table structure by eliminating unnecessary data fields."
+        },
+        {
+          "code": "ALTER TABLE books ALTER COLUMN published_year TYPE DATE;",
+          "description": "This operation changes the data type of the `published_year` column in the `books` table to `DATE`. It exemplifies how to modify column specifications to better reflect the nature of the data stored."
+        },
+        {
+          "code": "ALTER TABLE books ADD CONSTRAINT chk_year CHECK (published_year > 1800);",
+          "description": "To ensure data integrity, this command adds a check constraint named `chk_year` to the `books` table, requiring the `published_year` to be greater than 1800. It highlights the importance of enforcing data validity within a database."
         }
       ]
     },
