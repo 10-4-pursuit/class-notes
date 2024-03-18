@@ -674,6 +674,9 @@
           "url": "https://vitaly-t.github.io/pg-promise/",
           "length": "1 hour"
         }
+      ],
+      "exercises": [
+        "https://github.com/10-4-pursuit/04-11-basic-sql-express-integration"
       ]
     },
     {

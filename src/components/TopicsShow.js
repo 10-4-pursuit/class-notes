@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 import "./TopicsShow.css";
 
-
 import {
   Accordion,
   AccordionItem,
@@ -44,7 +43,7 @@ function TopicsShow() {
 
     getData();
     
-  }, [])
+  }, [samples.description])
 
   return (
     <div>

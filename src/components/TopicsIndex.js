@@ -23,7 +23,7 @@ function TopicsIndex() {
 
   return (
     <div>
-      <h1>Topics for { skillsets.find(s => s.id == id).title }</h1>
+      <h1>Topics for { skillsets.find(s => +s.id === +id).title }</h1>
       <ul>
         {topics.map(topic => (
           <li key={topic.id}>
