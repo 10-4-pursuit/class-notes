@@ -1304,7 +1304,7 @@
         }
       ]
     },
-    "7": {
+    "*": {
       "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/working_with_postgresql.md",
       "codeDescriptionPairs": [
         {
@@ -1313,7 +1313,7 @@
         }
       ]
     },
-    "8": {
+    "7": {
       "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/main/crud_with_sql.md",
 
       "codeDescriptionPairs": [
@@ -1372,6 +1372,47 @@
         {
           "code": "-- List all tables in the current database\n\\dt;",
           "description": "This PostgreSQL command lists all tables in the current database, helping to verify the existence and structure of tables."
+        }
+      ]
+    },
+    "8": {
+      "description": "https://raw.githubusercontent.com/10-4-pursuit/04-readings/e2ba6f9cd62a5235166d916bf04fd35571cf1488/sql_aggregators.md",
+      "codeDescriptionPairs": [
+        {
+          "code": "SELECT COUNT(*) FROM books;",
+          "description": "This SQL command calculates the total number of records in the `books` table. It uses the `COUNT` function to tally up every row, providing a simple way to know how many books are cataloged."
+        },
+        {
+          "code": "SELECT SUM(pages) FROM books;",
+          "description": "This command adds up the values in the `pages` column of the `books` table, giving the total number of pages across all books. The `SUM` function makes it easy to aggregate numerical data."
+        },
+        {
+          "code": "SELECT AVG(published_year) FROM books;",
+          "description": "This SQL statement computes the average publication year of all books in the `books` table. By using the `AVG` function, it provides insight into the general time period of the collection's publications."
+        },
+        {
+          "code": "SELECT MIN(published_year), MAX(published_year) FROM books;",
+          "description": "This command finds both the earliest and the latest publication year among all books. The `MIN` and `MAX` functions are used to identify the range of years covered by the books' publication dates."
+        },
+        {
+          "code": "SELECT genre, COUNT(*) FROM books GROUP BY genre;",
+          "description": "This statement counts the number of books within each genre, grouping the results by genre. It showcases how the `GROUP BY` clause categorizes data, allowing for aggregated operations like counting within each category."
+        },
+        {
+          "code": "SELECT COUNT(DISTINCT published_year) FROM books;",
+          "description": "This SQL command counts the number of unique publication years in the `books` table. By using `COUNT` with `DISTINCT`, it eliminates duplicate years, providing the count of distinct publication years."
+        },
+        {
+          "code": "SELECT genre, COUNT(*) FROM books GROUP BY genre HAVING COUNT(*) > 10;",
+          "description": "This statement filters genres to those with more than 10 books. It combines `GROUP BY` to aggregate by genre and `HAVING` to apply the count condition, showcasing how to filter aggregated data based on a condition."
+        },
+        {
+          "code": "SELECT AVG(pages) AS average_pages FROM books;",
+          "description": "This SQL command calculates the average number of pages per book and renames the result column to `average_pages` using the `AS` clause. It highlights how to make query results more readable and meaningful."
+        },
+        {
+          "code": "SELECT genre, AVG(pages) AS average_pages FROM books GROUP BY genre HAVING AVG(pages) > 300;",
+          "description": "This command identifies genres where the average page count per book exceeds 300. It demonstrates advanced use of aggregation, renaming, grouping, and filtering to extract specific insights from the data."
         }
       ]
     },
